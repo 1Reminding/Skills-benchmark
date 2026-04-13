@@ -1,6 +1,6 @@
 # SkillsBench 原理、数据集、指标与我们的改进
 
-**作者：** Yinda Chen (yindachen@mail.ustc.edu.cn)
+**作者：** Qinghua Xing (xingqinghua@mail.nankai.edu.cn)
 **日期：** 2026-04-12
 **目标会议：** NeurIPS 2026 Datasets and Benchmarks Track
 
