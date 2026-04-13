@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-04-12T20:53:20.257218",
+  "summary": {
+    "total_tasks": 3,
+    "successful_tasks": 2,
+    "success_rate": 0.6666666666666666,
+    "failure_mode_distribution": {
+      "success": 2,
+      "bad_combination": 1
+    }
+  },
+  "aggregated_metrics": {
+    "mean_token_efficiency": 0.0030555555555555557,
+    "mean_step_redundancy": 0.38888888888888884,
+    "mean_skill_utilization_cost": 313.3333333333333,
+    "mean_skill_combination_synergy": -0.07407407407407406,
+    "mean_cross_task_transferability": 0.6296296296296295,
+    "mean_failure_mode_specificity": 0.8333333333333334
+  },
+  "task_results": [
+    {
+      "task_id": "task_001",
+      "agent_name": "DummyAgent",
+      "task_success": true,
+      "failure_reason": null,
+      "failure_mode": "success",
+      "metrics": {
+        "token_efficiency": 0.006666666666666667,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 200.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 0.6666666666666666,
+        "failure_mode_specificity": 1.0
+      }
+    },
+    {
+      "task_id": "task_002",
+      "agent_name": "DummyAgent",
+      "task_success": true,
+      "failure_reason": null,
+      "failure_mode": "success",
+      "metrics": {
+        "token_efficiency": 0.0025,
+        "step_redundancy": 0.6666666666666666,
+        "skill_utilization_cost": 440.0,
+        "skill_combination_synergy": 0.11111111111111116,
+        "cross_task_transferability": 0.8888888888888888,
+        "failure_mode_specificity": 1.0
+      }
+    },
+    {
+      "task_id": "task_003",
+      "agent_name": "DummyAgent",
+      "task_success": false,
+      "failure_reason": "Bad Combination of plan and code_write",
+      "failure_mode": "bad_combination",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.5,
+        "skill_utilization_cost": 300.0,
+        "skill_combination_synergy": -0.3333333333333333,
+        "cross_task_transferability": 0.3333333333333333,
+        "failure_mode_specificity": 0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "SkillBench Economy Dataset v0.1",
+  "description": "6 representative tasks from SkillsBench spanning 5 domains, annotated with economy/effectiveness metadata for the Skill Economy Benchmark.",
+  "source": "https://github.com/benchflow-ai/skillsbench (Apache 2.0)",
+  "tasks": [
+    {
+      "task_id": "weighted-gdp-calc",
+      "domain": "financial-analysis",
+      "difficulty": "medium",
+      "instruction_file": "weighted-gdp-calc/instruction.md",
+      "required_skills": ["xlsx"],
+      "optimal_steps": 4,
+      "tags": ["excel", "finance", "macrofinance", "statistics"]
+    },
+    {
+      "task_id": "powerlifting-coef-calc",
+      "domain": "data-analysis",
+      "difficulty": "easy",
+      "instruction_file": "powerlifting-coef-calc/instruction.md",
+      "required_skills": ["xlsx", "powerlifting", "senior-data-scientist"],
+      "optimal_steps": 3,
+      "tags": ["excel", "sports", "statistics"]
+    },
+    {
+      "task_id": "fix-build-agentops",
+      "domain": "software-engineering",
+      "difficulty": "easy",
+      "instruction_file": "fix-build-agentops/instruction.md",
+      "required_skills": ["analyze-ci", "testing-python", "uv-package-manager"],
+      "optimal_steps": 5,
+      "tags": ["python", "build", "ci", "debugging"]
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "domain": "data-analysis",
+      "difficulty": "medium",
+      "instruction_file": "sales-pivot-analysis/instruction.md",
+      "required_skills": ["xlsx", "pdf"],
+      "optimal_steps": 5,
+      "tags": ["excel", "pivot-tables", "pdf", "data-integration"]
+    },
+    {
+      "task_id": "earthquake-plate-calculation",
+      "domain": "geophysics",
+      "difficulty": "medium",
+      "instruction_file": "earthquake-plate-calculation/instruction.md",
+      "required_skills": ["geospatial-analysis"],
+      "optimal_steps": 4,
+      "tags": ["geophysics", "spatial-analysis", "gis"]
+    },
+    {
+      "task_id": "latex-formula-extraction",
+      "domain": "document-processing",
+      "difficulty": "medium",
+      "instruction_file": "latex-formula-extraction/instruction.md",
+      "required_skills": ["pdf", "marker"],
+      "optimal_steps": 4,
+      "tags": ["pdf", "latex", "extraction"]
+    }
+  ],
+  "skill_taxonomy": {
+    "xlsx": {"name": "Excel Processing", "cost_per_call": 80, "category": "data"},
+    "pdf": {"name": "PDF Processing", "cost_per_call": 60, "category": "data"},
+    "powerlifting": {"name": "Powerlifting Domain Knowledge", "cost_per_call": 30, "category": "domain"},
+    "senior-data-scientist": {"name": "Senior Data Scientist Toolkit", "cost_per_call": 120, "category": "analysis"},
+    "analyze-ci": {"name": "CI Analysis", "cost_per_call": 100, "category": "engineering"},
+    "testing-python": {"name": "Python Testing", "cost_per_call": 90, "category": "engineering"},
+    "uv-package-manager": {"name": "UV Package Manager", "cost_per_call": 40, "category": "engineering"},
+    "temporal-python-testing": {"name": "Temporal Python Testing", "cost_per_call": 110, "category": "engineering"},
+    "geospatial-analysis": {"name": "Geospatial Analysis", "cost_per_call": 100, "category": "science"},
+    "marker": {"name": "Marker PDF-to-Markdown", "cost_per_call": 70, "category": "data"},
+    "code_write": {"name": "Code Writing", "cost_per_call": 100, "category": "engineering"},
+    "code_read": {"name": "Code Reading", "cost_per_call": 20, "category": "engineering"},
+    "debug": {"name": "Debugging", "cost_per_call": 150, "category": "engineering"},
+    "plan": {"name": "Task Planning", "cost_per_call": 50, "category": "reasoning"},
+    "search": {"name": "Web Search", "cost_per_call": 80, "category": "information"}
+  }
+}

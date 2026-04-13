@@ -1,0 +1,39 @@
+{
+  "skills": [
+    {
+      "id": "code_write",
+      "name": "Code Writing",
+      "cost_per_call": 100,
+      "category": "engineering",
+      "description": "Write new code or modify existing code"
+    },
+    {
+      "id": "code_read",
+      "name": "Code Reading",
+      "cost_per_call": 20,
+      "category": "engineering",
+      "description": "Read and understand existing code"
+    },
+    {
+      "id": "debug",
+      "name": "Debugging",
+      "cost_per_call": 150,
+      "category": "engineering",
+      "description": "Identify and fix bugs in code"
+    },
+    {
+      "id": "plan",
+      "name": "Task Planning",
+      "cost_per_call": 50,
+      "category": "reasoning",
+      "description": "Plan the approach and structure for a task"
+    },
+    {
+      "id": "search",
+      "name": "Web Search",
+      "cost_per_call": 80,
+      "category": "information",
+      "description": "Search the web for relevant information"
+    }
+  ]
+}

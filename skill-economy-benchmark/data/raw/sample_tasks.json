@@ -1,0 +1,31 @@
+{
+  "tasks": [
+    {
+      "task_id": "task_001",
+      "domain": "software_engineering",
+      "instruction": "Write a Python function to sort a list using an efficient algorithm.",
+      "required_skills": ["code_write"],
+      "optimal_steps": 2,
+      "verification_code": "assert sort_list([3,1,2]) == [1,2,3]",
+      "metadata": {"difficulty": "easy"}
+    },
+    {
+      "task_id": "task_002",
+      "domain": "software_engineering",
+      "instruction": "Debug a given broken Python script that fails with an IndexError.",
+      "required_skills": ["code_read", "debug"],
+      "optimal_steps": 3,
+      "verification_code": "assert fixed_script() == 'OK'",
+      "metadata": {"difficulty": "medium"}
+    },
+    {
+      "task_id": "task_003",
+      "domain": "software_engineering",
+      "instruction": "Plan a project structure and write a hello world file following the plan.",
+      "required_skills": ["plan", "code_write"],
+      "optimal_steps": 4,
+      "verification_code": "assert os.path.exists('hello.py')",
+      "metadata": {"difficulty": "medium"}
+    }
+  ]
+}

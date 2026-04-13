@@ -1,0 +1,112 @@
+{
+  "generated_at": "2026-04-12T20:51:28.314752",
+  "summary": {
+    "total_tasks": 6,
+    "successful_tasks": 5,
+    "success_rate": 0.8333333333333334,
+    "failure_mode_distribution": {
+      "success": 5,
+      "bad_combination": 1
+    }
+  },
+  "aggregated_metrics": {
+    "mean_token_efficiency": 0.002528874269005848,
+    "mean_step_redundancy": 0.15833333333333333,
+    "mean_skill_utilization_cost": 358.3333333333333,
+    "mean_skill_combination_synergy": -0.024999999999999967,
+    "mean_cross_task_transferability": 0.8583333333333334,
+    "mean_failure_mode_specificity": 0.9166666666666666
+  },
+  "task_results": [
+    {
+      "task_id": "weighted-gdp-calc",
+      "agent_name": "DummyAgent",
+      "task_success": true,
+      "failure_reason": null,
+      "failure_mode": "success",
+      "metrics": {
+        "token_efficiency": 0.003125,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 280.0,
+        "skill_combination_synergy": 0.06666666666666676,
+        "cross_task_transferability": 0.9333333333333332,
+        "failure_mode_specificity": 1.0
+      }
+    },
+    {
+      "task_id": "powerlifting-coef-calc",
+      "agent_name": "DummyAgent",
+      "task_success": true,
+      "failure_reason": null,
+      "failure_mode": "success",
+      "metrics": {
+        "token_efficiency": 0.004,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 230.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 1.0,
+        "failure_mode_specificity": 1.0
+      }
+    },
+    {
+      "task_id": "fix-build-agentops",
+      "agent_name": "DummyAgent",
+      "task_success": true,
+      "failure_reason": null,
+      "failure_mode": "success",
+      "metrics": {
+        "token_efficiency": 0.0020833333333333333,
+        "step_redundancy": 0.2,
+        "skill_utilization_cost": 500.0,
+        "skill_combination_synergy": 0.1166666666666667,
+        "cross_task_transferability": 0.8833333333333333,
+        "failure_mode_specificity": 1.0
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "agent_name": "DummyAgent",
+      "task_success": true,
+      "failure_reason": null,
+      "failure_mode": "success",
+      "metrics": {
+        "token_efficiency": 0.002631578947368421,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 340.0,
+        "skill_combination_synergy": 0.050000000000000044,
+        "cross_task_transferability": 0.95,
+        "failure_mode_specificity": 1.0
+      }
+    },
+    {
+      "task_id": "earthquake-plate-calculation",
+      "agent_name": "DummyAgent",
+      "task_success": false,
+      "failure_reason": "Missing skill: needed advanced projection handling",
+      "failure_mode": "bad_combination",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.75,
+        "skill_utilization_cost": 550.0,
+        "skill_combination_synergy": -0.43333333333333335,
+        "cross_task_transferability": 0.43333333333333335,
+        "failure_mode_specificity": 0.5
+      }
+    },
+    {
+      "task_id": "latex-formula-extraction",
+      "agent_name": "DummyAgent",
+      "task_success": true,
+      "failure_reason": null,
+      "failure_mode": "success",
+      "metrics": {
+        "token_efficiency": 0.0033333333333333335,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 250.0,
+        "skill_combination_synergy": 0.050000000000000044,
+        "cross_task_transferability": 0.95,
+        "failure_mode_specificity": 1.0
+      }
+    }
+  ]
+}

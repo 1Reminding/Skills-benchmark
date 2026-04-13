@@ -1,0 +1,7 @@
+pydantic>=2.0
+typer>=0.12
+pandas>=2.0
+matplotlib>=3.8
+seaborn>=0.13
+pytest>=8.0
+python-dotenv>=1.0
