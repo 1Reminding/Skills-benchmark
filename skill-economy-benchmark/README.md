@@ -1,6 +1,6 @@
 # Agent Skill Benchmark 2.0 -- 经济性与有效性评估框架
 
-**作者：** Yinda Chen | **日期：** 2026-04-12
+**作者：** Qinghua Xing | **日期：** 2026-04-12
 
 > 基于 [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench)（Apache 2.0）构建
 
