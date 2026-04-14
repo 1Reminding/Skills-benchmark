@@ -324,7 +324,7 @@ python scripts/04_visualize_results.py --dataset
 ```bibtex
 @misc{chen2026skilleconomy,
   title={Agent Skill Benchmark 2.0: Economy and Effectiveness Evaluation Framework},
-  author={Yinda Chen},
+  author={Qinghua Xing},
   year={2026},
   url={https://github.com/ydchen0806/skill-economy-benchmark}
 }
