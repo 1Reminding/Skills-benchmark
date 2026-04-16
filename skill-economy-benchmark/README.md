@@ -11,6 +11,7 @@
 - **[SkillsBench 原理、数据集、指标与我们的改进（含 NeurIPS TODO）](docs/skillbench_overview_and_our_contribution.md)** -- 最完整的项目说明文档，介绍 SkillsBench v1 的原理、数据集构成、已知局限性，以及我们 6 个创新指标的设计动机、数学定义和 NeurIPS 投稿计划
 - [指标数学定义与伪代码](docs/metrics_definition.md) -- 6 个指标的公式和实现逻辑
 - [研究提案](docs/research_proposal.md) -- 研究概述
+- [Skill Pool 构建协议](docs/skill_pool_protocol.md) -- 说明 retrieval + prompt engineering 的候选 skill 构建、过滤、去重与反泄露流程
 
 ## 目录
 
@@ -33,7 +34,66 @@
 
 1. **完成任务的代价有多大？** —— 一个消耗 500 tokens 就能完成的任务，和一个消耗 5000 tokens 才完成的任务，虽然结果相同，但经济性截然不同。
 2. **Skill 的使用方式是否合理？** —— Agent 是否使用了多余的 Skill？Skill 之间的组合是否产生了协同效应？失败的原因是缺少 Skill 还是 Skill 组合不当？
+3. **现有 benchmark 的 task-skill 映射往往过于稀疏。**  
+   在很多任务中，可用 skill 数量很少，甚至只有 1 个。这会直接导致：
+   - Skill 之间缺乏可比性
+   - 组合协同（SCS）难以稳定计算
+   - 跨任务迁移性（CTT）样本不足
+   - “缺 skill”与“组合不当”的分析缺乏依据
 
+因此，我们的目标不只是提出新的评测指标，而是进一步回答：
+
+> **如何把一个稀疏的 skill benchmark 扩展成一个可分析的 skill pool，并在此基础上研究“什么样的 skill 才是好的 skill”？**
+
+### 核心思路
+
+本项目包含两个互补层次：
+
+#### 层次 1：扩展评测维度
+在 SkillsBench v1 的 Pass Rate 之外，我们引入两个新维度：
+
+- **Economy**：完成任务花了多大代价？
+- **Effectiveness**：为什么成功 / 为什么失败？Skill 组合是否合理？
+
+#### 层次 2：扩展 skill 候选空间
+我们进一步观察到：如果每个 task 只有极少数 skill，可计算的分析维度会非常有限。  
+因此，本项目不把重点放在训练一个 skill generator，而是采用一种更轻量、可控、可复现的方法：
+
+> **retrieval + prompt engineering 的 skill pool construction pipeline**
+
+即：针对每类 task，从已有 skill、相似任务、通用 procedural pattern 中进行检索，再通过受控生成与过滤，构建一个更稠密、更可比较的 skill pool。
+
+### 方法概览
+
+```text
+                 SkillsBench v1
+        Pass/Fail on sparse task-skill mappings
+                           │
+                           ▼
+        Diagnose sparsity and under-identified metrics
+                           │
+                           ▼
+   Retrieval-augmented skill pool construction (ours)
+   ├── retrieve similar skills / task patterns
+   ├── prompt-based candidate skill generation
+   ├── filtering / dedup / anti-leakage checks
+   └── build dense per-task candidate pools
+                           │
+                           ▼
+     Evaluate with outcome + economy + effectiveness
+   ├── Pass Rate
+   ├── Token Efficiency / Step Redundancy / Skill Cost
+   ├── Skill Combination Synergy
+   ├── Cross-Task Transferability
+   └── Failure Mode Specificity
+                           │
+                           ▼
+     Analyze what makes a "good skill"
+   ├── high cost-effectiveness
+   ├── strong cross-task transferability
+   ├── positive composition synergy
+   └── interpretable failure patterns
+```   
 ### 核心方法
 
 我们在 SkillsBench v1 的基础上引入两个新维度：
@@ -89,6 +149,43 @@ Skill 交互分析     无                       Combination Synergy
 - CTT 帮助识别哪些 Skill 是"万金油"，哪些只适用于特定任务
 - FMS 提供可操作的改进建议：缺 Skill 就补充，组合不当就优化编排逻辑
 
+### 创新点 C：Benchmark Diagnosis —— 发现稀疏 skill 生态的问题
+
+我们指出：现有 SkillsBench 风格的 task-skill 映射在很多任务上过于稀疏，导致高阶分析指标难以成立。  
+这不仅影响 Skill 组合协同（SCS）和跨任务迁移性（CTT）的稳定计算，也限制了“好 skill 长什么样”的经验分析。
+
+我们因此将 **skill sparsity** 本身视为 benchmark 的一个结构性问题。
+
+### 创新点 D: Retrieval-Augmented Skill Pool Construction
+
+为了解决 task 下可比 skill 不足的问题，我们提出一种轻量但有效的 skill pool 构建方案，而不是训练一个昂贵的 skill generator：
+
+1. **Retrieval**：从已有 skill 库、相似任务、跨领域 procedural pattern 中检索候选材料
+2. **Prompt-based Generation**：通过受控 prompt 生成多个 skill 候选，而不是为单个任务拟合一个“专属答案”
+3. **Filtering & Safety Checks**：
+   - 结构合法性检查
+   - 与已有 skill 去重
+   - task-specific leakage 检测
+   - 成本与长度标注
+4. **Dense Skill Pooling**：为每个 task / task family 建立更丰富的 skill 候选池，使得后续比较和分析成为可能
+
+### 创新点 E：从“Skill 是否有用”走向“好 Skill 有什么特征”
+
+本项目最终关注的不只是分数，而是现象分析：
+
+- 哪些 skill 具有更高的 cost-effectiveness？
+- 哪些 skill 更容易跨任务迁移？
+- 哪些组合真正产生了 1+1>2 的效果？
+- 哪些失败来自缺 skill，哪些来自错误组合？
+- 高质量 skill 在长度、抽象层次、结构组织和调用方式上具有什么共性？
+
+因此，本项目的目标是把 Skill 评测从：
+
+> “Skill 有没有用？”
+
+推进到：
+
+> “什么样的 Skill 值得保留、复用与组合？”
 ---
 
 ## 数据集说明
@@ -142,6 +239,63 @@ dataset/<task-id>/
 
 ---
 
+## Skill Pool 构建方案
+
+### 为什么需要 Skill Pool
+
+原始 benchmark 中，很多 task 只绑定了极少数 curated skills。  
+这会带来一个直接后果：虽然 Pass Rate 仍然可以计算，但更细粒度的 economy / effectiveness 分析会受到很大限制。
+
+例如：
+
+- 如果一个 task 只有 1 个 skill，就很难讨论 skill 之间的优劣
+- 如果几乎没有可替代 skill，SCS 难以反映真正的组合协同
+- 如果某个 skill 只出现在 1 个任务里，CTT 就缺乏统计意义
+- FMS 中“Missing Skill”与“Bad Combination”的区分，也会因为候选空间不足而变得不可靠
+
+因此，我们引入一个新的中间层：
+
+> **为每个 task / task family 构建一个更稠密的 candidate skill pool。**
+
+### Skill Pool Construction Pipeline
+
+#### Step 1: Retrieval
+针对每个 task，我们检索三类材料：
+
+- **已有 skills**：原始 benchmark 中的 curated skills
+- **相似任务 skills**：同领域或程序结构相似任务中的 skill
+- **通用 procedural patterns**：可迁移的 how-to 模板、工具使用流程与分步策略
+
+#### Step 2: Prompt-Based Candidate Generation
+基于检索到的材料，使用 prompt engineering 生成多个候选 skill。  
+这里的目标不是为单个 task 写“专属答案”，而是生成 **可复用、可迁移、具有程序性指导价值** 的 skill 描述。
+
+生成约束包括：
+
+- 必须是 procedural guidance，而非 task answer
+- 尽量避免 task-specific 文件名、路径、魔法常数
+- 使用统一的 skill 结构与格式
+- 控制长度，避免冗长和重复
+
+#### Step 3: Filtering and Normalization
+对候选 skill 做进一步过滤：
+
+- 结构合法性检查（是否符合 skill 格式）
+- 与已有 skill 去重
+- 反泄露检测（是否包含 task-specific solution pattern）
+- 长度、抽象层次、领域标签、成本标签归一化
+
+#### Step 4: Pooling
+将通过过滤的 skill 合并为 task-level 或 family-level 的 candidate pool，供后续实验使用。
+
+### 设计原则
+
+我们的 skill pool 构建方法遵循三条原则：
+
+1. **Low-cost**：避免训练专门的 skill generator，优先使用 retrieval + prompting
+2. **Controllable**：生成过程透明、可调试、易做 ablation
+3. **Benchmark-oriented**：目标不是训练最强模型，而是让 benchmark 拥有足够的 skill 多样性，以支持更可靠的比较和分析
+
 ## 指标体系
 
 详细数学定义见 [docs/metrics_definition.md](docs/metrics_definition.md)。
@@ -187,6 +341,15 @@ skill-economy-benchmark/
 │   ├── sales-pivot-analysis/        # 数据集成任务
 │   ├── earthquake-plate-calculation/# 地球物理任务
 │   └── latex-formula-extraction/    # 文档处理任务
+├── skill_pool/                       # 新增：扩展后的 skill pool
+│   ├── raw_retrieved/                # 检索得到的原始候选材料
+│   ├── generated/                    # prompt 生成的候选 skill
+│   ├── filtered/                     # 过滤后的 skill pool
+│   └── metadata.json                 # skill 来源、标签、成本、长度等元数据
+├── prompts/                          # 新增：skill 构建与过滤用 prompt
+│   ├── retrieve_and_generate.md
+│   ├── dedup_filter.md
+│   └── leakage_check.md
 ├── src/                             # 核心代码
 │   ├── core/                        # 数据模型 (Pydantic v2)
 │   │   ├── task.py                  # Task 数据类
@@ -215,6 +378,8 @@ skill-economy-benchmark/
 │   ├── 02_generate_sample_data.py   # 生成示例数据
 │   ├── 03_run_dry_evaluation.py     # 运行评估 (--sample / --dataset)
 │   └── 04_visualize_results.py      # 生成可视化图表
+│   ├── 05_build_skill_pool.py        # 新增：构建 skill pool
+│   └── 06_run_pool_analysis.py       # 新增：在 pool 上运行分析
 ├── tests/                           # 测试
 │   ├── test_metrics.py              # 指标单元测试（16 个）
 │   └── test_end_to_end.py           # 端到端测试（5 个）
@@ -225,6 +390,7 @@ skill-economy-benchmark/
 ├── docs/                            # 研究文档
 │   ├── research_proposal.md         # 研究思路
 │   └── metrics_definition.md        # 指标数学定义
+│   └── skill_pool_protocol.md        # 新增：skill pool 构建协议
 ├── data/                            # 示例数据
 │   ├── raw/sample_tasks.json        # 3 个简单示例任务
 │   └── skill_taxonomy/base_skills.json  # 5 个基础 Skill
@@ -324,7 +490,7 @@ python scripts/04_visualize_results.py --dataset
 ```bibtex
 @misc{chen2026skilleconomy,
   title={Agent Skill Benchmark 2.0: Economy and Effectiveness Evaluation Framework},
-  author={Qinghua Xing},
+  author={Yinda Chen},
   year={2026},
   url={https://github.com/ydchen0806/skill-economy-benchmark}
 }
