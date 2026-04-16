@@ -17,9 +17,11 @@
   - [1.6 已知局限性](#16-已知局限性)
 - [二、我们的改进与创新](#二我们的改进与创新)
   - [2.1 定位：从 "做没做对" 到 "做得好不好"](#21-定位从-做没做对-到-做得好不好)
-  - [2.2 创新指标体系](#22-创新指标体系)
-  - [2.3 对 SkillsBench v1 局限性的直接回应](#23-对-skillsbench-v1-局限性的直接回应)
-  - [2.4 与 Related Work 的差异化定位](#24-与-related-work-的差异化定位)
+  - [2.2 第一贡献：Economy + Effectiveness 指标体系](#22-第一贡献economy--effectiveness-指标体系)
+  - [2.3 第二贡献：Benchmark Diagnosis —— 发现 Skill 稀疏性问题](#23-第二贡献benchmark-diagnosis--发现-skill-稀疏性问题)
+  - [2.4 第三贡献：Retrieval-Augmented Skill Pool Construction](#24-第三贡献retrieval-augmented-skill-pool-construction)
+  - [2.5 对 SkillsBench v1 局限性的直接回应](#25-对-skillsbench-v1-局限性的直接回应)
+  - [2.6 与 Related Work 的差异化定位](#26-与-related-work-的差异化定位)
 - [三、Target NeurIPS 的论文思路](#三target-neurips-的论文思路)
   - [3.1 论文标题候选](#31-论文标题候选)
   - [3.2 故事线（Story Line）](#32-故事线story-line)
@@ -174,7 +176,12 @@ SkillsBench v1 论文明确承认的不足（引自其 Section 5.1）：
 
 类比：如果 Pass Rate 是大学入学考试的"是否及格"，我们引入的经济性指标就是"考了多少分"，有效性指标就是"每道题的分析报告"。
 
-### 2.2 创新指标体系
+### 2.2 第一贡献：Economy + Effectiveness 指标体系
+
+在构建出更稠密的 skill pool 之后，我们再引入 economy / effectiveness 两类指标。  
+这样做的逻辑是：
+
+> **指标不是脱离 benchmark 结构单独存在的，而是建立在一个“足够可比”的 skill ecology 之上。**
 
 #### 经济性指标（Economy Metrics）—— "代价有多大"
 
@@ -192,7 +199,117 @@ SkillsBench v1 论文明确承认的不足（引自其 Section 5.1）：
 | **Cross-Task Transferability (CTT)** | `\|{t: success with skill s}\| / \|{t: used skill s}\|` | 单个 Skill 的跨任务通用性 | SkillsBench 只做单任务分析，我们引入跨任务视角 |
 | **Failure Mode Specificity (FMS)** | 分类为 Missing / Bad Combo / Success | 失败原因的精确诊断 | SkillsBench 只有 pass/fail，我们提供可操作的改进建议 |
 
-### 2.3 对 SkillsBench v1 局限性的直接回应
+#### 新的研究重点
+
+通过这组指标，我们真正要回答的是：
+
+- 什么样的 skill 更高效？
+- 什么样的 skill 更便于迁移？
+- 什么样的组合更容易产生正向协同？
+- 哪些失败说明 benchmark 缺 skill，哪些失败说明 skill orchestration 有问题？
+
+因此，本项目的重点已经从：
+
+> “Skill 是否有用？”
+
+转向：
+
+> “什么样的 Skill 值得保留、复用、组合和推荐？”
+---
+### 2.3 第二贡献：Benchmark Diagnosis —— 发现 Skill 稀疏性问题
+
+我们的第二贡献，是把 **skill sparsity** 本身作为 benchmark 的结构性问题提出。
+
+具体来说，我们希望对原始 benchmark 做以下诊断：
+
+1. **Task-level skill count distribution**  
+   统计每个 task 对应的 curated skill 数量分布，识别：
+   - 单 skill 任务
+   - 低组合空间任务
+   - 缺乏替代 skill 的任务
+
+2. **Skill coverage across tasks**  
+   统计每个 skill 覆盖多少任务，识别：
+   - 高复用通用 skill
+   - 仅在单一任务中出现的 task-specific skill
+
+3. **Metric identifiability analysis**  
+   分析在原始 benchmark 上：
+   - 哪些任务可以稳定计算 SCS
+   - 哪些 skill 可以稳定计算 CTT
+   - 哪些 FMS 诊断结论可能受候选空间不足影响
+
+这一步的意义在于：
+
+> 我们不是预设“原 benchmark 不够好”，而是通过定量分析说明：原始 task-skill 结构过于稀疏，限制了 economy / synergy / transfer analysis 的成立条件。
+
+---
+
+### 2.4 第三贡献：Retrieval-Augmented Skill Pool Construction
+
+为了解决 task 下可比 skill 不足的问题，我们不选择训练一个专门的 skill generator。  
+原因很现实：
+
+- 训练成本高
+- 调参与收敛周期长
+- 生成结果不稳定
+- 很容易把论文主线从 benchmark 研究带偏到 generation model 研究
+
+因此，我们采用一种更轻量、更可控、更贴近 benchmark 论文定位的方法：
+
+> **retrieval + prompt engineering 的 skill pool construction pipeline**
+
+其核心思想不是“为每个 task 拟合一个专属 skill”，而是：
+
+> **为每个 task / task family 扩展一个更丰富的 candidate skill pool，使得比较、筛选和分析成为可能。**
+
+#### Pipeline 设计
+
+**Step 1: Retrieval**
+
+针对目标 task，检索三类候选来源：
+
+- 原始 benchmark 中已有的 curated skills
+- 同领域或程序结构相似任务中的 skills
+- 通用 procedural patterns（如表格处理、日志诊断、文档抽取、分步分析模板等）
+
+**Step 2: Prompt-Based Candidate Generation**
+
+基于检索到的参考材料，使用 prompt engineering 生成多个 skill 候选。  
+这里的生成目标不是 task answer，而是：
+
+- 可迁移
+- 程序性
+- 可复用
+- 结构统一
+
+我们希望生成的 skill 更像一段 how-to guidance，而不是一个 task-specific cheat sheet。
+
+**Step 3: Filtering and Normalization**
+
+对候选 skill 做进一步处理：
+
+- 结构合法性检查
+- 与已有 skill 去重
+- 反泄露检测
+- 长度与复杂度归一化
+- 成本标签、领域标签、抽象层级标签补充
+
+**Step 4: Dense Skill Pooling**
+
+将过滤后的候选 skill 组织为 task-level 或 family-level 的 dense skill pool，供后续评测与分析使用。
+
+#### 为什么这个方案更适合本项目
+
+相比训练 skill generator，这套方案有三点优势：
+
+1. **低成本**：无需额外训练，大幅降低时间和 API 开销
+2. **可控性强**：每一步都可检查、可做 ablation、可分析错误来源
+3. **更符合 Datasets & Benchmarks 论文定位**：重点是 benchmark ecology 的扩展，而不是生成模型本身
+
+---
+
+### 2.5 对 SkillsBench v1 局限性的直接回应
 
 | SkillsBench v1 的局限 | 我们的回应 | 论文引用 |
 |----------------------|-----------|---------|
@@ -202,15 +319,16 @@ SkillsBench v1 论文明确承认的不足（引自其 Section 5.1）：
 | "因果归因不足" | SRR 通过与 optimal_steps 比较，部分解耦 "更多上下文" vs "更好程序" | §5.1 |
 | "Only terminal tasks" | 我们的指标框架是 modality-agnostic 的，可扩展到 GUI/多模态 | §5.1 |
 
-### 2.4 与 Related Work 的差异化定位
+### 2.6 与 Related Work 的差异化定位
 
 | 方向 | 代表工作 | 评估什么 | 我们的差异 |
 |------|---------|---------|-----------|
-| Agent 能力评测 | AgentBench, SWE-bench, Terminal-Bench | Agent 裸能力 | 我们评测 **Skill 增强的效率和诊断** |
-| 工具使用评测 | ToolLLM, Toolformer | 工具选择的正确性 | 我们不仅评价"用对了没"还评价"用得划不划算" |
-| 成本优化 | FrugalGPT, RouterBench | 模型路由的成本 | 我们聚焦 **Skill 层面** 的成本，而非模型选择 |
+| Agent 能力评测 | AgentBench, SWE-bench, Terminal-Bench | Agent 裸能力 | 我们评测 **Skill 增强的效率和诊断** ，聚焦 **Skill-augmented agent** 的可分析性|
+| 工具使用评测 | ToolLLM, Toolformer | 工具选择的正确性 | 我们不仅评价"用对了没"还评价"用得划不划算"，同时评估 **代价、迁移、协同和失败模式** |
+| 成本优化 | FrugalGPT, RouterBench | 模型路由的成本 | 我们聚焦 **Skill 层面** 的成本与使用质量，而非模型选择 |
 | 多维评估 | MMLU, BIG-bench | 能力的多维分解 | 我们分解的维度是 **经济性+有效性**，而非知识类别 |
-| SkillsBench v1 | Li et al. 2025 | Skill 是否有用 | 我们评价 Skill **有多有用**、**代价多大**、**为什么失败** |
+| 技能生成 | 各类 prompt/program synthesis 工作 | 如何生成能力模块 | 我们不把 skill generation 当主角，而将其作为 **benchmark densification** 的手段 |
+| SkillsBench v1 | Li et al. 2025 | Skill 是否有用 | 我们评价 Skill **有多有用**、**代价多大**、**为什么失败** ，研究 **benchmark 中 skill pool 稀疏性问题**，并进一步分析 **好 skill 的结构特征**|
 
 ---
 
@@ -246,31 +364,55 @@ Key Results:
    (2) 冗余性：平均 38% 的步骤是冗余的
    (3) 诊断：60% 的失败是 Bad Combination 而非 Missing Skill
    (4) 协同：2-3 个 Skill 组合产生正向协同，4+ 个开始冲突
-   (5) 迁移：通用 Skill (xlsx, pdf) 的 CTT > 0.8, 领域 Skill < 0.5"
+   (5) 迁移：通用 Skill (xlsx, pdf) 的 CTT > 0.8, 领域 Skill < 0.5
+   (6) 原 benchmark 中大量 task 的 skill 候选空间过小
+   (7) dense skill pools 使得 SCS / CTT / FMS 的分析更稳定、更有解释力
+   (8) 高质量 skill 往往更简洁、更抽象、更易迁移
+   (9) 高效 skill 组合通常来自互补而非冗余的 procedural guidance"
 
 Impact:
-  "这套框架让 Skill 的评估从 '有没有用' 进化到 '怎么用最好'，
-   为 Skill 选择、编排和优化提供数据驱动的决策支持。"
+  "这套框架让 Skill 的评估从 '有没有用' 进化到 '怎么用最好'，以及如何比较、筛选与分析 skill。
+   为 Skill 选择、编排和优化提供数据驱动的决策支持。为后续 benchmark 设计、skill 库维护和 skill 推荐系统提供依据。"
 ```
 
 ### 3.3 核心实验设计
+#### 实验 1：Dense Skill Pool Construction （对应论文 Section 4.1）
 
-#### 实验 1：经济性分析（对应论文 Section 4.1）
+**目标：** 构建可比较、可分析的 candidate skill pools
+
+|对比维度|方法|
+|---------|------|
+|Retrieval 来源|原始 skills / 相似任务 / 通用 procedural pattern|
+|Prompt 生成策略|对同一 task family 生成多个候选 skill|
+|Filtering 机制|去重、格式检查、反泄露检查、长度与成本标注|
+
+预期发现：
+- retrieval + prompt engineering 能以较低成本扩展 task-level skill 候选空间
+- dense pool 比原始 curated skill 集更适合支持比较分析
+- 训练专门的 skill generator，也能获得足够丰富的候选集
+
+#### 实验 2：Economy + Effectiveness Analysis on Dense Pools 经济性分析（对应论文 Section 4.2）
 
 **目标：** 证明 Pass Rate 不足以评价 Skill 效果
 
 | 对比维度 | 方法 |
 |---------|------|
-| 同任务不同 Agent | 在每个任务上对比 7 种 Agent-Model 配置的 TE/SRR/SUC |
-| 同 Agent 不同 Skill 条件 | 对比 No Skill / Curated / Self-Gen 三个条件下的经济性 |
+| Economy               | 计算 TE / SRR / SUC，比较 skill 的成本与效率          |
+| Effectiveness         | 计算 SCS / CTT / FMS，分析协同、迁移与失败模式            |
+| 同 Agent 不同 Skill 条件 | 对比不同条件下的经济性 |
 | 成本-效果 Pareto 前沿 | 用 TE 和 SUC 构建成本-效果 Pareto 图（升级 SkillsBench Figure 4） |
+| Skill characteristics | 比较高质量 skill 与低质量 skill 的长度、抽象层级、结构组织、领域专属性 |
 
 预期发现：
 - 通过率相同的 Agent，TE 可以相差 5-10x
 - Self-Generated Skills 虽然通过率低，但步骤冗余率更高（Agent "摸索"式执行）
 - 存在"Sweet Spot"：最优成本效益点不一定是最高通过率
+- 高 TE skill 更简洁、更少冗余步骤
+- 高 CTT skill 更抽象、更少 task-specific 表达
+- 正向 SCS 组合通常由互补型而非重复型 skill 构成
+- FMS 可帮助区分“应补 skill”与“应改编排”的失败
 
-#### 实验 2：有效性诊断（对应论文 Section 4.2）
+#### 实验 3：有效性诊断（对应论文 Section 4.3）
 
 **目标：** 证明 FMS 诊断对 Skill 改进有实际指导价值
 
@@ -285,7 +427,7 @@ Impact:
 - 医疗/制造领域：失败主要是 Missing Skill（缺少关键领域知识）
 - FMS 诊断可以直接指导 Skill 改进方向
 
-#### 实验 3：Skill 组合与迁移分析（对应论文 Section 4.3）
+#### 实验 4：Skill 组合与迁移分析（对应论文 Section 4.4）
 
 **目标：** 证明 SCS 和 CTT 提供了 SkillsBench v1 完全缺失的视角
 
@@ -308,6 +450,8 @@ NeurIPS Datasets and Benchmarks Track 的审稿标准对照：
 |-------------|-------------|
 | **Novelty of the dataset/benchmark** | 首个将经济性和有效性维度引入 Skill 评测的框架 |
 | **Usefulness** | 6 个指标均可直接用于 Agent 开发者优化 Skill 策略 |
+|提出并量化诊断 benchmark 中的 skill sparsity 问题|提出 retrieval-augmented skill pool construction，用低成本方式扩展 task-level candidate skill spaces
+|**evaluation**|在 dense skill pools 上系统评估 economy + effectiveness 指标
 | **Quality and rigor** | 基于 SkillsBench 的 84 个任务 + 7,308 轨迹，统计检验充分 |
 | **Clarity of documentation** | 完整的代码库 + 数学定义 + 可复现的 dry-run pipeline |
 | **Broader impact** | 推动 Skill 评测从 "有没有用" 到 "怎么用最好"，降低 Agent 部署成本 |
