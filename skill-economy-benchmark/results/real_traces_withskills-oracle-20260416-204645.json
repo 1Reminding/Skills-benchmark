@@ -1,0 +1,37 @@
+{
+  "traces": [
+    {
+      "task_id": "earthquake-plate-calculation",
+      "agent_name": "oracle",
+      "start_time": "2026-04-16T20:51:00.239520",
+      "end_time": "2026-04-16T20:51:00.262150",
+      "total_tokens": 0,
+      "steps_taken": 0,
+      "skill_calls": [],
+      "task_success": false,
+      "failure_reason": "[Errno 2] No such file or directory: 'docker'"
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "agent_name": "oracle",
+      "start_time": "2026-04-16T20:51:01.428075",
+      "end_time": "2026-04-16T20:51:01.479334",
+      "total_tokens": 0,
+      "steps_taken": 0,
+      "skill_calls": [],
+      "task_success": false,
+      "failure_reason": "[Errno 2] No such file or directory: 'docker'"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "agent_name": "oracle",
+      "start_time": "2026-04-16T20:50:59.099879",
+      "end_time": "2026-04-16T20:50:59.122076",
+      "total_tokens": 0,
+      "steps_taken": 0,
+      "skill_calls": [],
+      "task_success": false,
+      "failure_reason": "[Errno 2] No such file or directory: 'docker'"
+    }
+  ]
+}

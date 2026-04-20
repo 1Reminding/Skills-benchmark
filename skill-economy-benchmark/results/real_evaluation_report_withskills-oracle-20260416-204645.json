@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-04-16T20:51:04.199954",
+  "summary": {
+    "total_tasks": 3,
+    "successful_tasks": 0,
+    "success_rate": 0.0,
+    "failure_mode_distribution": {
+      "missing_skill": 3
+    }
+  },
+  "aggregated_metrics": {
+    "mean_token_efficiency": 0.0,
+    "mean_step_redundancy": 0.0,
+    "mean_skill_utilization_cost": 0.0,
+    "mean_skill_combination_synergy": 0.0,
+    "mean_cross_task_transferability": 0.0,
+    "mean_failure_mode_specificity": 0.0
+  },
+  "task_results": [
+    {
+      "task_id": "earthquake-plate-calculation",
+      "agent_name": "oracle",
+      "task_success": false,
+      "failure_reason": "[Errno 2] No such file or directory: 'docker'",
+      "failure_mode": "missing_skill",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 0.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 0.0,
+        "failure_mode_specificity": 0.0
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "agent_name": "oracle",
+      "task_success": false,
+      "failure_reason": "[Errno 2] No such file or directory: 'docker'",
+      "failure_mode": "missing_skill",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 0.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 0.0,
+        "failure_mode_specificity": 0.0
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "agent_name": "oracle",
+      "task_success": false,
+      "failure_reason": "[Errno 2] No such file or directory: 'docker'",
+      "failure_mode": "missing_skill",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 0.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 0.0,
+        "failure_mode_specificity": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "skills": [
+    {
+      "skill_id": "xlsx_basic_ops",
+      "source_type": "registry",
+      "family": ["spreadsheet_analytics"],
+      "artifacts": ["xlsx", "csv"],
+      "operations": ["extract", "aggregate", "validate"],
+      "tools": ["spreadsheet", "python"],
+      "granularity": "atomic",
+      "domain_specificity": "low",
+      "summary": "Read spreadsheets, inspect sheets/columns, compute aggregates, and validate outputs.",
+      "tags": ["spreadsheet", "xlsx", "aggregation"],
+      "metadata": {
+        "notes": "Fill with a short description of what this skill does."
+      }
+    },
+    {
+      "skill_id": "pdf_table_extraction",
+      "source_type": "registry",
+      "family": ["document_extraction"],
+      "artifacts": ["pdf"],
+      "operations": ["extract", "transform"],
+      "tools": ["pdf", "python"],
+      "granularity": "atomic",
+      "domain_specificity": "low",
+      "summary": "Extract tables or structured fields from PDFs and normalize them into machine-readable form.",
+      "tags": ["pdf", "extraction"],
+      "metadata": {}
+    }
+  ]
+}

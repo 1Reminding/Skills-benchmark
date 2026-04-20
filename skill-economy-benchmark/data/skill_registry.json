@@ -1,0 +1,256 @@
+{
+  "generated_at": "2026-04-20T11:08:06.224848",
+  "source_type": "scanned_from_dataset",
+  "summary": {
+    "n_registry_entries": 7,
+    "n_raw_skill_occurrences": 8,
+    "n_tasks_covered": 4
+  },
+  "skills": [
+    {
+      "skill_id": "analyze-ci",
+      "source_type": "scanned_from_dataset",
+      "source_tasks": [
+        "fix-build-agentops"
+      ],
+      "source_paths": [
+        "dataset/fix-build-agentops/environment/skills/analyze-ci"
+      ],
+      "aliases": [
+        "analyze-ci"
+      ],
+      "family": [
+        "debugging_ci_repair"
+      ],
+      "artifacts": [],
+      "operations": [
+        "analyze",
+        "debug"
+      ],
+      "tools": [
+        "ci",
+        "testing"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "medium",
+      "summary": "This skill analyzes logs from failed GitHub Action jobs using Claude.",
+      "confidence": 0.85,
+      "text_sha1s": [
+        "2675ec3c76e98942934622e44ae8e82288aeeb5a"
+      ],
+      "occurrences": 1,
+      "notes": []
+    },
+    {
+      "skill_id": "geospatial-analysis",
+      "source_type": "scanned_from_dataset",
+      "source_tasks": [
+        "earthquake-plate-calculation"
+      ],
+      "source_paths": [
+        "dataset/earthquake-plate-calculation/environment/skills/geospatial-analysis"
+      ],
+      "aliases": [
+        "geospatial-analysis"
+      ],
+      "family": [
+        "geospatial_analysis"
+      ],
+      "artifacts": [],
+      "operations": [
+        "analyze"
+      ],
+      "tools": [
+        "geospatial"
+      ],
+      "granularity": "generic",
+      "domain_specificity": "high",
+      "summary": "When working with geographic data (earthquakes, plate boundaries, etc.), using geopandas with proper coordinate projections provides accurate distance calculations and efficient spatial operations. This guide covers best practices for geospatial analysis.",
+      "confidence": 0.9,
+      "text_sha1s": [
+        "8b4004cb7e099fbeb6af5ad046929e010e93334b"
+      ],
+      "occurrences": 1,
+      "notes": []
+    },
+    {
+      "skill_id": "pdf",
+      "source_type": "scanned_from_dataset",
+      "source_tasks": [
+        "sales-pivot-analysis"
+      ],
+      "source_paths": [
+        "dataset/sales-pivot-analysis/environment/skills/pdf"
+      ],
+      "aliases": [
+        "pdf"
+      ],
+      "family": [
+        "document_extraction"
+      ],
+      "artifacts": [
+        "pdf"
+      ],
+      "operations": [
+        "extract",
+        "transform"
+      ],
+      "tools": [
+        "pdf",
+        "python"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "low",
+      "summary": "**The Read tool cannot properly extract tabular data from PDFs.** It will only show you a limited preview of the first page's text content, missing most of the data.",
+      "confidence": 0.95,
+      "text_sha1s": [
+        "d9f2352ab8c0579c3ef2b6389dacd07f5fe1b3d0"
+      ],
+      "occurrences": 1,
+      "notes": []
+    },
+    {
+      "skill_id": "temporal-python-testing",
+      "source_type": "scanned_from_dataset",
+      "source_tasks": [
+        "fix-build-agentops"
+      ],
+      "source_paths": [
+        "dataset/fix-build-agentops/environment/skills/temporal-python-testing"
+      ],
+      "aliases": [
+        "temporal-python-testing"
+      ],
+      "family": [
+        "debugging_ci_repair"
+      ],
+      "artifacts": [],
+      "operations": [
+        "verify"
+      ],
+      "tools": [
+        "python",
+        "testing"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "low",
+      "summary": "Comprehensive testing approaches for Temporal workflows using pytest, progressive disclosure resources for specific testing scenarios.",
+      "confidence": 0.9,
+      "text_sha1s": [
+        "c333527a1cdadbffa0b281f4f648ed8c9aa20eda"
+      ],
+      "occurrences": 1,
+      "notes": []
+    },
+    {
+      "skill_id": "testing-python",
+      "source_type": "scanned_from_dataset",
+      "source_tasks": [
+        "fix-build-agentops"
+      ],
+      "source_paths": [
+        "dataset/fix-build-agentops/environment/skills/testing-python"
+      ],
+      "aliases": [
+        "testing-python"
+      ],
+      "family": [
+        "debugging_ci_repair"
+      ],
+      "artifacts": [
+        "json"
+      ],
+      "operations": [
+        "debug"
+      ],
+      "tools": [
+        "python",
+        "testing"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "low",
+      "summary": "Every test should be **atomic**, **self-contained**, and test **single functionality**. A test that tests multiple things is harder to debug and maintain.",
+      "confidence": 0.95,
+      "text_sha1s": [
+        "d687edaf8b7af910cdf61e4fe13906c972f04c04"
+      ],
+      "occurrences": 1,
+      "notes": []
+    },
+    {
+      "skill_id": "uv-package-manager",
+      "source_type": "scanned_from_dataset",
+      "source_tasks": [
+        "fix-build-agentops"
+      ],
+      "source_paths": [
+        "dataset/fix-build-agentops/environment/skills/uv-package-manager"
+      ],
+      "aliases": [
+        "uv-package-manager"
+      ],
+      "family": [
+        "debugging_ci_repair"
+      ],
+      "artifacts": [],
+      "operations": [
+        "verify"
+      ],
+      "tools": [
+        "ci",
+        "python"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "medium",
+      "summary": "Comprehensive guide to using uv, an extremely fast Python package installer and resolver written in Rust, for modern Python project management and dependency workflows.",
+      "confidence": 0.9,
+      "text_sha1s": [
+        "e8214e27a3d3acb89c8803edbfe70e1cd197ba9f"
+      ],
+      "occurrences": 1,
+      "notes": []
+    },
+    {
+      "skill_id": "xlsx",
+      "source_type": "scanned_from_dataset",
+      "source_tasks": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "source_paths": [
+        "dataset/sales-pivot-analysis/environment/skills/xlsx",
+        "dataset/weighted-gdp-calc/environment/skills/xlsx"
+      ],
+      "aliases": [
+        "xlsx"
+      ],
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "json",
+        "xlsx"
+      ],
+      "operations": [
+        "analyze",
+        "extract"
+      ],
+      "tools": [
+        "python",
+        "shell",
+        "spreadsheet",
+        "testing"
+      ],
+      "granularity": "generic",
+      "domain_specificity": "low",
+      "summary": "This skill covers working with Excel files using Python libraries: **openpyxl** for Excel-specific features (formatting, formulas, pivot tables) and **pandas** for data analysis.",
+      "confidence": 0.95,
+      "text_sha1s": [
+        "a244676cfa1b248dcaa0156205979ba27a052177",
+        "cab575a1850c36b81dfefd4de61ced03273491a6"
+      ],
+      "occurrences": 2,
+      "notes": []
+    }
+  ]
+}

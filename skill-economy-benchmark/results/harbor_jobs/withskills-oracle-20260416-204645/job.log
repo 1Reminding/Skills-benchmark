@@ -1,0 +1,18 @@
+Trial weighted-gdp-calc__4ERYHdd failed: [Errno 2] No such file or directory: 'docker'
+Warning: Environment cleanup failed for weighted-gdp-calc__4ERYHdd: [Errno 2] No such file or directory: 'docker'
+Trial weighted-gdp-calc__4ERYHdd failed with exception FileNotFoundError. Retrying in 1.00 seconds...
+Trial weighted-gdp-calc__4ERYHdd failed: [Errno 2] No such file or directory: 'docker'
+Warning: Environment cleanup failed for weighted-gdp-calc__4ERYHdd: [Errno 2] No such file or directory: 'docker'
+Not retrying trial because the maximum number of retries has been reached
+Trial earthquake-plate-calculation__gn5ZuiP failed: [Errno 2] No such file or directory: 'docker'
+Warning: Environment cleanup failed for earthquake-plate-calculation__gn5ZuiP: [Errno 2] No such file or directory: 'docker'
+Trial earthquake-plate-calculation__gn5ZuiP failed with exception FileNotFoundError. Retrying in 1.00 seconds...
+Trial earthquake-plate-calculation__gn5ZuiP failed: [Errno 2] No such file or directory: 'docker'
+Warning: Environment cleanup failed for earthquake-plate-calculation__gn5ZuiP: [Errno 2] No such file or directory: 'docker'
+Not retrying trial because the maximum number of retries has been reached
+Trial sales-pivot-analysis__ru7iRV9 failed: [Errno 2] No such file or directory: 'docker'
+Warning: Environment cleanup failed for sales-pivot-analysis__ru7iRV9: [Errno 2] No such file or directory: 'docker'
+Trial sales-pivot-analysis__ru7iRV9 failed with exception FileNotFoundError. Retrying in 1.00 seconds...
+Trial sales-pivot-analysis__ru7iRV9 failed: [Errno 2] No such file or directory: 'docker'
+Warning: Environment cleanup failed for sales-pivot-analysis__ru7iRV9: [Errno 2] No such file or directory: 'docker'
+Not retrying trial because the maximum number of retries has been reached

@@ -12,6 +12,7 @@
 - [指标数学定义与伪代码](docs/metrics_definition.md) -- 6 个指标的公式和实现逻辑
 - [研究提案](docs/research_proposal.md) -- 研究概述
 - [Skill Pool 构建协议](docs/skill_pool_protocol.md) -- 说明 retrieval + prompt engineering 的候选 skill 构建、过滤、去重与反泄露流程
+- [实验任务协议](docs/experiment_protocol.md) -- 说明 skill pool 构建完成后需要运行的实验配置、对照组、重复次数与主实验模板
 
 ## 目录
 
@@ -377,9 +378,10 @@ skill-economy-benchmark/
 │   ├── 01_setup_project.py          # 项目结构验证
 │   ├── 02_generate_sample_data.py   # 生成示例数据
 │   ├── 03_run_dry_evaluation.py     # 运行评估 (--sample / --dataset)
-│   └── 04_visualize_results.py      # 生成可视化图表
-│   ├── 05_build_skill_pool.py        # 新增：构建 skill pool
-│   └── 06_run_pool_analysis.py       # 新增：在 pool 上运行分析
+│   ├── 04_visualize_results.py      # 生成可视化图表
+│   ├── 05_run_real_evaluation.py    # 真实 Harbor 任务运行 + 轨迹评估
+│   ├── 06_compare_with_without_skills.py # with-skills vs no-skills 对照
+│   └── 07_build_skill_pool_retrieval.py  # retrieval-only skill pool 构建
 ├── tests/                           # 测试
 │   ├── test_metrics.py              # 指标单元测试（16 个）
 │   └── test_end_to_end.py           # 端到端测试（5 个）
@@ -437,6 +439,40 @@ python scripts/03_run_dry_evaluation.py --dataset
 # 生成对应的可视化
 python scripts/04_visualize_results.py --dataset
 ```
+
+### 运行真实 Harbor 实验（with-skills vs no-skills）
+
+```bash
+# 需要 Docker（SkillsBench 的 environment.type=docker）
+docker --version
+
+# 运行真实对照实验（可通过 --task-ids 先小规模测试）
+python scripts/06_compare_with_without_skills.py \
+  --skillsbench-root /local-data/xingqinghua/skillsbench \
+  --task-ids weighted-gdp-calc,sales-pivot-analysis,earthquake-plate-calculation \
+  --agent oracle \
+  --attempts 1
+```
+
+注意事项：
+- 如果终端出现 `No such file or directory: 'docker'` 或 `Docker is not installed`，说明任务环境未真正启动，结果为基础设施失败，不是指标本身为 0。
+- `scripts/05_run_real_evaluation.py` 现在会在运行前检查 Docker；如果所有 trace 都是 infra error，会直接报错退出，避免生成误导性的“全 0”评估报告。
+- 仅在已有有效 Harbor 产物时才使用 `--skip-run` 做离线解析。
+
+### 先做 Skill Pool Retrieval（不依赖 Docker / 不依赖 API）
+
+```bash
+# 小规模先跑 2-3 个 task（推荐先做这步）
+python scripts/07_build_skill_pool_retrieval.py \
+  --task-ids sales-pivot-analysis,weighted-gdp-calc,earthquake-plate-calculation \
+  --top-k-cross 8 \
+  --top-k-external 20
+```
+
+输出目录：
+- `skill_pool/raw_retrieved/<task_id>.json`：三路召回结果（orig/cross/external）
+- `skill_pool/task_pools/<task_id>.json`：合并后的 task-level candidate pool
+- `skill_pool/metadata.json`：本次运行清单
 
 ---
 

@@ -1,0 +1,29 @@
+{
+    "id": "473ad6e0-bdf0-41d2-9334-5cc351efd467",
+    "started_at": "2026-04-16T20:51:23.462981",
+    "finished_at": "2026-04-16T20:51:27.313982",
+    "n_total_trials": 3,
+    "stats": {
+        "n_trials": 3,
+        "n_errors": 3,
+        "evals": {
+            "oracle__tasks-no-skills": {
+                "n_trials": 0,
+                "n_errors": 3,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {},
+                "exception_stats": {
+                    "FileNotFoundError": [
+                        "weighted-gdp-calc__wUUCxdQ",
+                        "earthquake-plate-calculation__Lw9KkTM",
+                        "sales-pivot-analysis__XvZQmUY"
+                    ]
+                }
+            }
+        }
+    }
+}
