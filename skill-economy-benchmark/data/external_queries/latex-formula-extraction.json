@@ -1,0 +1,294 @@
+{
+  "task_id": "latex-formula-extraction",
+  "generated_at": "2026-04-21T11:54:14.478219",
+  "schema": {
+    "task_id": "latex-formula-extraction",
+    "family": "document_extraction",
+    "domain": "document-processing",
+    "artifacts": [
+      "pdf"
+    ],
+    "operations": [
+      "extract",
+      "transform",
+      "verify"
+    ],
+    "tools": [
+      "pdf",
+      "python"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "extraction",
+      "latex",
+      "pdf"
+    ],
+    "family_candidates": [
+      "document_extraction"
+    ],
+    "original_curated_skills": [
+      "marker",
+      "pdf"
+    ]
+  },
+  "internal_pool_skills": [],
+  "source_policy": {
+    "allowed_domains": [
+      "github.com",
+      "pdfplumber.readthedocs.io",
+      "pymupdf.readthedocs.io",
+      "readthedocs.io"
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "latex-formula-extraction::family_core::01",
+      "text": "pdf table extraction python workflow",
+      "query_type": "family_core",
+      "priority": 1.03,
+      "rationale": "family-level reusable workflow query",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "document_extraction"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::family_core::02",
+      "text": "document to structured data extraction",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "document_extraction"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::skill_neighbor::03",
+      "text": "pdf table extraction python",
+      "query_type": "skill_neighbor",
+      "priority": 1.0,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "pdf"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::family_specific::04",
+      "text": "pdf parsing best practices python",
+      "query_type": "family_specific",
+      "priority": 0.98,
+      "rationale": "family-level reusable workflow query",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "document_extraction"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::skill_neighbor::05",
+      "text": "document extraction structured output",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "pdf"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::artifact_operation::06",
+      "text": "document pdfplumber workflow",
+      "query_type": "artifact_operation",
+      "priority": 0.96,
+      "rationale": "artifact + tool query derived from task schema",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "artifact": "document",
+        "tool": "pdfplumber"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::artifact_operation::07",
+      "text": "document pymupdf workflow",
+      "query_type": "artifact_operation",
+      "priority": 0.96,
+      "rationale": "artifact + tool query derived from task schema",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "artifact": "document",
+        "tool": "pymupdf"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::artifact_operation::08",
+      "text": "pdf extraction workflow python",
+      "query_type": "artifact_operation",
+      "priority": 0.96,
+      "rationale": "artifact + operation query derived from task schema",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "artifact": "pdf",
+        "operation": "extract"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::artifact_operation::09",
+      "text": "pdf normalization workflow python",
+      "query_type": "artifact_operation",
+      "priority": 0.96,
+      "rationale": "artifact + operation query derived from task schema",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "artifact": "pdf",
+        "operation": "transform"
+      }
+    },
+    {
+      "query_id": "latex-formula-extraction::artifact_operation::10",
+      "text": "pdf output checking python",
+      "query_type": "artifact_operation",
+      "priority": 0.96,
+      "rationale": "artifact + operation query derived from task schema",
+      "family": "document_extraction",
+      "suggested_domains": [
+        "github.com",
+        "pdfplumber.readthedocs.io",
+        "pymupdf.readthedocs.io",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "artifact": "pdf",
+        "operation": "verify"
+      }
+    }
+  ],
+  "summary": {
+    "n_queries": 10,
+    "family": "document_extraction",
+    "artifacts": [
+      "pdf"
+    ],
+    "tools": [
+      "pdf",
+      "python"
+    ]
+  }
+}

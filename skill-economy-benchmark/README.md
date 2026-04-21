@@ -381,7 +381,8 @@ skill-economy-benchmark/
 │   ├── 04_visualize_results.py      # 生成可视化图表
 │   ├── 05_run_real_evaluation.py    # 真实 Harbor 任务运行 + 轨迹评估
 │   ├── 06_compare_with_without_skills.py # with-skills vs no-skills 对照
-│   └── 07_build_skill_pool_retrieval.py  # retrieval-only skill pool 构建
+│   ├── 07_build_skill_pool_retrieval_v2.py  # retrieval-only skill pool 构建（稳定版）
+│   └── 08_prepare_external_skills_catalog.py # 外部 skill 清单标准化（含 URL/license）
 ├── tests/                           # 测试
 │   ├── test_metrics.py              # 指标单元测试（16 个）
 │   └── test_end_to_end.py           # 端到端测试（5 个）
@@ -463,16 +464,52 @@ python scripts/06_compare_with_without_skills.py \
 
 ```bash
 # 小规模先跑 2-3 个 task（推荐先做这步）
-python scripts/07_build_skill_pool_retrieval.py \
+python scripts/07_build_skill_pool_retrieval_v2.py \
   --task-ids sales-pivot-analysis,weighted-gdp-calc,earthquake-plate-calculation \
-  --top-k-cross 8 \
-  --top-k-external 20
+  --max-pool-size 10 \
+  --max-generic 1 \
+  --max-cross 1 \
+  --max-external 0
 ```
 
 输出目录：
 - `skill_pool/raw_retrieved/<task_id>.json`：三路召回结果（orig/cross/external）
 - `skill_pool/task_pools/<task_id>.json`：合并后的 task-level candidate pool
 - `skill_pool/metadata.json`：本次运行清单
+
+### 外部清单准备（URL/license 可追溯）
+
+```bash
+# 从 docs/skills-research/official_skills.json 生成标准化 external skills 清单
+python scripts/08_prepare_external_skills_catalog.py \
+  --source-file docs/skills-research/official_skills.json \
+  --output-file data/external_skills.json
+
+# 实时外部拉取（GitHub API，推荐）
+# 可选：export GITHUB_TOKEN=...
+python scripts/08_prepare_external_skills_catalog.py \
+  --live-fetch \
+  --task-ids sales-pivot-analysis,weighted-gdp-calc,fix-build-agentops,earthquake-plate-calculation \
+  --max-skills 40 \
+  --output-file data/external_skills.json
+
+# 小规模开启 external 候选
+python scripts/07_build_skill_pool_retrieval_v2.py \
+  --task-ids sales-pivot-analysis,weighted-gdp-calc \
+  --external-skills data/external_skills.json \
+  --max-generic 1 \
+  --max-cross 1 \
+  --max-external 2
+```
+
+`data/external_skills.json` 每条候选建议包含：
+- `metadata.source_url`：原始来源链接
+- `metadata.license_note`：许可证说明（或待确认）
+- `family / artifacts / operations / tools / granularity / domain_specificity`：用于可解释检索
+
+说明：
+- `--live-fetch` 会优先从 GitHub 实时拉取 skills（默认仓库：`anthropics/skills`、`openai/skills`），若拉取失败会回退到本地 `--source-file`。
+- 可用 `--save-live-snapshot` 将本次实时拉取内容写回本地快照，便于复现。
 
 ---
 

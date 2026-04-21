@@ -1,0 +1,42 @@
+Trial weighted-gdp-calc__GyUy3Pe failed: Docker compose command failed for environment weighted-gdp-calc. Command: docker compose -p weighted-gdp-calc__gyuy3pe -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__weighted-gdp-calc Building 
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+
+. Stderr: None. 
+Docker compose down failed: Docker compose command failed for environment weighted-gdp-calc. Command: docker compose -p weighted-gdp-calc__gyuy3pe -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml down --rmi all --volumes --remove-orphans. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+. Stderr: None. 
+Trial weighted-gdp-calc__GyUy3Pe failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial weighted-gdp-calc__GyUy3Pe failed: Docker compose command failed for environment weighted-gdp-calc. Command: docker compose -p weighted-gdp-calc__gyuy3pe -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__weighted-gdp-calc Building 
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+
+. Stderr: None. 
+Docker compose down failed: Docker compose command failed for environment weighted-gdp-calc. Command: docker compose -p weighted-gdp-calc__gyuy3pe -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml down --rmi all --volumes --remove-orphans. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial earthquake-plate-calculation__TZ8czpt failed: Docker compose command failed for environment earthquake-plate-calculation. Command: docker compose -p earthquake-plate-calculation__tz8czpt -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__earthquake-plate-calculation Building 
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+
+. Stderr: None. 
+Docker compose down failed: Docker compose command failed for environment earthquake-plate-calculation. Command: docker compose -p earthquake-plate-calculation__tz8czpt -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml down --rmi all --volumes --remove-orphans. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+. Stderr: None. 
+Trial earthquake-plate-calculation__TZ8czpt failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial earthquake-plate-calculation__TZ8czpt failed: Docker compose command failed for environment earthquake-plate-calculation. Command: docker compose -p earthquake-plate-calculation__tz8czpt -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__earthquake-plate-calculation Building 
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+
+. Stderr: None. 
+Docker compose down failed: Docker compose command failed for environment earthquake-plate-calculation. Command: docker compose -p earthquake-plate-calculation__tz8czpt -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml down --rmi all --volumes --remove-orphans. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial sales-pivot-analysis__AKuae5B failed: Docker compose command failed for environment sales-pivot-analysis. Command: docker compose -p sales-pivot-analysis__akuae5b -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__sales-pivot-analysis Building 
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+
+. Stderr: None. 
+Docker compose down failed: Docker compose command failed for environment sales-pivot-analysis. Command: docker compose -p sales-pivot-analysis__akuae5b -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml down --rmi all --volumes --remove-orphans. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+. Stderr: None. 
+Trial sales-pivot-analysis__AKuae5B failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial sales-pivot-analysis__AKuae5B failed: Docker compose command failed for environment sales-pivot-analysis. Command: docker compose -p sales-pivot-analysis__akuae5b -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__sales-pivot-analysis Building 
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+
+. Stderr: None. 
+Docker compose down failed: Docker compose command failed for environment sales-pivot-analysis. Command: docker compose -p sales-pivot-analysis__akuae5b -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml down --rmi all --volumes --remove-orphans. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached

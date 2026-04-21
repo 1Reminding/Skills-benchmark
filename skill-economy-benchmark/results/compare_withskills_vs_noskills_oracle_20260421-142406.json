@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "generated_at": "2026-04-21T14:24:06.604693",
+    "withskills_job": "withskills-oracle-20260421-142304",
+    "noskills_job": "noskills-oracle-20260421-142343",
+    "protocol": "withskills_vs_noskills_only"
+  },
+  "success": {
+    "withskills_success_rate": 0.0,
+    "noskills_success_rate": 0.0,
+    "delta_with_minus_no": 0.0,
+    "withskills_total_tasks": 3,
+    "noskills_total_tasks": 3
+  },
+  "metrics": {
+    "token_efficiency": {
+      "withskills": 0.0,
+      "noskills": 0.0,
+      "delta_with_minus_no": 0.0
+    },
+    "step_redundancy": {
+      "withskills": 0.0,
+      "noskills": 0.0,
+      "delta_with_minus_no": 0.0
+    },
+    "skill_utilization_cost": {
+      "withskills": 0.0,
+      "noskills": 0.0,
+      "delta_with_minus_no": 0.0
+    },
+    "skill_combination_synergy": {
+      "withskills": 0.0,
+      "noskills": 0.0,
+      "delta_with_minus_no": 0.0
+    },
+    "cross_task_transferability": {
+      "withskills": 0.0,
+      "noskills": 0.0,
+      "delta_with_minus_no": 0.0
+    },
+    "failure_mode_specificity": {
+      "withskills": 0.0,
+      "noskills": 0.0,
+      "delta_with_minus_no": 0.0
+    }
+  },
+  "failure_modes": {
+    "withskills": {
+      "missing_skill": 3
+    },
+    "noskills": {
+      "missing_skill": 3
+    }
+  }
+}

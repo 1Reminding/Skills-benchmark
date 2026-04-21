@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 """Build capability-aware retrieval candidate skill pools for selected tasks.
 
-This script is a retrieval MVP aligned with the current project plan:
-1) build a task capability schema
-2) load a structured skill registry
-3) retrieve multi-source candidates with rule-based scoring
-4) write raw retrieval results and a provisional balanced task-level pool
-
-It intentionally does NOT call any generation API.
-Generation / rewrite / leakage filtering should happen in later scripts.
+Tightened version:
+- downweights/ignores weak artifacts (json/text/markdown/python)
+- adds hard gates for cross/generic candidate admission
+- prevents balanced pool from filling with low-quality cross candidates
+- keeps only a small number of generic and cross candidates unless strongly matched
 """
 
 from __future__ import annotations
@@ -45,6 +42,10 @@ ARTIFACT_EXTENSIONS = {
     ".html": "html",
     ".tex": "latex",
 }
+
+WEAK_ARTIFACTS = {"json", "text", "markdown", "python"}
+MIN_SCORE_BY_BUCKET = {"orig": 0.0, "generic": 4.0, "cross": 5.0, "external": 5.5}
+DEFAULT_MAX_PER_BUCKET = {"orig": 99, "generic": 2, "cross": 1, "external": 0}
 
 TAG_TO_FAMILY = {
     "excel": "spreadsheet_analytics",
@@ -85,6 +86,14 @@ FAMILY_DEFAULT_TOOLS = {
     "geospatial_analysis": {"python", "geospatial"},
     "data_analytics": {"python"},
     "general_problem_solving": {"shell"},
+}
+FAMILY_PRIORITY = {
+    "spreadsheet_analytics": 0,
+    "document_extraction": 1,
+    "debugging_ci_repair": 2,
+    "geospatial_analysis": 3,
+    "data_analytics": 4,
+    "general_problem_solving": 9,
 }
 
 GENERIC_SKILL_HINTS = {
@@ -134,10 +143,8 @@ def _normalize_token(token: str) -> str:
     return token
 
 
-
 def _tokenize(text: str) -> set[str]:
     return {_normalize_token(t) for t in TOKEN_RE.findall((text or "").lower()) if len(t) >= 2}
-
 
 
 def _read_json(path: Path) -> Any:
@@ -145,11 +152,9 @@ def _read_json(path: Path) -> Any:
         return json.load(f)
 
 
-
 def _write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
-
 
 
 def _safe_list_str(value: Any) -> list[str]:
@@ -158,7 +163,6 @@ def _safe_list_str(value: Any) -> list[str]:
     if isinstance(value, list):
         return sorted({str(v).strip() for v in value if str(v).strip()})
     return [str(value).strip()] if str(value).strip() else []
-
 
 
 def _detect_artifacts(task_dir: Path) -> list[str]:
@@ -177,23 +181,28 @@ def _detect_artifacts(task_dir: Path) -> list[str]:
     return sorted(found)
 
 
-
-def _infer_family(domain: str, tags: list[str], artifacts: list[str]) -> str:
+def _rank_task_families(domain: str, tags: list[str], artifacts: list[str]) -> list[str]:
+    votes: dict[str, float] = {}
     tags_s = {_normalize_token(t) for t in tags}
-    for t in tags_s:
-        if t in TAG_TO_FAMILY:
-            return TAG_TO_FAMILY[t]
-    if "xlsx" in artifacts or "csv" in artifacts:
-        return "spreadsheet_analytics"
-    if "pdf" in artifacts or "latex" in artifacts:
-        return "document_extraction"
+    artifacts_s = set(artifacts)
     d = domain.lower()
-    if "software" in d or "engineering" in d:
-        return "debugging_ci_repair"
-    if "science" in d and ("json" in artifacts or "csv" in artifacts):
-        return "data_analytics"
-    return "general_problem_solving"
 
+    for tag in tags_s:
+        fam = TAG_TO_FAMILY.get(tag)
+        if fam:
+            votes[fam] = votes.get(fam, 0.0) + 3.0
+    if "xlsx" in artifacts_s or "csv" in artifacts_s:
+        votes["spreadsheet_analytics"] = votes.get("spreadsheet_analytics", 0.0) + 2.0
+    if "pdf" in artifacts_s or "latex" in artifacts_s:
+        votes["document_extraction"] = votes.get("document_extraction", 0.0) + 2.0
+    if "software" in d or "engineering" in d:
+        votes["debugging_ci_repair"] = votes.get("debugging_ci_repair", 0.0) + 2.0
+    if "science" in d and ("json" in artifacts_s or "csv" in artifacts_s):
+        votes["data_analytics"] = votes.get("data_analytics", 0.0) + 1.0
+
+    if not votes:
+        return ["general_problem_solving"]
+    return sorted(votes.keys(), key=lambda x: (-votes[x], FAMILY_PRIORITY.get(x, 99), x))
 
 
 def _detect_operations(tags: list[str], artifacts: list[str], domain: str) -> list[str]:
@@ -209,7 +218,6 @@ def _detect_operations(tags: list[str], artifacts: list[str], domain: str) -> li
     return sorted(ops)
 
 
-
 def _detect_tools(artifacts: list[str], family: str) -> list[str]:
     tools = set(FAMILY_DEFAULT_TOOLS.get(family, {"shell"}))
     if "xlsx" in artifacts or "csv" in artifacts:
@@ -219,7 +227,6 @@ def _detect_tools(artifacts: list[str], family: str) -> list[str]:
     if "python" in artifacts:
         tools.add("python")
     return sorted(tools)
-
 
 
 @dataclass
@@ -233,6 +240,7 @@ class TaskSchema:
     output_type: str
     constraints: list[str]
     tags: list[str] = field(default_factory=list)
+    family_candidates: list[str] = field(default_factory=list)
     original_curated_skills: list[str] = field(default_factory=list)
 
     def to_json(self) -> dict[str, Any]:
@@ -246,9 +254,9 @@ class TaskSchema:
             "output_type": self.output_type,
             "constraints": self.constraints,
             "tags": self.tags,
+            "family_candidates": self.family_candidates,
             "original_curated_skills": self.original_curated_skills,
         }
-
 
 
 @dataclass
@@ -281,14 +289,14 @@ class SkillSchema:
         }
 
 
-
 def _build_task_schema(task_meta: dict[str, Any], dataset_root: Path) -> TaskSchema:
     task_id = task_meta["task_id"]
     domain = str(task_meta.get("domain", "unknown"))
     tags = _safe_list_str(task_meta.get("tags", []))
     original_curated = _safe_list_str(task_meta.get("required_skills", []))
     artifacts = _detect_artifacts(dataset_root / task_id)
-    family = _infer_family(domain, tags, artifacts)
+    family_ranked = _rank_task_families(domain, tags, artifacts)
+    family = family_ranked[0]
     operations = _detect_operations(tags, artifacts, domain)
     tools = _detect_tools(artifacts, family)
     constraints = ["deterministic_verifier"]
@@ -303,9 +311,9 @@ def _build_task_schema(task_meta: dict[str, Any], dataset_root: Path) -> TaskSch
         output_type=output_type,
         constraints=constraints,
         tags=tags,
+        family_candidates=family_ranked[:3],
         original_curated_skills=original_curated,
     )
-
 
 
 def _normalize_skill_record(raw: dict[str, Any], default_source: str) -> SkillSchema:
@@ -337,7 +345,6 @@ def _normalize_skill_record(raw: dict[str, Any], default_source: str) -> SkillSc
     )
 
 
-
 def _load_skill_file(path: Path, default_source: str) -> list[SkillSchema]:
     if not path.exists():
         return []
@@ -356,7 +363,6 @@ def _load_skill_file(path: Path, default_source: str) -> list[SkillSchema]:
     return skills
 
 
-
 def _load_default_generic_skills() -> list[SkillSchema]:
     return [
         _normalize_skill_record({"skill_id": skill_id, **payload}, default_source="generic_builtin")
@@ -364,12 +370,7 @@ def _load_default_generic_skills() -> list[SkillSchema]:
     ]
 
 
-
-def _build_skill_registry(
-    skill_registry_path: Path,
-    generic_skills_path: Path | None,
-    external_skills_path: Path | None,
-) -> list[SkillSchema]:
+def _build_skill_registry(skill_registry_path: Path, generic_skills_path: Path | None, external_skills_path: Path | None) -> list[SkillSchema]:
     registry: dict[str, SkillSchema] = {}
     for skill in _load_skill_file(skill_registry_path, default_source="registry"):
         registry[skill.skill_id] = skill
@@ -384,7 +385,6 @@ def _build_skill_registry(
         for skill in _load_skill_file(external_skills_path, default_source="external"):
             registry[skill.skill_id] = skill
     return list(registry.values())
-
 
 
 def _fallback_skill_tokens(skill: SkillSchema) -> set[str]:
@@ -403,57 +403,10 @@ def _fallback_skill_tokens(skill: SkillSchema) -> set[str]:
     )
 
 
-
-def _score_task_skill(task: TaskSchema, skill: SkillSchema) -> tuple[float, list[str]]:
-    score = 0.0
-    reasons: list[str] = []
-
-    task_family = task.family
-    skill_families = set(skill.family)
-    if task_family in skill_families:
-        score += 4.0
-        reasons.append("family_match")
-    elif task_family != "general_problem_solving" and "general_problem_solving" in skill_families:
-        score += 1.5
-        reasons.append("generic_family_match")
-
-    artifact_overlap = set(task.artifacts) & set(skill.artifacts)
-    if artifact_overlap:
-        score += 2.0 * len(artifact_overlap)
-        reasons.append("artifact_overlap")
-
-    op_overlap = set(task.operations) & set(skill.operations)
-    if op_overlap:
-        score += 2.0 * len(op_overlap)
-        reasons.append("operation_overlap")
-
-    tool_overlap = set(task.tools) & set(skill.tools)
-    if tool_overlap:
-        score += 1.0 * len(tool_overlap)
-        reasons.append("tool_overlap")
-
-    task_tokens = _tokenize(
-        " ".join([task.task_id, task.domain, task.family, " ".join(task.tags), " ".join(task.artifacts)])
-    )
-    token_overlap = len(task_tokens & _fallback_skill_tokens(skill))
-    if token_overlap:
-        score += min(2.0, 0.25 * token_overlap)
-        reasons.append("semantic_overlap")
-
-    if skill.skill_id in set(task.original_curated_skills):
-        score += 6.0
-        reasons.append("original_curated_match")
-
-    if skill.domain_specificity == "low":
-        score += 0.5
-        reasons.append("transfer_bonus")
-
-    if skill.granularity == "generic":
-        score += 0.2
-        reasons.append("generic_skill_bonus")
-
-    return round(score, 3), reasons
-
+def _filtered_artifact_overlap(task: TaskSchema, skill: SkillSchema) -> set[str]:
+    task_artifacts = {a for a in task.artifacts if a not in WEAK_ARTIFACTS}
+    skill_artifacts = {a for a in skill.artifacts if a not in WEAK_ARTIFACTS}
+    return task_artifacts & skill_artifacts
 
 
 def _source_bucket(skill: SkillSchema, task: TaskSchema) -> str:
@@ -466,46 +419,130 @@ def _source_bucket(skill: SkillSchema, task: TaskSchema) -> str:
     return "cross"
 
 
+def _allow_bucket(task: TaskSchema, skill: SkillSchema, bucket: str, artifact_overlap: set[str], op_overlap: set[str], tool_overlap: set[str]) -> bool:
+    if bucket == "orig":
+        return True
+
+    same_family = task.family in set(skill.family)
+    general_only = set(skill.family) == {"general_problem_solving"}
+    artifact_ok = len(artifact_overlap) >= 1
+    op_ok = len(op_overlap) >= 1
+    tool_ok = len(tool_overlap) >= 1
+
+    if bucket == "generic":
+        if general_only:
+            return len(op_overlap) >= 2 and tool_ok
+        return same_family or (artifact_ok and op_ok) or (tool_ok and len(op_overlap) >= 2)
+
+    if bucket == "cross":
+        return same_family or (artifact_ok and op_ok) or (tool_ok and len(op_overlap) >= 2)
+
+    if bucket == "external":
+        return same_family or (artifact_ok and op_ok)
+
+    return False
+
+
+def _score_task_skill(task: TaskSchema, skill: SkillSchema) -> tuple[float, list[str], str] | None:
+    score = 0.0
+    reasons: list[str] = []
+    bucket = _source_bucket(skill, task)
+
+    task_family = task.family
+    skill_families = set(skill.family)
+    same_family = task_family in skill_families
+
+    if same_family:
+        score += 4.0
+        reasons.append("family_match")
+    elif task_family != "general_problem_solving" and "general_problem_solving" in skill_families:
+        score += 1.5
+        reasons.append("generic_family_match")
+
+    artifact_overlap = _filtered_artifact_overlap(task, skill)
+    if artifact_overlap:
+        score += 2.0 * len(artifact_overlap)
+        reasons.append("artifact_overlap")
+
+    op_overlap = set(task.operations) & set(skill.operations)
+    if op_overlap:
+        score += 1.75 * len(op_overlap)
+        reasons.append("operation_overlap")
+
+    tool_overlap = set(task.tools) & set(skill.tools)
+    if tool_overlap:
+        score += 0.8 * len(tool_overlap)
+        reasons.append("tool_overlap")
+
+    if not _allow_bucket(task, skill, bucket, artifact_overlap, op_overlap, tool_overlap):
+        return None
+
+    # semantic overlap is only useful when there is already some structural signal
+    if same_family or artifact_overlap or len(op_overlap) >= 2:
+        task_tokens = _tokenize(
+            " ".join([task.task_id, task.domain, task.family, " ".join(task.tags), " ".join(task.artifacts)])
+        )
+        token_overlap = len(task_tokens & _fallback_skill_tokens(skill))
+        if token_overlap:
+            score += min(1.5, 0.2 * token_overlap)
+            reasons.append("semantic_overlap")
+
+    if skill.skill_id in set(task.original_curated_skills):
+        score += 6.0
+        reasons.append("original_curated_match")
+
+    if skill.domain_specificity == "low" and bucket in {"generic", "cross"}:
+        score += 0.3
+        reasons.append("transfer_bonus")
+
+    if skill.granularity == "generic" and set(skill.family) == {"general_problem_solving"}:
+        score += 0.2
+        reasons.append("generic_skill_bonus")
+
+    score = round(score, 3)
+    if score < MIN_SCORE_BY_BUCKET.get(bucket, 0.0):
+        return None
+
+    return score, reasons, bucket
+
 
 def _dedupe_candidates(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
     deduped: dict[str, dict[str, Any]] = {}
     for candidate in sorted(candidates, key=lambda x: x["score"], reverse=True):
-        skill_id = candidate["skill_id"]
-        if skill_id not in deduped:
-            deduped[skill_id] = candidate
+        if candidate["skill_id"] not in deduped:
+            deduped[candidate["skill_id"]] = candidate
     return list(deduped.values())
 
 
+def _select_balanced_pool(candidates: list[dict[str, Any]], max_pool_size: int, max_per_bucket: dict[str, int]) -> list[dict[str, Any]]:
+    grouped: dict[str, list[dict[str, Any]]] = {"orig": [], "generic": [], "cross": [], "external": []}
+    for c in candidates:
+        grouped.setdefault(c["bucket"], []).append(c)
+    for bucket in grouped:
+        grouped[bucket].sort(key=lambda x: x["score"], reverse=True)
 
-def _select_balanced_pool(
-    task: TaskSchema,
-    candidates: list[dict[str, Any]],
-    max_pool_size: int,
-    max_per_bucket: dict[str, int],
-) -> list[dict[str, Any]]:
     selected: list[dict[str, Any]] = []
-    counts = {k: 0 for k in max_per_bucket}
 
-    # Always keep original curated candidates when present.
-    for candidate in candidates:
-        if candidate["bucket"] == "orig":
-            selected.append(candidate)
-            counts["orig"] += 1
+    # keep all orig first
+    selected.extend(grouped["orig"])
 
-    for candidate in candidates:
-        if len(selected) >= max_pool_size:
-            break
-        if candidate in selected:
+    # then strong generic skills
+    selected.extend(grouped["generic"][: max_per_bucket.get("generic", 0)])
+
+    # then at most one strong cross skill
+    selected.extend(grouped["cross"][: max_per_bucket.get("cross", 0)])
+
+    selected.extend(grouped["external"][: max_per_bucket.get("external", 0)])
+
+    deduped = []
+    seen = set()
+    for c in selected:
+        if c["skill_id"] in seen:
             continue
-        bucket = candidate["bucket"]
-        if bucket in max_per_bucket and counts[bucket] >= max_per_bucket[bucket]:
-            continue
-        selected.append(candidate)
-        if bucket in counts:
-            counts[bucket] += 1
+        seen.add(c["skill_id"])
+        deduped.append(c)
 
-    return selected[:max_pool_size]
-
+    return deduped[:max_pool_size]
 
 
 def _build_retrieval_for_task(
@@ -513,18 +550,20 @@ def _build_retrieval_for_task(
     dataset_root: Path,
     skill_registry: list[SkillSchema],
     max_pool_size: int,
+    max_per_bucket: dict[str, int],
 ) -> dict[str, Any]:
     task = _build_task_schema(task_meta, dataset_root)
     raw_candidates: list[dict[str, Any]] = []
 
     for skill in skill_registry:
-        score, reasons = _score_task_skill(task, skill)
-        if score <= 0:
+        result = _score_task_skill(task, skill)
+        if result is None:
             continue
+        score, reasons, bucket = result
         raw_candidates.append(
             {
                 "skill_id": skill.skill_id,
-                "bucket": _source_bucket(skill, task),
+                "bucket": bucket,
                 "source_type": skill.source_type,
                 "score": score,
                 "retrieval_path": reasons,
@@ -540,13 +579,7 @@ def _build_retrieval_for_task(
 
     raw_candidates = _dedupe_candidates(raw_candidates)
     raw_candidates.sort(key=lambda x: x["score"], reverse=True)
-
-    balanced_pool = _select_balanced_pool(
-        task,
-        raw_candidates,
-        max_pool_size=max_pool_size,
-        max_per_bucket={"orig": 99, "cross": 6, "generic": 3, "external": 4},
-    )
+    balanced_pool = _select_balanced_pool(raw_candidates, max_pool_size=max_pool_size, max_per_bucket=max_per_bucket)
 
     grouped: dict[str, list[dict[str, Any]]] = {"orig": [], "cross": [], "generic": [], "external": []}
     for candidate in raw_candidates:
@@ -569,13 +602,11 @@ def _build_retrieval_for_task(
     }
 
 
-
 def _select_tasks(all_tasks: list[dict[str, Any]], task_ids: list[str] | None) -> list[dict[str, Any]]:
     if not task_ids:
         return all_tasks
     lookup = {t["task_id"]: t for t in all_tasks}
     return [lookup[tid] for tid in task_ids if tid in lookup]
-
 
 
 def main() -> None:
@@ -587,8 +618,21 @@ def main() -> None:
     parser.add_argument("--external-skills", type=Path, default=None)
     parser.add_argument("--task-ids", type=str, default=None, help="Comma-separated task ids")
     parser.add_argument("--max-pool-size", type=int, default=12)
+    parser.add_argument("--max-orig", type=int, default=DEFAULT_MAX_PER_BUCKET["orig"])
+    parser.add_argument("--max-generic", type=int, default=DEFAULT_MAX_PER_BUCKET["generic"])
+    parser.add_argument("--max-cross", type=int, default=DEFAULT_MAX_PER_BUCKET["cross"])
+    parser.add_argument("--max-external", type=int, default=DEFAULT_MAX_PER_BUCKET["external"])
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     args = parser.parse_args()
+
+    if args.external_skills and not args.external_skills.exists():
+        raise SystemExit(f"External skills file not found: {args.external_skills}")
+    max_per_bucket = {
+        "orig": max(0, args.max_orig),
+        "generic": max(0, args.max_generic),
+        "cross": max(0, args.max_cross),
+        "external": max(0, args.max_external),
+    }
 
     index_data = _read_json(args.dataset_index)
     all_tasks = list(index_data.get("tasks", []))
@@ -606,9 +650,7 @@ def main() -> None:
         external_skills_path=args.external_skills,
     )
     if not skill_registry:
-        raise SystemExit(
-            "Skill registry is empty. Fill data/skill_registry.json first, or pass --generic-skills/--external-skills."
-        )
+        raise SystemExit("Skill registry is empty. Fill data/skill_registry.json first, or pass --generic-skills/--external-skills.")
 
     raw_dir = args.output_root / "raw_retrieved"
     task_pool_dir = args.output_root / "task_pools"
@@ -623,6 +665,7 @@ def main() -> None:
         "generic_skills": str(args.generic_skills) if args.generic_skills else None,
         "external_skills": str(args.external_skills) if args.external_skills else None,
         "max_pool_size": args.max_pool_size,
+        "max_per_bucket": max_per_bucket,
         "selected_task_ids": [t["task_id"] for t in selected_tasks],
         "results": [],
     }
@@ -633,6 +676,7 @@ def main() -> None:
             dataset_root=args.dataset_root,
             skill_registry=skill_registry,
             max_pool_size=args.max_pool_size,
+            max_per_bucket=max_per_bucket,
         )
         task_id = task_meta["task_id"]
         raw_path = raw_dir / f"{task_id}.json"

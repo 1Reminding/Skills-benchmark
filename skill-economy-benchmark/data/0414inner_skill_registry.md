@@ -263,15 +263,93 @@ scripts/build_initial_retrieval.py
 读取 skill_registry.json
 跑 retrieval
 输出 retrieval_results.json
-最后给你一个最简路线
 
-你现在就按这个做：
+你们现在的做法，精简但具体地总结一下
+第 1 步：扫描原始 skill 目录
 
-先手工写 5 个 task schema
-先手工写 20~30 个 skill schema
-先做规则召回 top-k
-人工检查结果
-再加 embedding rerank
-最后才接 prompt engineering 扩 skill pool
+代码：
 
-这就是最正确的起步顺序。
+scripts/06_build_skill_registry_from_dataset.py
+
+做的事情：
+
+扫描 dataset/<task>/environment/skills/<skill>/SKILL.md
+读取每个原始 skill
+自动抽取结构化字段，比如：
+skill_id
+summary
+family
+artifacts
+operations
+tools
+granularity
+domain_specificity
+
+生成的文件：
+
+1. data/skill_registry.raw.json
+一条记录 = 一个 task 下出现的一次 skill occurrence
+用来保留最原始的扫描结果，便于 debug 和追溯
+2. data/skill_registry.json
+去重聚合后的统一 registry
+retrieval 真正使用的输入文件
+你们现在已经有 7 条聚合 skill，可以直接进入下一步。
+3. data/skill_registry.review.json
+不是主数据，而是人工检查提示
+用来标记：
+短 summary
+metadata 稀疏
+可疑 artifacts
+多文本版本合并
+你现在这份 review 已经开始正常工作。
+第 2 步：统一 skill 表示
+
+逻辑上你们现在已经完成了这个转换：
+
+原始 SkillsBench task 内 skills
+→ 扫描与标准化
+→ 统一 skill registry
+
+这一步的意义是：
+
+不再每次 retrieval 都去 task 目录临时扫 skill
+后续 retrieval 只读一个统一表
+便于跨 task 检索、去重、调试
+第 3 步：下一步进入 retrieval
+
+代码：
+
+scripts/07_build_skill_pool_retrieval_v2.py
+
+它应该做的事情是：
+
+从 dataset_index.json 和 task 文件中构建 TaskSchema
+从 data/skill_registry.json 读 SkillSchema
+按 capability overlap 做 retrieval
+输出每个 task 的候选 skill pool
+
+你后面应该得到这类文件：
+
+1. skill_pool/raw_retrieved/<task>.json
+原始候选
+按来源分 bucket，比如：
+orig
+cross
+generic
+external
+2. skill_pool/task_pools/<task>.json
+平衡后的 task-level candidate pool
+这是后面做 single / combo / full-pool 配置的基础
+3. skill_pool/metadata.json
+整体 manifest
+记录本次 retrieval 的参数和输出位置
+你现在的逻辑闭环
+
+一句话版：
+
+dataset/<task>/environment/skills/
+→ 06_build_skill_registry_from_dataset.py
+→ data/skill_registry.json
+→ 07_build_skill_pool_retrieval_v2.py
+→ skill_pool/task_pools/<task>.json
+→ 后续再做 prompt generation / filtering / experiment configs

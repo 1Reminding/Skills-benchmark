@@ -1,0 +1,76 @@
+{
+  "task_id": "earthquake-plate-calculation",
+  "schema": {
+    "task_id": "earthquake-plate-calculation",
+    "family": "geospatial_analysis",
+    "domain": "geophysics",
+    "artifacts": [
+      "json"
+    ],
+    "operations": [
+      "analyze",
+      "calculate",
+      "verify"
+    ],
+    "tools": [
+      "geospatial",
+      "python"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "geophysics",
+      "gis",
+      "spatial-analysis"
+    ],
+    "family_candidates": [
+      "geospatial_analysis"
+    ],
+    "original_curated_skills": [
+      "geospatial-analysis"
+    ]
+  },
+  "raw_retrieval": {
+    "orig": [
+      {
+        "skill_id": "geospatial-analysis",
+        "bucket": "orig",
+        "source_type": "scanned_from_dataset",
+        "score": 12.75,
+        "retrieval_path": [
+          "family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "original_curated_match"
+        ],
+        "family": [
+          "geospatial_analysis"
+        ],
+        "artifacts": [],
+        "operations": [
+          "analyze"
+        ],
+        "tools": [
+          "geospatial"
+        ],
+        "granularity": "generic",
+        "domain_specificity": "high",
+        "summary": "When working with geographic data (earthquakes, plate boundaries, etc.), using geopandas with proper coordinate projections provides accurate distance calculations and efficient spatial operations. This guide covers best practices for geospatial analysis."
+      }
+    ],
+    "cross": [],
+    "generic": [],
+    "external": []
+  },
+  "summary": {
+    "n_raw_total": 1,
+    "n_orig": 1,
+    "n_cross": 0,
+    "n_generic": 0,
+    "n_external": 0,
+    "n_balanced_pool": 1
+  }
+}

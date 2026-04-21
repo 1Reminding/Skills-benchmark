@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-04-21T14:23:43.096467",
+  "summary": {
+    "total_tasks": 3,
+    "successful_tasks": 0,
+    "success_rate": 0.0,
+    "failure_mode_distribution": {
+      "missing_skill": 3
+    }
+  },
+  "aggregated_metrics": {
+    "mean_token_efficiency": 0.0,
+    "mean_step_redundancy": 0.0,
+    "mean_skill_utilization_cost": 0.0,
+    "mean_skill_combination_synergy": 0.0,
+    "mean_cross_task_transferability": 0.0,
+    "mean_failure_mode_specificity": 0.0
+  },
+  "task_results": [
+    {
+      "task_id": "earthquake-plate-calculation",
+      "agent_name": "oracle",
+      "task_success": false,
+      "failure_reason": "Docker compose command failed for environment earthquake-plate-calculation. Command: docker compose -p earthquake-plate-calculation__er9gegn -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__earthquake-plate-calculation Building \nfailed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory\n\n. Stderr: None. ",
+      "failure_mode": "missing_skill",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 0.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 0.0,
+        "failure_mode_specificity": 0.0
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "agent_name": "oracle",
+      "task_success": false,
+      "failure_reason": "Docker compose command failed for environment sales-pivot-analysis. Command: docker compose -p sales-pivot-analysis__ft5e5gc -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__sales-pivot-analysis Building \nfailed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory\n\n. Stderr: None. ",
+      "failure_mode": "missing_skill",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 0.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 0.0,
+        "failure_mode_specificity": 0.0
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "agent_name": "oracle",
+      "task_success": false,
+      "failure_reason": "Docker compose command failed for environment weighted-gdp-calc. Command: docker compose -p weighted-gdp-calc__lwakpkz -f /local-data/xingqinghua/skillsbench/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__weighted-gdp-calc Building \nfailed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory\n\n. Stderr: None. ",
+      "failure_mode": "missing_skill",
+      "metrics": {
+        "token_efficiency": 0.0,
+        "step_redundancy": 0.0,
+        "skill_utilization_cost": 0.0,
+        "skill_combination_synergy": 0.0,
+        "cross_task_transferability": 0.0,
+        "failure_mode_specificity": 0.0
+      }
+    }
+  ]
+}

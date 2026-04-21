@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-04-21T11:54:13.841349",
+  "dataset_index": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/dataset/dataset_index.json",
+  "dataset_root": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/dataset",
+  "task_pool_root": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/task_pools",
+  "max_queries_per_task": 10,
+  "source_policy_path": null,
+  "selected_task_ids": [
+    "weighted-gdp-calc",
+    "powerlifting-coef-calc",
+    "fix-build-agentops",
+    "sales-pivot-analysis",
+    "earthquake-plate-calculation",
+    "latex-formula-extraction"
+  ],
+  "tasks": [
+    {
+      "task_id": "weighted-gdp-calc",
+      "family": "spreadsheet_analytics",
+      "query_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_queries/weighted-gdp-calc.json",
+      "n_queries": 10
+    },
+    {
+      "task_id": "powerlifting-coef-calc",
+      "family": "spreadsheet_analytics",
+      "query_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_queries/powerlifting-coef-calc.json",
+      "n_queries": 10
+    },
+    {
+      "task_id": "fix-build-agentops",
+      "family": "debugging_ci_repair",
+      "query_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_queries/fix-build-agentops.json",
+      "n_queries": 10
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "family": "spreadsheet_analytics",
+      "query_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_queries/sales-pivot-analysis.json",
+      "n_queries": 10
+    },
+    {
+      "task_id": "earthquake-plate-calculation",
+      "family": "geospatial_analysis",
+      "query_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_queries/earthquake-plate-calculation.json",
+      "n_queries": 10
+    },
+    {
+      "task_id": "latex-formula-extraction",
+      "family": "document_extraction",
+      "query_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_queries/latex-formula-extraction.json",
+      "n_queries": 10
+    }
+  ]
+}

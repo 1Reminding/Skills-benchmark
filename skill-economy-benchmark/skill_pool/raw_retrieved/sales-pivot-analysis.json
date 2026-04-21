@@ -1,0 +1,216 @@
+{
+  "task_id": "sales-pivot-analysis",
+  "schema": {
+    "task_id": "sales-pivot-analysis",
+    "family": "spreadsheet_analytics",
+    "domain": "data-analysis",
+    "artifacts": [
+      "pdf",
+      "xlsx"
+    ],
+    "operations": [
+      "aggregate",
+      "extract",
+      "transform",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "pdf",
+      "python",
+      "spreadsheet"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "data-integration",
+      "excel",
+      "pdf",
+      "pivot-tables"
+    ],
+    "family_candidates": [
+      "spreadsheet_analytics",
+      "document_extraction"
+    ],
+    "original_curated_skills": [
+      "pdf",
+      "xlsx"
+    ]
+  },
+  "raw_retrieval": {
+    "orig": [
+      {
+        "skill_id": "xlsx",
+        "bucket": "orig",
+        "source_type": "scanned_from_dataset",
+        "score": 15.95,
+        "retrieval_path": [
+          "family_match",
+          "artifact_overlap",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "original_curated_match"
+        ],
+        "family": [
+          "spreadsheet_analytics"
+        ],
+        "artifacts": [
+          "json",
+          "xlsx"
+        ],
+        "operations": [
+          "analyze",
+          "extract"
+        ],
+        "tools": [
+          "python",
+          "shell",
+          "spreadsheet",
+          "testing"
+        ],
+        "granularity": "generic",
+        "domain_specificity": "low",
+        "summary": "This skill covers working with Excel files using Python libraries: **openpyxl** for Excel-specific features (formatting, formulas, pivot tables) and **pandas** for data analysis."
+      },
+      {
+        "skill_id": "pdf",
+        "bucket": "orig",
+        "source_type": "scanned_from_dataset",
+        "score": 13.3,
+        "retrieval_path": [
+          "artifact_overlap",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "original_curated_match"
+        ],
+        "family": [
+          "document_extraction"
+        ],
+        "artifacts": [
+          "pdf"
+        ],
+        "operations": [
+          "extract",
+          "transform"
+        ],
+        "tools": [
+          "pdf",
+          "python"
+        ],
+        "granularity": "atomic",
+        "domain_specificity": "low",
+        "summary": "**The Read tool cannot properly extract tabular data from PDFs.** It will only show you a limited preview of the first page's text content, missing most of the data."
+      }
+    ],
+    "cross": [],
+    "generic": [
+      {
+        "skill_id": "spreadsheet_sanity_check",
+        "bucket": "generic",
+        "source_type": "generic_builtin",
+        "score": 11.8,
+        "retrieval_path": [
+          "family_match",
+          "artifact_overlap",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "transfer_bonus"
+        ],
+        "family": [
+          "spreadsheet_analytics"
+        ],
+        "artifacts": [
+          "csv",
+          "xlsx"
+        ],
+        "operations": [
+          "clean",
+          "validate",
+          "verify"
+        ],
+        "tools": [
+          "python",
+          "spreadsheet"
+        ],
+        "granularity": "atomic",
+        "domain_specificity": "low",
+        "summary": "Check spreadsheet schema, column types, missing values, and formula consistency."
+      },
+      {
+        "skill_id": "result_verification",
+        "bucket": "generic",
+        "source_type": "generic_builtin",
+        "score": 6.3,
+        "retrieval_path": [
+          "generic_family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "transfer_bonus",
+          "generic_skill_bonus"
+        ],
+        "family": [
+          "general_problem_solving"
+        ],
+        "artifacts": [],
+        "operations": [
+          "validate",
+          "verify"
+        ],
+        "tools": [
+          "python",
+          "shell"
+        ],
+        "granularity": "generic",
+        "domain_specificity": "low",
+        "summary": "Verify outputs against task constraints before finalizing results."
+      },
+      {
+        "skill_id": "error_diagnosis",
+        "bucket": "generic",
+        "source_type": "generic_builtin",
+        "score": 6.1,
+        "retrieval_path": [
+          "generic_family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "transfer_bonus"
+        ],
+        "family": [
+          "debugging_ci_repair",
+          "general_problem_solving"
+        ],
+        "artifacts": [
+          "python",
+          "text"
+        ],
+        "operations": [
+          "debug",
+          "validate",
+          "verify"
+        ],
+        "tools": [
+          "python",
+          "shell",
+          "testing"
+        ],
+        "granularity": "generic",
+        "domain_specificity": "low",
+        "summary": "Locate the failing stage, isolate the error source, and validate the fix minimally."
+      }
+    ],
+    "external": []
+  },
+  "summary": {
+    "n_raw_total": 5,
+    "n_orig": 2,
+    "n_cross": 0,
+    "n_generic": 3,
+    "n_external": 0,
+    "n_balanced_pool": 3
+  }
+}

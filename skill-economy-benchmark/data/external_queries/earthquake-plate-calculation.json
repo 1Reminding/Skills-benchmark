@@ -1,0 +1,301 @@
+{
+  "task_id": "earthquake-plate-calculation",
+  "generated_at": "2026-04-21T11:54:14.456990",
+  "schema": {
+    "task_id": "earthquake-plate-calculation",
+    "family": "geospatial_analysis",
+    "domain": "geophysics",
+    "artifacts": [
+      "json"
+    ],
+    "operations": [
+      "analyze",
+      "calculate",
+      "verify"
+    ],
+    "tools": [
+      "geospatial",
+      "python"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "geophysics",
+      "gis",
+      "spatial-analysis"
+    ],
+    "family_candidates": [
+      "geospatial_analysis"
+    ],
+    "original_curated_skills": [
+      "geospatial-analysis"
+    ]
+  },
+  "internal_pool_skills": [
+    "geospatial-analysis"
+  ],
+  "source_policy": {
+    "allowed_domains": [
+      "geopandas.org",
+      "github.com",
+      "pyproj4.github.io",
+      "readthedocs.io",
+      "shapely.readthedocs.io"
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "earthquake-plate-calculation::family_core::01",
+      "text": "geopandas projection best practices",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "geospatial_analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::family_core::02",
+      "text": "point to line distance geopandas",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "geospatial_analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::family_core::03",
+      "text": "spatial filtering geopandas workflow",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "geospatial_analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::skill_neighbor::04",
+      "text": "geopandas spatial analysis workflow",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "geospatial-analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::skill_neighbor::05",
+      "text": "projection distance calculation geopandas",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "geospatial-analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::skill_neighbor::06",
+      "text": "spatial filtering unary_union geopandas",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "geospatial-analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::family_specific::07",
+      "text": "crs transformation distance calculation geopandas",
+      "query_type": "family_specific",
+      "priority": 0.95,
+      "rationale": "family-level reusable workflow query",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "geospatial_analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::family_specific::08",
+      "text": "unary_union distance workflow geopandas",
+      "query_type": "family_specific",
+      "priority": 0.95,
+      "rationale": "family-level reusable workflow query",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "geospatial_analysis"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::tool_workflow::09",
+      "text": "geopandas spatial analysis best practices",
+      "query_type": "tool_workflow",
+      "priority": 0.88,
+      "rationale": "tool-driven reusable search query",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "tool": "geospatial"
+      }
+    },
+    {
+      "query_id": "earthquake-plate-calculation::tool_workflow::10",
+      "text": "python best practices workflow",
+      "query_type": "tool_workflow",
+      "priority": 0.88,
+      "rationale": "tool-driven reusable search query",
+      "family": "geospatial_analysis",
+      "suggested_domains": [
+        "geopandas.org",
+        "github.com",
+        "pyproj4.github.io",
+        "readthedocs.io",
+        "shapely.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "tool": "python"
+      }
+    }
+  ],
+  "summary": {
+    "n_queries": 10,
+    "family": "geospatial_analysis",
+    "artifacts": [
+      "json"
+    ],
+    "tools": [
+      "geospatial",
+      "python"
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "task_id": "fix-build-agentops",
+  "generated_at": "2026-04-21T11:54:14.121757",
+  "schema": {
+    "task_id": "fix-build-agentops",
+    "family": "debugging_ci_repair",
+    "domain": "software-engineering",
+    "artifacts": [],
+    "operations": [
+      "debug",
+      "patch",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "ci",
+      "python",
+      "shell",
+      "testing"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "build",
+      "ci",
+      "debugging",
+      "python"
+    ],
+    "family_candidates": [
+      "debugging_ci_repair"
+    ],
+    "original_curated_skills": [
+      "analyze-ci",
+      "testing-python",
+      "uv-package-manager"
+    ]
+  },
+  "internal_pool_skills": [
+    "analyze-ci",
+    "error_diagnosis",
+    "temporal-python-testing",
+    "testing-python",
+    "uv-package-manager"
+  ],
+  "source_policy": {
+    "allowed_domains": [
+      "docs.astral.sh",
+      "docs.github.com",
+      "docs.pytest.org",
+      "github.com",
+      "readthedocs.io"
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "fix-build-agentops::family_core::01",
+      "text": "dependency conflict troubleshooting python",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "debugging_ci_repair"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::family_core::02",
+      "text": "github actions log triage workflow",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "debugging_ci_repair"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::family_core::03",
+      "text": "pytest debugging workflow",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "debugging_ci_repair"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::skill_neighbor::04",
+      "text": "ci log root cause analysis",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "analyze-ci"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::skill_neighbor::05",
+      "text": "github actions failure analysis workflow",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "analyze-ci"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::skill_neighbor::06",
+      "text": "pytest test design best practices",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "testing-python"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::skill_neighbor::07",
+      "text": "python testing debugging workflow",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "testing-python"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::skill_neighbor::08",
+      "text": "temporal python testing workflow",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "temporal-python-testing"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::skill_neighbor::09",
+      "text": "uv dependency resolution troubleshooting",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "uv-package-manager"
+      }
+    },
+    {
+      "query_id": "fix-build-agentops::skill_neighbor::10",
+      "text": "uv package manager workflow python",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "debugging_ci_repair",
+      "suggested_domains": [
+        "docs.astral.sh",
+        "docs.github.com",
+        "docs.pytest.org",
+        "github.com",
+        "readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "uv-package-manager"
+      }
+    }
+  ],
+  "summary": {
+    "n_queries": 10,
+    "family": "debugging_ci_repair",
+    "artifacts": [],
+    "tools": [
+      "ci",
+      "python",
+      "shell",
+      "testing"
+    ]
+  }
+}

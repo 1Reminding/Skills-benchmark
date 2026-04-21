@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-04-21T11:45:18.123895",
+  "dataset_index": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/dataset/dataset_index.json",
+  "dataset_root": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/dataset",
+  "skill_registry": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/skill_registry.json",
+  "generic_skills": null,
+  "external_skills": null,
+  "max_pool_size": 10,
+  "max_per_bucket": {
+    "orig": 99,
+    "generic": 1,
+    "cross": 1,
+    "external": 0
+  },
+  "selected_task_ids": [
+    "weighted-gdp-calc",
+    "sales-pivot-analysis",
+    "fix-build-agentops",
+    "earthquake-plate-calculation"
+  ],
+  "results": [
+    {
+      "task_id": "weighted-gdp-calc",
+      "raw_retrieval": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/raw_retrieved/weighted-gdp-calc.json",
+      "task_pool": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/task_pools/weighted-gdp-calc.json",
+      "summary": {
+        "n_raw_total": 4,
+        "n_orig": 1,
+        "n_cross": 0,
+        "n_generic": 3,
+        "n_external": 0,
+        "n_balanced_pool": 2
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "raw_retrieval": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/raw_retrieved/sales-pivot-analysis.json",
+      "task_pool": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/task_pools/sales-pivot-analysis.json",
+      "summary": {
+        "n_raw_total": 5,
+        "n_orig": 2,
+        "n_cross": 0,
+        "n_generic": 3,
+        "n_external": 0,
+        "n_balanced_pool": 3
+      }
+    },
+    {
+      "task_id": "fix-build-agentops",
+      "raw_retrieval": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/raw_retrieved/fix-build-agentops.json",
+      "task_pool": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/task_pools/fix-build-agentops.json",
+      "summary": {
+        "n_raw_total": 7,
+        "n_orig": 3,
+        "n_cross": 1,
+        "n_generic": 3,
+        "n_external": 0,
+        "n_balanced_pool": 5
+      }
+    },
+    {
+      "task_id": "earthquake-plate-calculation",
+      "raw_retrieval": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/raw_retrieved/earthquake-plate-calculation.json",
+      "task_pool": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/task_pools/earthquake-plate-calculation.json",
+      "summary": {
+        "n_raw_total": 1,
+        "n_orig": 1,
+        "n_cross": 0,
+        "n_generic": 0,
+        "n_external": 0,
+        "n_balanced_pool": 1
+      }
+    }
+  ]
+}

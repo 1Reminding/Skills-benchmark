@@ -1,0 +1,306 @@
+{
+  "task_id": "powerlifting-coef-calc",
+  "generated_at": "2026-04-21T11:54:13.862017",
+  "schema": {
+    "task_id": "powerlifting-coef-calc",
+    "family": "spreadsheet_analytics",
+    "domain": "data-analysis",
+    "artifacts": [
+      "markdown",
+      "xlsx"
+    ],
+    "operations": [
+      "aggregate",
+      "extract",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "python",
+      "spreadsheet"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "excel",
+      "sports",
+      "statistics"
+    ],
+    "family_candidates": [
+      "spreadsheet_analytics"
+    ],
+    "original_curated_skills": [
+      "powerlifting",
+      "senior-data-scientist",
+      "xlsx"
+    ]
+  },
+  "internal_pool_skills": [],
+  "source_policy": {
+    "allowed_domains": [
+      "github.com",
+      "openpyxl.readthedocs.io",
+      "pandas.pydata.org",
+      "readthedocs.io",
+      "xlsxwriter.readthedocs.io"
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "powerlifting-coef-calc::family_core::01",
+      "text": "openpyxl workbook editing best practices",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "spreadsheet_analytics"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::family_core::02",
+      "text": "pandas excel analysis workflow",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "spreadsheet_analytics"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::family_core::03",
+      "text": "spreadsheet validation workflow python",
+      "query_type": "family_core",
+      "priority": 1.0,
+      "rationale": "family-level reusable workflow query",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "spreadsheet_analytics"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::skill_neighbor::04",
+      "text": "openpyxl excel workflow",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "xlsx"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::skill_neighbor::05",
+      "text": "pandas excel validation",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "xlsx"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::skill_neighbor::06",
+      "text": "spreadsheet formula verification",
+      "query_type": "skill_neighbor",
+      "priority": 0.97,
+      "rationale": "neighbor query derived from internal baseline skills",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "skill_id": "xlsx"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::family_specific::07",
+      "text": "financial spreadsheet sanity check",
+      "query_type": "family_specific",
+      "priority": 0.95,
+      "rationale": "family-level reusable workflow query",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "spreadsheet_analytics"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::family_specific::08",
+      "text": "pivot table workflow openpyxl",
+      "query_type": "family_specific",
+      "priority": 0.95,
+      "rationale": "family-level reusable workflow query",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "family": "spreadsheet_analytics"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::artifact_operation::09",
+      "text": "excel aggregation workflow python",
+      "query_type": "artifact_operation",
+      "priority": 0.93,
+      "rationale": "artifact + operation query derived from task schema",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "artifact": "excel",
+        "operation": "aggregate"
+      }
+    },
+    {
+      "query_id": "powerlifting-coef-calc::artifact_operation::10",
+      "text": "excel extraction workflow python",
+      "query_type": "artifact_operation",
+      "priority": 0.93,
+      "rationale": "artifact + operation query derived from task schema",
+      "family": "spreadsheet_analytics",
+      "suggested_domains": [
+        "github.com",
+        "openpyxl.readthedocs.io",
+        "pandas.pydata.org",
+        "readthedocs.io",
+        "xlsxwriter.readthedocs.io"
+      ],
+      "source_hints": [
+        "official_docs",
+        "trusted_repo_docs",
+        "examples",
+        "how_to_guides"
+      ],
+      "evidence": {
+        "artifact": "excel",
+        "operation": "extract"
+      }
+    }
+  ],
+  "summary": {
+    "n_queries": 10,
+    "family": "spreadsheet_analytics",
+    "artifacts": [
+      "markdown",
+      "xlsx"
+    ],
+    "tools": [
+      "python",
+      "spreadsheet"
+    ]
+  }
+}

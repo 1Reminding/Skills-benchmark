@@ -1,0 +1,261 @@
+{
+  "task_id": "fix-build-agentops",
+  "schema": {
+    "task_id": "fix-build-agentops",
+    "family": "debugging_ci_repair",
+    "domain": "software-engineering",
+    "artifacts": [],
+    "operations": [
+      "debug",
+      "patch",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "ci",
+      "python",
+      "shell",
+      "testing"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "build",
+      "ci",
+      "debugging",
+      "python"
+    ],
+    "family_candidates": [
+      "debugging_ci_repair"
+    ],
+    "original_curated_skills": [
+      "analyze-ci",
+      "testing-python",
+      "uv-package-manager"
+    ]
+  },
+  "raw_retrieval": {
+    "orig": [
+      {
+        "skill_id": "uv-package-manager",
+        "bucket": "orig",
+        "source_type": "scanned_from_dataset",
+        "score": 13.95,
+        "retrieval_path": [
+          "family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "original_curated_match"
+        ],
+        "family": [
+          "debugging_ci_repair"
+        ],
+        "artifacts": [],
+        "operations": [
+          "verify"
+        ],
+        "tools": [
+          "ci",
+          "python"
+        ],
+        "granularity": "atomic",
+        "domain_specificity": "medium",
+        "summary": "Comprehensive guide to using uv, an extremely fast Python package installer and resolver written in Rust, for modern Python project management and dependency workflows."
+      },
+      {
+        "skill_id": "analyze-ci",
+        "bucket": "orig",
+        "source_type": "scanned_from_dataset",
+        "score": 13.75,
+        "retrieval_path": [
+          "family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "original_curated_match"
+        ],
+        "family": [
+          "debugging_ci_repair"
+        ],
+        "artifacts": [],
+        "operations": [
+          "analyze",
+          "debug"
+        ],
+        "tools": [
+          "ci",
+          "testing"
+        ],
+        "granularity": "atomic",
+        "domain_specificity": "medium",
+        "summary": "This skill analyzes logs from failed GitHub Action jobs using Claude."
+      },
+      {
+        "skill_id": "testing-python",
+        "bucket": "orig",
+        "source_type": "scanned_from_dataset",
+        "score": 13.75,
+        "retrieval_path": [
+          "family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "original_curated_match"
+        ],
+        "family": [
+          "debugging_ci_repair"
+        ],
+        "artifacts": [
+          "json"
+        ],
+        "operations": [
+          "debug"
+        ],
+        "tools": [
+          "python",
+          "testing"
+        ],
+        "granularity": "atomic",
+        "domain_specificity": "low",
+        "summary": "Every test should be **atomic**, **self-contained**, and test **single functionality**. A test that tests multiple things is harder to debug and maintain."
+      }
+    ],
+    "cross": [
+      {
+        "skill_id": "temporal-python-testing",
+        "bucket": "cross",
+        "source_type": "scanned_from_dataset",
+        "score": 8.05,
+        "retrieval_path": [
+          "family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "transfer_bonus"
+        ],
+        "family": [
+          "debugging_ci_repair"
+        ],
+        "artifacts": [],
+        "operations": [
+          "verify"
+        ],
+        "tools": [
+          "python",
+          "testing"
+        ],
+        "granularity": "atomic",
+        "domain_specificity": "low",
+        "summary": "Comprehensive testing approaches for Temporal workflows using pytest, progressive disclosure resources for specific testing scenarios."
+      }
+    ],
+    "generic": [
+      {
+        "skill_id": "error_diagnosis",
+        "bucket": "generic",
+        "source_type": "generic_builtin",
+        "score": 12.35,
+        "retrieval_path": [
+          "family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "transfer_bonus"
+        ],
+        "family": [
+          "debugging_ci_repair",
+          "general_problem_solving"
+        ],
+        "artifacts": [
+          "python",
+          "text"
+        ],
+        "operations": [
+          "debug",
+          "validate",
+          "verify"
+        ],
+        "tools": [
+          "python",
+          "shell",
+          "testing"
+        ],
+        "granularity": "generic",
+        "domain_specificity": "low",
+        "summary": "Locate the failing stage, isolate the error source, and validate the fix minimally."
+      },
+      {
+        "skill_id": "result_verification",
+        "bucket": "generic",
+        "source_type": "generic_builtin",
+        "score": 7.3,
+        "retrieval_path": [
+          "generic_family_match",
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "transfer_bonus",
+          "generic_skill_bonus"
+        ],
+        "family": [
+          "general_problem_solving"
+        ],
+        "artifacts": [],
+        "operations": [
+          "validate",
+          "verify"
+        ],
+        "tools": [
+          "python",
+          "shell"
+        ],
+        "granularity": "generic",
+        "domain_specificity": "low",
+        "summary": "Verify outputs against task constraints before finalizing results."
+      },
+      {
+        "skill_id": "spreadsheet_sanity_check",
+        "bucket": "generic",
+        "source_type": "generic_builtin",
+        "score": 4.8,
+        "retrieval_path": [
+          "operation_overlap",
+          "tool_overlap",
+          "semantic_overlap",
+          "transfer_bonus"
+        ],
+        "family": [
+          "spreadsheet_analytics"
+        ],
+        "artifacts": [
+          "csv",
+          "xlsx"
+        ],
+        "operations": [
+          "clean",
+          "validate",
+          "verify"
+        ],
+        "tools": [
+          "python",
+          "spreadsheet"
+        ],
+        "granularity": "atomic",
+        "domain_specificity": "low",
+        "summary": "Check spreadsheet schema, column types, missing values, and formula consistency."
+      }
+    ],
+    "external": []
+  },
+  "summary": {
+    "n_raw_total": 7,
+    "n_orig": 3,
+    "n_cross": 1,
+    "n_generic": 3,
+    "n_external": 0,
+    "n_balanced_pool": 5
+  }
+}
