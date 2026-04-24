@@ -1,0 +1,31 @@
+{
+  "skill_id": "programmatic-spreadsheet-update-and-charting",
+  "display_name": "Programmatic Spreadsheet Update and Charting",
+  "family": [
+    "spreadsheet_analytics"
+  ],
+  "artifacts": [
+    "xlsx"
+  ],
+  "tools": [
+    "python"
+  ],
+  "operations": [
+    "transform"
+  ],
+  "granularity": "compositional",
+  "summary": "Automating the modification of Excel cells, column values, and the insertion of visual charts using Python libraries like openpyxl.",
+  "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+  "metadata": {
+    "task_id": "sales-pivot-analysis",
+    "source_chunk_ids": [
+      "db718da9d96d848b1b0e4e92652db8cb5ec9bf53"
+    ],
+    "source_urls": [
+      "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md"
+    ],
+    "confidence": 0.85,
+    "finalized_at": "2026-04-22T11:26:22.877341",
+    "finalizer": "12_finalize_skill_candidates.py"
+  }
+}

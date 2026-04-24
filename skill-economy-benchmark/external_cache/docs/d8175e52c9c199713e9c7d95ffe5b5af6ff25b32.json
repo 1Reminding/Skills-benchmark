@@ -1,0 +1,16 @@
+{
+  "doc_id": "d8175e52c9c199713e9c7d95ffe5b5af6ff25b32",
+  "fetched_at": "2026-04-21T18:07:48.753059",
+  "source_type": "github_repo_doc",
+  "repo": "BobLd/camelot-sharp",
+  "path": "README.md",
+  "default_branch": "master",
+  "source_url": "https://github.com/BobLd/camelot-sharp/blob/master/README.md",
+  "text": "# camelot-sharp\nA C# library to extract tabular data from PDFs (port of camelot Python version using PdfPig).\n\nOriginal Python source code available here: [camelot-dev/camelot](https://github.com/camelot-dev/camelot).\n\n[![Windows](https://github.com/BobLd/camelot-sharp/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BobLd/camelot-sharp/actions/workflows/dotnet.yml)\n\nNuGet packages available on the [releases](https://github.com/BobLd/camelot-sharp/releases) page and on www.nuget.org:\n- [Camelot](https://www.nuget.org/packages/Camelot)\n- [Camelot.ImageProcessing.OpenCvSharp4](https://www.nuget.org/packages/Camelot.ImageProcessing.OpenCvSharp4)\n\n# Usage\n## Stream mode \n```csharp\nusing (PdfDocument doc = PdfDocument.Open(@\"Files\\foo.pdf\", new ParsingOptions() { ClipPaths = true }))\n{\n\tStream stream = new Stream();\n\tvar tables = stream.ExtractTables(doc.GetPage(1));\n\n\tAssert.Single(tables);\n\tAssert.Equal((612, 792), stream.Dimensions);\n\tAssert.Equal(612, stream.PdfWidth);\n\tAssert.Equal(792, stream.PdfHeight);\n\t//Assert.Equal(84, stream.HorizontalText.Count);\n\n\tvar parsingReport = tables[0].ParsingReport();\n\t//   parsing_report = {\"accuracy\": 99.02, \"whitespace\": 12.24, \"order\": 1, \"page\": 1}\n\tparsingReport[\"order\"] = 1;\n\tparsingReport[\"page\"] = 1;\n}\n```\n\n## Lattice mode\n```csharp\nusing (var doc = PdfDocument.Open(@\"Files\\column_span_2.pdf\", new ParsingOptions() { ClipPaths = true }))\n{\n\tvar page = doc.GetPage(1);\n\n\tLattice lattice = new Lattice(new OpenCvImageProcesser(), new BasicSystemDrawingProcessor(), line_scale: 40);\n\tvar tables = lattice.ExtractTables(page,\n\t\tlayout_kwargs: new DlaOptions[]\n\t\t{\n\t\t\tnew DocstrumBoundingBoxes.DocstrumBoundingBoxesOptions()\n\t\t\t{\n\t\t\t\tWithinLineMultiplier = 2\n\t\t\t}\n\t\t});\n\tAssert.Single(tables);\n\tAssert.Equal(DataLatticeShiftTextLeftTop.Length, tables[0].Cells.Count);\n\tAssert.Equal(DataLatticeShiftTextLeftTop, tables[0].Data().Select(r => r.Select(c => c).ToArray()).ToArray());\n}\n\n```\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03"
+    }
+  ]
+}

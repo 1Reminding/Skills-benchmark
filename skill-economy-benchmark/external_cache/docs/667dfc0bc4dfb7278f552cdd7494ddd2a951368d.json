@@ -1,0 +1,16 @@
+{
+  "doc_id": "667dfc0bc4dfb7278f552cdd7494ddd2a951368d",
+  "fetched_at": "2026-04-21T18:07:58.875539",
+  "source_type": "github_repo_doc",
+  "repo": "Tanguy9862/Medical-OCR-Data-Extraction",
+  "path": "README.md",
+  "default_branch": "master",
+  "source_url": "https://github.com/Tanguy9862/Medical-OCR-Data-Extraction/blob/master/README.md",
+  "text": "# Medical OCR Data Extraction\n\nAutomated the extraction of medical data from scanned documents using **Optical Character Recognition (OCR)** and regular expressions, enabling efficient data processing and analysis.\n\n## 📄 Overview\nThis project focuses on automating the extraction of medical data from scanned documents. By leveraging OCR technology, the script reads text from images and applies regular expressions to extract specific data fields. It is designed to handle various types of medical reports, such as IPS (Intravascular Pressure System) and EFR (Electrocardiogram Frequency Response).\n\n## 🛠️ Technical Highlights\n\n- **Programming Language:** Python\n- **Libraries:**\n  - ```pytesseract```\n  - ```Pandas```\n  - ```NumPy```\n  - ```langdetect```\n  - ```re```\n- **Reporting:** RMarkdown\n\n## 🧰 Challenges and Solutions\n\n- **Language Variability**: One of the challenges was dealing with documents in multiple languages. The solution was to use langdetect to identify the language and then apply the appropriate regular expressions.\n- **Complex Data Fields**: Some medical data fields required intricate regular expressions for accurate extraction. This required a deep understanding of both medical terminologies and regular expression capabilities.\n- **Data Quality**: Scanned documents can have varying quality, affecting OCR performance. The project allows for custom Tesseract configurations to handle such cases.\n\n## 👨‍⚕️ Collaboration and Statistical Analysis\n\nThis project involved regular collaboration with medical professionals to identify and prioritize critical data fields relevant for medical diagnoses and treatment plans. Their expertise guided the selection of key metrics to focus on during data extraction and analysis. A comprehensive RMarkdown document was also developed to perform statistical tests on the extracted data, featuring interactive graphs powered by Plotly to aid decision-making. Due to confidentiality, the RMarkdown file is not included in this repository.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05"
+    }
+  ]
+}

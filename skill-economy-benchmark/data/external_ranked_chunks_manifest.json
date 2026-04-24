@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-04-21T20:22:33.559929",
+  "chunks_path": "data/external_corpus_chunks.jsonl",
+  "query_manifest": "data/external_queries.json",
+  "query_dir": "data/external_queries",
+  "summary": {
+    "n_input_chunks": 437,
+    "n_kept_after_hard_filter": 255,
+    "n_tasks": 2
+  },
+  "tasks": [
+    {
+      "task_id": "weighted-gdp-calc",
+      "output_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_ranked_chunks/weighted-gdp-calc.json",
+      "n_ranked_candidates": 20
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "output_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/external_ranked_chunks/sales-pivot-analysis.json",
+      "n_ranked_candidates": 20
+    }
+  ]
+}

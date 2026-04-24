@@ -1,0 +1,20 @@
+{
+  "doc_id": "6da0cbc3b5c35441a86d163ffae33dc6a19be09e",
+  "fetched_at": "2026-04-21T18:08:25.305398",
+  "source_type": "github_repo_doc",
+  "repo": "aring87/Software-List-Management",
+  "path": "samples/README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/aring87/Software-List-Management/blob/main/samples/README.md",
+  "text": "# Sample Data\n\n`Example_Software_List.xlsx` contains **fictional** software entries for testing the GUI.\n\nDo not place real Intune exports in this repo.\n\n## Data Format\n\nColumn Names: \n- Number\n- Name\n- Version\n- Platform\n- Type\n- Description\n- Vendor\n- Authorization Date\n- Authorization Expires\n- State\n- Authorized User",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04"
+    }
+  ]
+}

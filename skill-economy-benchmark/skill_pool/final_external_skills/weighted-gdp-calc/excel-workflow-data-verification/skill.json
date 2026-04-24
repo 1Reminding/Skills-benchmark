@@ -1,0 +1,35 @@
+{
+  "skill_id": "excel-workflow-data-verification",
+  "display_name": "Excel Workflow Data Verification",
+  "family": [
+    "spreadsheet_analytics"
+  ],
+  "artifacts": [
+    "xlsx"
+  ],
+  "tools": [
+    "python",
+    "spreadsheet"
+  ],
+  "operations": [
+    "extract",
+    "verify"
+  ],
+  "granularity": "compositional",
+  "summary": "Verify data existence and integrity during spreadsheet import/update workflows, ensuring that row-level operations are correctly tracked and reported in a structured format.",
+  "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+  "metadata": {
+    "task_id": "weighted-gdp-calc",
+    "source_chunk_ids": [
+      "3ae140fe7667349120ed070e3dbdf7d635109171",
+      "3e5286ca05ea3934b83d869191592866ac4643f6"
+    ],
+    "source_urls": [
+      "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+      "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/fastapi_reference/README.md"
+    ],
+    "confidence": 0.8,
+    "finalized_at": "2026-04-22T11:26:42.457005",
+    "finalizer": "12_finalize_skill_candidates.py"
+  }
+}

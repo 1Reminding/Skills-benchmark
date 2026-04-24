@@ -1,0 +1,20 @@
+{
+  "doc_id": "417b2670aa0fb27da9546bc0f74f81b7d9aa2244",
+  "fetched_at": "2026-04-21T18:08:19.010023",
+  "source_type": "github_repo_doc",
+  "repo": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md",
+  "text": "# Automating-Excel-WorkFlows-Using-Python\n\nExcel Workflow Automation with OpenPyXL\nThis Python script automates Excel spreadsheet processing using the openpyxl library. It modifies numerical values, adds a bar chart, and saves an updated version of the file.\n\nFeatures\nReads an Excel file and processes data in Sheet1.\n\nUpdates values in the third column (reducing by 10%) and writes them to the fourth column.\n\nAdds a bar chart to visualize the updated values.\n\nSaves a new Excel file with modifications.\n\nRequirements\nPython 3.x\n\nopenpyxl library\n\nInstallation\nbash\nCopy\nEdit\npip install openpyxl\nUsage\nEnsure your Excel file (e.g., sales.xlsx) exists in the script's directory.\n\nRun the script with:\n\npython\nCopy\nEdit\nprocess_spreadsheet(\"sales.xlsx\")\nThe modified file is saved as sales_updated.xlsx.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04"
+    }
+  ]
+}

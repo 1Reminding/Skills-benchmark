@@ -1,0 +1,20 @@
+{
+  "doc_id": "e114afdaa03c103c48d21ecaf3835110bc9eecc9",
+  "fetched_at": "2026-04-21T18:08:20.896426",
+  "source_type": "github_repo_doc",
+  "repo": "a-sehic-dev/seo-automation-tool",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/a-sehic-dev/seo-automation-tool/blob/main/README.md",
+  "text": "# SEO Automation Tool\n\nGenerates SEO content ideas from a list of keywords. Supply an Excel file with keywords in the first column; the tool outputs an Excel file with keyword–idea pairs (e.g. \"Best X tips\", \"X for beginners\", \"Advanced X guide\").\n\n## Features\n\n- **GUI application** — Select an Excel file via a simple interface and generate SEO ideas with one click.\n- **CLI application** — Run from the command line; auto-detects an `.xlsx` file in the folder and writes `seo_results.xlsx`.\n- **Excel in/out** — Input: keywords in the first column; output: Excel file with **Keyword** and **SEO Idea** columns.\n- **Cross-platform** — Works on Windows, macOS, and Linux (Python 3.7+).\n\n## Requirements\n\n- **Python 3.7+**\n- **pip** (Python package installer)\n\n## Setup\n\n1. **Clone the repository**\n   ```bash\n   git clone https://github.com/a-sehic-dev/seo-automation-tool.git\n   cd seo-automation-tool\n   ```\n\n2. **Create and activate a virtual environment**\n   ```bash\n   python -m venv .venv\n   .venv\\Scripts\\activate\n   ```\n   (Use `.venv\\Scripts\\activate` on Windows; on macOS/Linux use `source .venv/bin/activate`.)\n\n3. **Install dependencies**\n   ```bash\n   pip install -r requirements.txt\n   ```\n\n## How to run\n\n- **GUI (recommended):**\n  ```bash\n  python seo_gui.py\n  ```\n- **CLI (no GUI):**\n  ```bash\n  python seo_tool.py\n  ```\n  Place one `.xlsx` file (other than `seo_results.xlsx`) in the project folder before running.\n\n## Example usage\n\n1. Create an Excel file (e.g. `keywords.xlsx`) with keywords in the **first column** (no header required, but the first row will be used as the first keyword).\n2. **GUI:** Run `python seo_gui.py` → \"Select Excel\" → choose your file → \"Generate SEO Ideas\". Output: `seo_results.xlsx` in the project folder.\n3. **CLI:** Put `keywords.xlsx` in the project folder, run `python seo_tool.py`. Output: `seo_results.xlsx` in the same folder.\n\nExample input (first column): `python`, `seo`, `marketing`  \nExample output rows: `(python, Best python tips)`, `(python, python for beginners)`, `(python, Advanced python guide)`, and similar for each keyword.\n\n## Project structure\n\n```\nseo-automation-tool/\n├── .gitignore\n├── CHANGELOG.md\n├── LICENSE\n├── README.md\n├── requirements.txt\n├── seo_gui.py          # GUI entry point\n├── seo_tool.py         # CLI entry point\n├── installer.iss       # Inno Setup (Windows installer)\n└── instaler.iss        # Inno Setup (alternate)\n```\n\nGenerated at runtime (not in repo): `seo_results.xlsx`.\n\n## Troubleshooting\n\n| Issue | What to do |\n|-------|------------|\n| **\"No Excel file found\"** (CLI) | Ensure exactly one `.xlsx` file (other than `seo_results.xlsx`) is in the project folder. |\n| **\"Select Excel file first!\"** (GUI) | Click \"Select Excel\" and choose an `.xlsx` file before \"Generate SEO Ideas\". |\n| **`ModuleNotFoundError: No module named 'pandas'`** | Activate the venv and run `pip install -r requirements.txt`. |\n| **`ModuleNotFoundError: No module named 'openpyxl'`** | Same as above; pandas uses `openpyxl` for `.xlsx` files. |\n| **GUI doesn't open / Tkinter errors** | On Linux, install `python3-tk` (e.g. `sudo apt install python3-tk`). On macOS, use a Python from python.org or ensure Tk is installed. |\n| **Permission or file-in-use error when saving** | Close `seo_results.xlsx` if it’s open in Excel, then run again. |\n\n## License\n\nMIT — see [LICENSE](LICENSE).\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04"
+    }
+  ]
+}

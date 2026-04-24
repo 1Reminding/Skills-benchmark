@@ -1,0 +1,35 @@
+{
+  "skill_id": "python-spreadsheet-aggregation-workflow",
+  "display_name": "Python Spreadsheet Aggregation Workflow",
+  "family": [
+    "spreadsheet_analytics"
+  ],
+  "artifacts": [
+    "xlsx"
+  ],
+  "tools": [
+    "python",
+    "spreadsheet"
+  ],
+  "operations": [
+    "aggregate",
+    "extract"
+  ],
+  "granularity": "compositional",
+  "summary": "Programmatically compute numerical metrics and aggregations (such as weighted sums or revenue metrics) from spreadsheet data using Python libraries like Pandas or OpenPyXL, and update the workbook with results.",
+  "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+  "metadata": {
+    "task_id": "weighted-gdp-calc",
+    "source_chunk_ids": [
+      "db718da9d96d848b1b0e4e92652db8cb5ec9bf53",
+      "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+    ],
+    "source_urls": [
+      "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md",
+      "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md"
+    ],
+    "confidence": 0.9,
+    "finalized_at": "2026-04-22T11:26:42.456956",
+    "finalizer": "12_finalize_skill_candidates.py"
+  }
+}

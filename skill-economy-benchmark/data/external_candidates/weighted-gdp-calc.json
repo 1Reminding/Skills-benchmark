@@ -1,0 +1,56 @@
+{
+  "task_id": "weighted-gdp-calc",
+  "generated_at": "2026-04-21T17:12:33.681381",
+  "summary": {
+    "n_candidates": 1
+  },
+  "external_candidates": [
+    {
+      "skill_id": "docx",
+      "source_type": "external",
+      "family": [
+        "document_extraction"
+      ],
+      "artifacts": [
+        "pdf",
+        "xlsx"
+      ],
+      "operations": [
+        "analyze",
+        "debug",
+        "patch",
+        "validate",
+        "verify"
+      ],
+      "tools": [
+        "pdf",
+        "python",
+        "shell",
+        "spreadsheet"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "high",
+      "summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.",
+      "metadata": {
+        "source_name": "docx",
+        "source_url": "https://github.com/anthropics/skills/tree/main/skills/docx",
+        "source_repo": "anthropics/skills",
+        "license_note": "Proprietary. LICENSE.txt has complete terms",
+        "provenance": "github_live",
+        "collected_at": "2026-04-21T17:12:33.665746",
+        "possible_internal_duplicate": true
+      },
+      "retrieval_score": 8.5,
+      "retrieval_path": [
+        "artifact_overlap",
+        "tool_overlap",
+        "weak_operation_overlap",
+        "query_overlap",
+        "best_query:weighted-gdp-calc::family_core::03",
+        "allowed_domain_match",
+        "trusted_repo_bonus"
+      ],
+      "task_id": "weighted-gdp-calc"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "task_id": "weighted-gdp-calc",
+  "family": "spreadsheet_analytics",
+  "domain": "financial-analysis",
+  "artifacts": [
+    "xlsx"
+  ],
+  "operations": [
+    "calculate"
+  ],
+  "tools": [
+    "spreadsheet",
+    "python"
+  ],
+  "output_type": "structured_output_or_file_update",
+  "constraints": [],
+  "tags": [
+    "excel",
+    "finance",
+    "macrofinance",
+    "statistics"
+  ],
+  "family_candidates": [
+    "spreadsheet_analytics"
+  ],
+  "original_curated_skills": [
+    "xlsx"
+  ],
+  "task_goal": "Complete task 'weighted-gdp-calc' in domain 'financial-analysis' by performing calculate over artifacts xlsx. Context tags: excel, finance, macrofinance, statistics.",
+  "input_state": "Task provides environment files and instructions under dataset/weighted-gdp-calc. Primary artifacts appear to be: xlsx.",
+  "expected_output": "Produce a deterministic, verifier-compatible file update or structured result.",
+  "verifier_targets": [
+    "workbook_structure_or_cell_values",
+    "computed_metric_correctness"
+  ],
+  "critical_substeps": [
+    "load_and_inspect_workbook_structure",
+    "compute_required_metrics_or_weighted_values"
+  ],
+  "hard_constraints": [],
+  "failure_modes": [
+    "wrong_cell_range_or_sheet_selection",
+    "type_or_formula_mismatch",
+    "incorrect_grouping_or_weighting",
+    "numeric_aggregation_error"
+  ],
+  "comparable_skill_shape": "Comparable skills for 'weighted-gdp-calc' should be atomic, method-like units aligned with the original curated skills (xlsx) and focused on load_and_inspect_workbook_structure, compute_required_metrics_or_weighted_values, rather than broad project workflows.",
+  "preferred_granularity": "atomic",
+  "query_focus_terms": [
+    "calculate",
+    "excel",
+    "finance",
+    "formula",
+    "macrofinance",
+    "openpyxl",
+    "pivot",
+    "python",
+    "sheet",
+    "spreadsheet",
+    "statistics",
+    "workbook",
+    "xlsx"
+  ],
+  "negative_terms": [
+    "archive",
+    "brand",
+    "changelog",
+    "internal-comms",
+    "landing-page",
+    "lockfile",
+    "marketing",
+    "news",
+    "release",
+    "requirements",
+    "theme"
+  ],
+  "must_not_be": [
+    "broad_project_workflow",
+    "generic_platform_skill",
+    "task_answer_or_solution_dump"
+  ],
+  "extraction_debug": {
+    "artifact_reasons": {
+      "xlsx": [
+        "env_file:gdp.xlsx",
+        "token_overlap:excel,xlsx"
+      ]
+    },
+    "tool_reasons": {
+      "spreadsheet": [
+        "token_overlap:excel,workbook",
+        "artifact_prior"
+      ],
+      "python": [
+        "repo_structure_prior"
+      ]
+    },
+    "operation_reasons": {
+      "calculate": [
+        "token_overlap:calculate,formula,weighted"
+      ]
+    },
+    "family_reasons": {
+      "spreadsheet_analytics": [
+        "token_overlap:excel,formula,sheet,workbook,xlsx",
+        "artifact_tool_prior"
+      ]
+    },
+    "evidence_preview": {
+      "env_files": [
+        "Dockerfile",
+        "gdp.xlsx",
+        "skills/xlsx/LICENSE.txt",
+        "skills/xlsx/SKILL.md",
+        "skills/xlsx/recalc.py"
+      ],
+      "test_files": [
+        "test.sh",
+        "test_outputs.py"
+      ],
+      "solution_files": [
+        "solve.sh"
+      ]
+    }
+  },
+  "ambiguity_score": 0.15,
+  "generated_at": "2026-04-22T17:06:29.835439"
+}

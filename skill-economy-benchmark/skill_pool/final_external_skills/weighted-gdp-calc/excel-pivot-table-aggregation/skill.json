@@ -1,0 +1,34 @@
+{
+  "skill_id": "excel-pivot-table-aggregation",
+  "display_name": "Excel Pivot Table Aggregation",
+  "family": [
+    "spreadsheet_analytics"
+  ],
+  "artifacts": [
+    "xlsx"
+  ],
+  "tools": [
+    "spreadsheet"
+  ],
+  "operations": [
+    "aggregate",
+    "extract"
+  ],
+  "granularity": "atomic",
+  "summary": "Utilize Excel Pivot Tables to aggregate and summarize large datasets, enabling multi-dimensional analysis such as top-performing categories or average values across groups.",
+  "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+  "metadata": {
+    "task_id": "weighted-gdp-calc",
+    "source_chunk_ids": [
+      "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+      "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+    ],
+    "source_urls": [
+      "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+      "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+    ],
+    "confidence": 0.85,
+    "finalized_at": "2026-04-22T11:26:42.456983",
+    "finalizer": "12_finalize_skill_candidates.py"
+  }
+}

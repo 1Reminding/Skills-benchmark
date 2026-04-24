@@ -1,0 +1,12 @@
+{
+  "task_id": "weighted-gdp-calc",
+  "generated_at": "2026-04-22T11:26:42.767736",
+  "summary": {
+    "n_input_candidates": 4,
+    "n_prefilter_removed": 0,
+    "n_model_removed": 0,
+    "n_final_candidates": 4
+  },
+  "prefilter_removed": [],
+  "model_removed": []
+}

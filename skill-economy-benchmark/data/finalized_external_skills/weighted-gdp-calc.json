@@ -1,0 +1,185 @@
+{
+  "task_id": "weighted-gdp-calc",
+  "generated_at": "2026-04-22T11:26:42.457087",
+  "schema": {
+    "task_id": "weighted-gdp-calc",
+    "family": "spreadsheet_analytics",
+    "domain": "financial-analysis",
+    "artifacts": [
+      "xlsx"
+    ],
+    "operations": [
+      "aggregate",
+      "extract",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "python",
+      "spreadsheet"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "excel",
+      "finance",
+      "macrofinance",
+      "statistics"
+    ],
+    "family_candidates": [
+      "spreadsheet_analytics"
+    ],
+    "original_curated_skills": [
+      "xlsx"
+    ]
+  },
+  "summary": {
+    "n_input_candidates": 4,
+    "n_prefilter_kept": 4,
+    "n_final_candidates": 4,
+    "model": "gemini-3-flash-preview"
+  },
+  "final_skill_candidates": [
+    {
+      "skill_id": "excel-data-validation-and-normalization",
+      "display_name": "Excel Data Validation and Normalization",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python",
+        "spreadsheet"
+      ],
+      "operations": [
+        "extract",
+        "validate"
+      ],
+      "granularity": "atomic",
+      "summary": "Clean and validate spreadsheet data by handling missing values, normalizing data types (e.g., numeric coercion), and identifying data quality risks using heuristic scoring.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "3cd94e144b37d775043058a7b95ca3def2d668f6",
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc"
+        ],
+        "source_urls": [
+          "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "finalized_at": "2026-04-22T11:26:42.456919",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    },
+    {
+      "skill_id": "python-spreadsheet-aggregation-workflow",
+      "display_name": "Python Spreadsheet Aggregation Workflow",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python",
+        "spreadsheet"
+      ],
+      "operations": [
+        "aggregate",
+        "extract"
+      ],
+      "granularity": "compositional",
+      "summary": "Programmatically compute numerical metrics and aggregations (such as weighted sums or revenue metrics) from spreadsheet data using Python libraries like Pandas or OpenPyXL, and update the workbook with results.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "db718da9d96d848b1b0e4e92652db8cb5ec9bf53",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md",
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "finalized_at": "2026-04-22T11:26:42.456956",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    },
+    {
+      "skill_id": "excel-pivot-table-aggregation",
+      "display_name": "Excel Pivot Table Aggregation",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "spreadsheet"
+      ],
+      "operations": [
+        "aggregate",
+        "extract"
+      ],
+      "granularity": "atomic",
+      "summary": "Utilize Excel Pivot Tables to aggregate and summarize large datasets, enabling multi-dimensional analysis such as top-performing categories or average values across groups.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.85,
+        "finalized_at": "2026-04-22T11:26:42.456983",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    },
+    {
+      "skill_id": "excel-workflow-data-verification",
+      "display_name": "Excel Workflow Data Verification",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python",
+        "spreadsheet"
+      ],
+      "operations": [
+        "extract",
+        "verify"
+      ],
+      "granularity": "compositional",
+      "summary": "Verify data existence and integrity during spreadsheet import/update workflows, ensuring that row-level operations are correctly tracked and reported in a structured format.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "3ae140fe7667349120ed070e3dbdf7d635109171",
+          "3e5286ca05ea3934b83d869191592866ac4643f6"
+        ],
+        "source_urls": [
+          "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+          "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/fastapi_reference/README.md"
+        ],
+        "confidence": 0.8,
+        "finalized_at": "2026-04-22T11:26:42.457005",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    }
+  ]
+}

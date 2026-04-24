@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-04-22T17:06:29.819327",
+  "dataset_index": "dataset/dataset_index.json",
+  "dataset_root": "dataset",
+  "ontology_file": "data/schema_ontology_v2.json",
+  "summary": {
+    "n_tasks": 2,
+    "n_api_refined": 0
+  },
+  "tasks": [
+    {
+      "task_id": "weighted-gdp-calc",
+      "output_file": "data/task_schema_v2/weighted-gdp-calc.json",
+      "family": "spreadsheet_analytics",
+      "ambiguity_score": 0.15,
+      "api_refined": false
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "output_file": "data/task_schema_v2/sales-pivot-analysis.json",
+      "family": "spreadsheet_analytics",
+      "ambiguity_score": 0.4,
+      "api_refined": false
+    }
+  ]
+}

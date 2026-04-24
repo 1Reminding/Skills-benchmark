@@ -1,0 +1,144 @@
+{
+  "task_id": "sales-pivot-analysis",
+  "generated_at": "2026-04-21T17:12:33.684242",
+  "summary": {
+    "n_candidates": 3
+  },
+  "external_candidates": [
+    {
+      "skill_id": "docx",
+      "source_type": "external",
+      "family": [
+        "document_extraction"
+      ],
+      "artifacts": [
+        "pdf",
+        "xlsx"
+      ],
+      "operations": [
+        "analyze",
+        "debug",
+        "patch",
+        "validate",
+        "verify"
+      ],
+      "tools": [
+        "pdf",
+        "python",
+        "shell",
+        "spreadsheet"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "high",
+      "summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.",
+      "metadata": {
+        "source_name": "docx",
+        "source_url": "https://github.com/anthropics/skills/tree/main/skills/docx",
+        "source_repo": "anthropics/skills",
+        "license_note": "Proprietary. LICENSE.txt has complete terms",
+        "provenance": "github_live",
+        "collected_at": "2026-04-21T17:12:33.665746",
+        "possible_internal_duplicate": true
+      },
+      "retrieval_score": 13.3,
+      "retrieval_path": [
+        "artifact_overlap",
+        "tool_overlap",
+        "weak_operation_overlap",
+        "query_overlap",
+        "best_query:sales-pivot-analysis::skill_neighbor::03",
+        "allowed_domain_match",
+        "trusted_repo_bonus"
+      ],
+      "task_id": "sales-pivot-analysis"
+    },
+    {
+      "skill_id": "canvas-design",
+      "source_type": "external",
+      "family": [
+        "document_extraction"
+      ],
+      "artifacts": [
+        "pdf"
+      ],
+      "operations": [
+        "verify"
+      ],
+      "tools": [
+        "pdf",
+        "python"
+      ],
+      "granularity": "compositional",
+      "domain_specificity": "medium",
+      "summary": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "metadata": {
+        "source_name": "canvas-design",
+        "source_url": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+        "source_repo": "anthropics/skills",
+        "license_note": "Complete terms in LICENSE.txt",
+        "provenance": "github_live",
+        "collected_at": "2026-04-21T17:12:33.664651",
+        "possible_internal_duplicate": false
+      },
+      "retrieval_score": 8.2,
+      "retrieval_path": [
+        "artifact_overlap",
+        "tool_overlap",
+        "weak_operation_overlap",
+        "query_overlap",
+        "best_query:sales-pivot-analysis::skill_neighbor::03",
+        "allowed_domain_match",
+        "trusted_repo_bonus"
+      ],
+      "task_id": "sales-pivot-analysis"
+    },
+    {
+      "skill_id": "cli-creator",
+      "source_type": "external",
+      "family": [
+        "debugging_ci_repair"
+      ],
+      "artifacts": [
+        "json",
+        "notebook"
+      ],
+      "operations": [
+        "analyze",
+        "debug",
+        "patch",
+        "search",
+        "transform",
+        "validate",
+        "verify"
+      ],
+      "tools": [
+        "browser",
+        "python",
+        "shell"
+      ],
+      "granularity": "atomic",
+      "domain_specificity": "medium",
+      "summary": "Build a composable CLI for Codex from API docs, an OpenAPI spec, existing curl examples, an SDK, a web app, an admin tool, or a local script. Use when the user wants Codex to create a command-line tool that can run from any repo, expose composable read/write commands, return stable JSON, manage auth, and pair with a companion skill.",
+      "metadata": {
+        "source_name": "cli-creator",
+        "source_url": "https://github.com/openai/skills/tree/main/skills/.curated/cli-creator",
+        "source_repo": "openai/skills",
+        "license_note": "unknown",
+        "provenance": "github_live",
+        "collected_at": "2026-04-21T17:12:33.669696",
+        "possible_internal_duplicate": false
+      },
+      "retrieval_score": 5.7,
+      "retrieval_path": [
+        "tool_overlap",
+        "strong_operation_overlap",
+        "weak_operation_overlap",
+        "query_overlap",
+        "best_query:sales-pivot-analysis::skill_neighbor::03",
+        "allowed_domain_match",
+        "trusted_repo_bonus"
+      ],
+      "task_id": "sales-pivot-analysis"
+    }
+  ]
+}

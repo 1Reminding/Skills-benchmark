@@ -1,0 +1,20 @@
+{
+  "doc_id": "1a3abc045740db4f036284cd7a01cdb6a56c4b65",
+  "fetched_at": "2026-04-21T18:08:37.503257",
+  "source_type": "github_repo_doc",
+  "repo": "fy-labs/md-spreadsheet-parser",
+  "path": "docs/changes/archive/0.4.3/readme_feedback.docs.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/fy-labs/md-spreadsheet-parser/blob/main/docs/changes/archive/0.4.3/readme_feedback.docs.md",
+  "text": "Updated README.md to highlight suitability for AWS Lambda (Zero Dependency) and the \"Markdown as Database\" concept based on user feedback.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05"
+    }
+  ]
+}

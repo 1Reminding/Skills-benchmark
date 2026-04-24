@@ -1,0 +1,397 @@
+{
+  "task_id": "sales-pivot-analysis",
+  "generated_at": "2026-04-21T21:04:01.044377",
+  "schema": {
+    "task_id": "sales-pivot-analysis",
+    "family": "spreadsheet_analytics",
+    "domain": "data-analysis",
+    "artifacts": [
+      "pdf",
+      "xlsx"
+    ],
+    "operations": [
+      "aggregate",
+      "extract",
+      "transform",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "pdf",
+      "python",
+      "spreadsheet"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "data-integration",
+      "excel",
+      "pdf",
+      "pivot-tables"
+    ],
+    "family_candidates": [
+      "document_extraction",
+      "spreadsheet_analytics"
+    ],
+    "original_curated_skills": [
+      "pdf",
+      "xlsx"
+    ]
+  },
+  "summary": {
+    "n_evidence_chunks": 10,
+    "n_generated_candidates": 5,
+    "model": "gemini-3-flash-preview"
+  },
+  "evidence_preview": [
+    {
+      "chunk_id": "f269114e3cb05a90aea9d47e8b129857f1e47813",
+      "doc_id": "dcfb5a5e9eb2a7230cf421ba236a7b3d9fb7711f",
+      "title": "rogers-cyber/SmartExcelGuardian:README.md",
+      "section_title": "SmartExcelGuardian v1.1.0 – Professional Excel Data Guardian Tool (Full Source Code)",
+      "repo": "rogers-cyber/SmartExcelGuardian",
+      "path": "README.md",
+      "source_url": "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+      "retrieval_score": 16.2,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:2",
+        "tool_overlap:3",
+        "weak_ops:2",
+        "query_overlap:3",
+        "best_query:sales-pivot-analysis::skill_neighbor::07",
+        "procedural_cues:1",
+        "path_good:1",
+        "substantive_chunk"
+      ],
+      "text": "entation ------------------------------------------------------------ 📦 OUTPUT FORMATS ------------------------------------------------------------ - Excel (.xlsx) — Cleaned data, highlighted risk columns, formulas - PDF — Color-coded heuristic report with pagination - JSON — Machine-readable cleanup results - TXT — Human-readable text summary ------------------------------------------------------------ 📦 DEPENDENCIES ------------------------------------------------------------ - Python 3.10+ - pandas — Data processing and validation - numpy — Numeric computation support - ttkbootstrap — Modern themed UI - openpyxl — Excel reading, writing, and formatting - reportlab — PDF generation - Tkinter — Standard Python GUI framework - threading — Background cleanup execution - OS / Sys — Platform-aware file handling ------------------------------------------------------------ 📝 NOTES ------------------------------------------------------------ - SmartExcelGuardian processes all files locally - No data is transmitted or uploaded - Heuristic scores help prioritize risky columns - Conditional formatting visually highlights problem areas - Numeric columns receive automatic SUM and AVERAGE form"
+    },
+    {
+      "chunk_id": "1f873e24ce1ab3d3ae618b67107c31ac2804ec8c",
+      "doc_id": "12f99320e38a75eb3b455950c0b094dc4a4d07e3",
+      "title": "Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction:README.md",
+      "section_title": "Features",
+      "repo": "Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction",
+      "path": "README.md",
+      "source_url": "https://github.com/Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction/blob/main/README.md",
+      "retrieval_score": 15.7,
+      "retrieval_path": [
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:3",
+        "query_overlap:3",
+        "best_query:sales-pivot-analysis::skill_neighbor::03",
+        "procedural_cues:5",
+        "workflow_verbs",
+        "path_good:1"
+      ],
+      "text": "- **PDF to Image Conversion:** Transforms PDF pages into images, preparing them for table detection and extraction. - **Advanced Table Detection:** Employs morphological transformations to detect tables within images. - **OCR Text Extraction:** Leverages OCR technology to extract text from tables accurately. - **AI-Powered Text Processing:** Cleans and formats extracted text, using AI models from Hugging Face Hub. - **Structured Data Output:** Aggregates extracted data into a structured and usable format."
+    },
+    {
+      "chunk_id": "f493b34e318ff85a5d8aab3957557cfaa5c179dc",
+      "doc_id": "707c6a6b10f969c0fcbc773455d1954e1dee9210",
+      "title": "SakshiKhanore/Sales-Dashboard-Excel:README.md",
+      "section_title": "Tools & Technologies",
+      "repo": "SakshiKhanore/Sales-Dashboard-Excel",
+      "path": "README.md",
+      "source_url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+      "retrieval_score": 15.3,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:2",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "weak_ops:2",
+        "query_overlap:3",
+        "best_query:sales-pivot-analysis::family_core::02",
+        "procedural_cues:3",
+        "path_good:1"
+      ],
+      "text": "- **Python (Pandas)** — data cleaning, filtering, aggregation, revenue metrics computation - **Microsoft Excel** — Pivot Tables, KPI cards, interactive charts (Line, Bar, Donut), dashboard design - **Jupyter Notebook** — exploratory data analysis and programmatic validation"
+    },
+    {
+      "chunk_id": "ee5b2d2608e06abd382904539817b9c99daaa2dc",
+      "doc_id": "6f3e570568b5b0a6432891554fb425bebfaa0f4d",
+      "title": "xavctn/img2table:README.md",
+      "section_title": "Table of contents",
+      "repo": "xavctn/img2table",
+      "path": "README.md",
+      "source_url": "https://github.com/xavctn/img2table/blob/main/README.md",
+      "retrieval_score": 15.2,
+      "retrieval_path": [
+        "family_cues:2",
+        "artifact_overlap:2",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:3",
+        "best_query:sales-pivot-analysis::skill_neighbor::03",
+        "procedural_cues:2",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:1",
+        "thin_chunk"
+      ],
+      "text": "* [Installation](#installation) * [Features](#features) * [Supported file formats](#supported-file-formats) * [Usage](#usage) * [Documents](#documents) * [Images](#images-doc) * [PDF](#pdf-doc) * [Supported OCRs](#ocr) * [Table extraction](#table-extract) * [Excel export](#xlsx) * [Examples](#examples) * [Caveats / FYI](#fyi)"
+    },
+    {
+      "chunk_id": "db718da9d96d848b1b0e4e92652db8cb5ec9bf53",
+      "doc_id": "417b2670aa0fb27da9546bc0f74f81b7d9aa2244",
+      "title": "RazaAli313/Automating-Excel-WorkFlows-Using-Python:README.md",
+      "section_title": "Automating-Excel-WorkFlows-Using-Python",
+      "repo": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+      "path": "README.md",
+      "source_url": "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md",
+      "retrieval_score": 15.0,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:3",
+        "best_query:sales-pivot-analysis::family_core::04",
+        "procedural_cues:4",
+        "path_good:2"
+      ],
+      "text": "Excel Workflow Automation with OpenPyXL This Python script automates Excel spreadsheet processing using the openpyxl library. It modifies numerical values, adds a bar chart, and saves an updated version of the file. Features Reads an Excel file and processes data in Sheet1. Updates values in the third column (reducing by 10%) and writes them to the fourth column. Adds a bar chart to visualize the updated values. Saves a new Excel file with modifications. Requirements Python 3.x openpyxl library Installation bash Copy Edit pip install openpyxl Usage Ensure your Excel file (e.g., sales.xlsx) exists in the script's directory. Run the script with: python Copy Edit process_spreadsheet(\"sales.xlsx\") The modified file is saved as sales_updated.xlsx."
+    },
+    {
+      "chunk_id": "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+      "doc_id": "f4b661f99186a192c02b4e1fe96f350d413f9126",
+      "title": "shourba1/Tourism-Data-Analysis-Project:README.md",
+      "section_title": "README",
+      "repo": "shourba1/Tourism-Data-Analysis-Project",
+      "path": "README.md",
+      "source_url": "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md",
+      "retrieval_score": 14.9,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:2",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:sales-pivot-analysis::family_core::02",
+        "procedural_cues:2",
+        "step_pattern",
+        "path_good:1",
+        "substantive_chunk"
+      ],
+      "text": "graphics, and seasonality. 🧹 1. Python – Data Cleaning & EDA The raw dataset contained inconsistent data types, missing values, and noisy text fields. ✔ Cleaning Steps: Converted Age & Spending to numeric Converted dates to datetime Handled missing values using median and default categories Normalized text fields (Gender / Purpose / Feedback) Removed corrupt or invalid rows Created new fields: Duration MonthNumber ✔ EDA Highlights: Age distribution ≈ 44 years No correlation between Age and Spending Spending range: 300–4998 USD Dataset fully cleaned for further analysis 🔗 Notebook: python_analysis.ipynb 📊 2. Excel – Business Analysis (10 Questions) Using Pivot Tables, I analyzed: Top countries → Egypt & Germany (1491 visitors each) Most common purpose → Business & Leisure Highest spending country → Saint Martin Gender distribution → Male 7311 | Female 7112 Highest spending age group → 50+ Peak month → May (1320 visitors) Average duration → 11.54 days Most common feedback → OK 🔗 Excel File: clean_tourism_data.xlsx 📈 3."
+    },
+    {
+      "chunk_id": "14e302497801b7124d937b646f86c17fa2150123",
+      "doc_id": "dcfb5a5e9eb2a7230cf421ba236a7b3d9fb7711f",
+      "title": "rogers-cyber/SmartExcelGuardian:README.md",
+      "section_title": "SmartExcelGuardian v1.1.0 – Professional Excel Data Guardian Tool (Full Source Code)",
+      "repo": "rogers-cyber/SmartExcelGuardian",
+      "path": "README.md",
+      "source_url": "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+      "retrieval_score": 14.8,
+      "retrieval_path": [
+        "family_cues:2",
+        "artifact_overlap:2",
+        "tool_overlap:2",
+        "query_overlap:2",
+        "best_query:sales-pivot-analysis::family_core::02",
+        "procedural_cues:4",
+        "step_pattern",
+        "workflow_verbs",
+        "path_good:1"
+      ],
+      "text": "e displayed with: - Original type → Cleaned type - Missing values count - Duplicate count - Heuristic score (0–100) - Suggested rename (snake_case) 5. Export Results: - 📄 Excel — Cleaned data, conditional formatting, formulas - 📄 PDF — Professional audit-style report - 📄 JSON — Structured results for automation - 📃 TXT — Plain-text summary 6. About / Guide: - Click ℹ About for features, usage steps, and developer info ------------------------------------------------------------ ⚙️ CONFIGURATION OPTIONS ------------------------------------------------------------ Option Description ------------------------------ -------------------------------------------------- Excel File Load a workbook for cleanup Start Cleanup Begin heuristic analysis and data cleaning Stop Cleanup Safely halt processing Results Table Interactive column-level diagnostics Export Excel Cleaned data + formulas + formatting Export PDF Professional audit-style report Export JSON Structured cleanup metadata Export TXT Plain-text summary About / Guide Built-in usage documentation ------------------------------------------------------------ 📦 OUTPUT FORMATS ------------------------------------------------------------ -"
+    },
+    {
+      "chunk_id": "8a4924f9c5cc93e1937039b17a2849ecdf1d057b",
+      "doc_id": "6f3e570568b5b0a6432891554fb425bebfaa0f4d",
+      "title": "xavctn/img2table:README.md",
+      "section_title": "Features <a name=\"features\"></a>",
+      "repo": "xavctn/img2table",
+      "path": "README.md",
+      "source_url": "https://github.com/xavctn/img2table/blob/main/README.md",
+      "retrieval_score": 14.7,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:2",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:3",
+        "best_query:sales-pivot-analysis::skill_neighbor::03",
+        "procedural_cues:2",
+        "example_pattern",
+        "path_good:1"
+      ],
+      "text": "* Table identification for images and PDF files, including bounding boxes at the table cell level * Handling of complex table structures such as merged cells * Handling of implicit content - see [example](/examples/Implicit.ipynb) * Table content extraction by providing support for OCR services / tools * Extracted tables are returned as a simple object, including a Pandas DataFrame representation * Export extracted tables to an Excel file, preserving their original structure"
+    }
+  ],
+  "skill_candidates": [
+    {
+      "skill_id": "pdf-table-to-structured-extraction",
+      "display_name": "PDF Table to Structured Extraction",
+      "family": [
+        "document_extraction"
+      ],
+      "artifacts": [
+        "pdf",
+        "xlsx"
+      ],
+      "tools": [
+        "pdf",
+        "python"
+      ],
+      "operations": [
+        "extract",
+        "transform"
+      ],
+      "granularity": "compositional",
+      "summary": "Extracting tabular data from PDF documents using OCR and morphological transformations, then converting the results into structured formats like Pandas DataFrames or Excel workbooks.",
+      "why_distinct": "This focuses specifically on the bridge between unstructured PDF documents and structured spreadsheet formats, which is the initial step in the data pipeline.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "1f873e24ce1ab3d3ae618b67107c31ac2804ec8c",
+          "8a4924f9c5cc93e1937039b17a2849ecdf1d057b"
+        ],
+        "source_urls": [
+          "https://github.com/Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction/blob/main/README.md",
+          "https://github.com/xavctn/img2table/blob/main/README.md"
+        ],
+        "confidence": 0.95,
+        "generated_at": "2026-04-21T21:04:01.044167",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    },
+    {
+      "skill_id": "pivot-table-aggregation-analysis",
+      "display_name": "Pivot Table Aggregation Analysis",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "spreadsheet"
+      ],
+      "operations": [
+        "aggregate"
+      ],
+      "granularity": "atomic",
+      "summary": "Using pivot tables to group and summarize data to identify key business metrics such as top-performing categories, seasonal peaks, and categorical distributions.",
+      "why_distinct": "This skill focuses on the analytical aggregation phase specifically within the spreadsheet environment rather than programmatic data processing.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.95,
+        "generated_at": "2026-04-21T21:04:01.044229",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    },
+    {
+      "skill_id": "data-integrity-audit-and-validation",
+      "display_name": "Data Integrity Audit and Validation",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "pdf",
+        "xlsx"
+      ],
+      "tools": [
+        "python"
+      ],
+      "operations": [
+        "validate",
+        "verify"
+      ],
+      "granularity": "compositional",
+      "summary": "Conducting heuristic analysis to identify data risks, such as missing values and duplicates, and generating color-coded validation reports in PDF and Excel formats.",
+      "why_distinct": "It focuses on the verification and quality assurance aspect, providing an audit trail of data cleanliness.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "14e302497801b7124d937b646f86c17fa2150123",
+          "f269114e3cb05a90aea9d47e8b129857f1e47813"
+        ],
+        "source_urls": [
+          "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "generated_at": "2026-04-21T21:04:01.044272",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    },
+    {
+      "skill_id": "tabular-data-cleaning-and-normalization",
+      "display_name": "Tabular Data Cleaning and Normalization",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python"
+      ],
+      "operations": [
+        "transform",
+        "validate"
+      ],
+      "granularity": "compositional",
+      "summary": "Processing raw datasets to resolve inconsistent data types, handle missing values, and normalize text fields to prepare data for downstream analysis.",
+      "why_distinct": "It emphasizes the transformation of 'noisy' data into a clean state, which is a distinct prerequisite to performing pivot analysis.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "generated_at": "2026-04-21T21:04:01.044206",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    },
+    {
+      "skill_id": "programmatic-spreadsheet-update-and-charting",
+      "display_name": "Programmatic Spreadsheet Update and Charting",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python"
+      ],
+      "operations": [
+        "transform"
+      ],
+      "granularity": "compositional",
+      "summary": "Automating the modification of Excel cells, column values, and the insertion of visual charts using Python libraries like openpyxl.",
+      "why_distinct": "This identifies the automation of file updates and visual enhancements, which is different from just analyzing or cleaning data.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "db718da9d96d848b1b0e4e92652db8cb5ec9bf53"
+        ],
+        "source_urls": [
+          "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md"
+        ],
+        "confidence": 0.85,
+        "generated_at": "2026-04-21T21:04:01.044251",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    }
+  ]
+}

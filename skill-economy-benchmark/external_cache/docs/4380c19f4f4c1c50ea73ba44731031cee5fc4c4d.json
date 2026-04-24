@@ -1,0 +1,20 @@
+{
+  "doc_id": "4380c19f4f4c1c50ea73ba44731031cee5fc4c4d",
+  "fetched_at": "2026-04-21T18:08:21.747612",
+  "source_type": "github_repo_doc",
+  "repo": "a-sehic-dev/seo-automation-tool",
+  "path": "CHANGELOG.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/a-sehic-dev/seo-automation-tool/blob/main/CHANGELOG.md",
+  "text": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),\nand this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n\n## [Unreleased]\n\n## [1.0.0] - 2025-03-01\n\n### Added\n\n- GUI application (`seo_gui.py`) — Tkinter interface to select Excel file and generate SEO ideas.\n- CLI application (`seo_tool.py`) — Auto-detect Excel file in folder and generate `seo_results.xlsx`.\n- Excel input: first column used as keywords; output columns: Keyword, SEO Idea.\n- Template ideas per keyword: \"Best X tips\", \"X for beginners\", \"Advanced X guide\".\n- MIT license and initial project documentation for public release.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04"
+    }
+  ]
+}

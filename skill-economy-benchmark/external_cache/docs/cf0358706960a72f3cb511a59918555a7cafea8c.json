@@ -1,0 +1,16 @@
+{
+  "doc_id": "cf0358706960a72f3cb511a59918555a7cafea8c",
+  "fetched_at": "2026-04-21T18:07:57.119230",
+  "source_type": "github_repo_doc",
+  "repo": "JuniverseCoder/MinerU2PPT",
+  "path": "docs/testing/ocr-configuration-testing.md",
+  "default_branch": "master",
+  "source_url": "https://github.com/JuniverseCoder/MinerU2PPT/blob/master/docs/testing/ocr-configuration-testing.md",
+  "text": "# OCR Configuration Testing\n\n## Scope\n- Feature/workflow under test:\n  - OCR engine configuration from GUI/CLI into `PaddleOCREngine`\n- Test layers covered: unit / integration\n\n## Shared Testing Rules\n- Mandatory coverage expectations:\n  - GUI/CLI parameter wiring must not change defaults when fields are empty.\n  - OCR engine should accept det_db_* overrides without initialization errors.\n- Test data/fixtures conventions:\n  - Use small synthetic bboxes; avoid model downloads where possible.\n- Mock/adapter expectations:\n  - Prefer unit tests to assert parameter values on engine instances.\n\n## How to Run\n- Unit:\n  - `python -m pytest tests/unit`\n- Integration:\n  - `python -m pytest tests/integration/test_generator_ocr_merge.py`\n\n## Workflow Validation Requirements\n- When workflow changes, required test updates:\n  - Update/extend unit tests if OCR config parameters are added or renamed.\n  - Ensure GUI advanced options remain collapsible and do not crash on start.\n- Required evidence for sign-off:\n  - Unit tests green.\n  - GUI launch smoke test (instantiate `App`).\n\n## Failure Handling\n- Common failure patterns:\n  - GUI startup errors due to missing widget attributes.\n  - OCR engine reuse without resetting `_ocr` after config changes.\n- Debug/triage checklist:\n  - Confirm advanced options are hidden by default.\n  - Verify det_db_* are `None` when fields are empty.\n\n## References\n- PRD/Plan refs:\n  - `docs/plan/ocr-model-variant-selection-plan.md`\n- Related test files:\n  - `tests/unit/test_ocr_engine_init.py`\n  - `tests/integration/test_generator_ocr_merge.py`\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05"
+    }
+  ]
+}

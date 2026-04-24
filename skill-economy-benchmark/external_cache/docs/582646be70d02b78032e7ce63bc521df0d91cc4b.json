@@ -1,0 +1,16 @@
+{
+  "doc_id": "582646be70d02b78032e7ce63bc521df0d91cc4b",
+  "fetched_at": "2026-04-21T18:08:03.749861",
+  "source_type": "github_repo_doc",
+  "repo": "bettercallmanav/resume-builder-skill",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/bettercallmanav/resume-builder-skill/blob/main/README.md",
+  "text": "# Resume Builder Skill\n\nAn AI skill that builds professional, high-impact resumes through a structured career consulting conversation. It doesn't just format text into a document — it conducts an honest review process that extracts real achievements, challenges weak claims, and produces a resume that tells a coherent career story.\n\n## What It Does\n\nThe skill walks through a 5-phase process:\n\n1. **Context Gathering** — Understands the user's career level, target role, compensation goals, and current situation. Reads existing resumes and gives an honest initial assessment.\n\n2. **Career Consulting** — Identifies core differentiators, assesses market value, and arrives at a clear positioning statement before any writing begins.\n\n3. **Section-by-Section Review** — Goes through each resume section with brutal honesty. Extracts real metrics through probing questions. Never fabricates numbers.\n\n4. **Document Generation** — Produces a polished `.docx` and `.pdf` with clickable links, bold metrics, right-aligned dates, and proper formatting using the `docx` npm package.\n\n5. **Final Review** — Self-reviews the output for coherence, contradictions, and positioning alignment.\n\nWorks for freshers, mid-career professionals, senior leaders, and career switchers across US, India, and European markets.\n\n## Repository Structure\n\n```\nresume-builder/\n  SKILL.md                           # Main skill definition and process\n  references/\n    career-consulting.md             # Career consulting and positioning guidance\n    section-framework.md             # Section-by-section writing framework\n    docx-generator.md                # DOCX generation template and formatting rules\nexamples/\n  Manav_Bhatia_Resume_PM.docx        # Sample output (DOCX)\n  Manav_Bhatia_Resume_PM.pdf         # Sample output (PDF)\nresume-builder.skill                 # Packaged skill file (ZIP archive)\n```\n\n## Key Principles\n\n- **Honest, not nice.** Weak content gets called out directly.\n- **Metrics must be real.** Every number is a promise the user will defend in an interview.\n- **Marketing document, not job description.** Outcomes over responsibilities.\n- **Positioning over completeness.** A focused narrative beats a comprehensive dump.\n- **One page first, two pages if earned.** Every line on page two must make the hiring manager more interested.\n\n## Sample Output\n\nCheck the [`examples/`](./examples) directory for sample resume output in both DOCX and PDF formats.\n\n## License\n\n[MIT](./LICENSE)\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05"
+    }
+  ]
+}

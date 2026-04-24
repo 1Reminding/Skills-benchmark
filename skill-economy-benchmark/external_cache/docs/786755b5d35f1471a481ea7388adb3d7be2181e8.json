@@ -1,0 +1,20 @@
+{
+  "doc_id": "786755b5d35f1471a481ea7388adb3d7be2181e8",
+  "fetched_at": "2026-04-21T18:08:24.304242",
+  "source_type": "github_repo_doc",
+  "repo": "aring87/Software-List-Management",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/aring87/Software-List-Management/blob/main/README.md",
+  "text": "![license](https://img.shields.io/badge/license-MIT-green)\n![python](https://img.shields.io/badge/python-3.10%2B-blue)\n![platform](https://img.shields.io/badge/platform-Windows-orange)\n![repo size](https://img.shields.io/github/repo-size/aring87/Software-List-Management)\n![last commit](https://img.shields.io/github/last-commit/aring87/Software-List-Management)\n\n# SoftWare List Management App\n\nA small Python GUI tool for searching a software list in Excel and submitting a software request via a form-style workflow.\n\nThis repo includes **fictional demo data** in `/samples` so you can test the app without using real Intune exports.\n\n## Screenshots\n\n### Main View\n![Main View](docs/screenshots/main_view.png)\n### Request Form\n![Request Form](docs/screenshots/request_form.png)\n### Request Queue\n![Request Queue](docs/screenshots/request_queue.png)\n\n## What's in this repo\n\n- `excel_search_gui.py` — main GUI application\n- `request_form_geometry.json` — saved UI layout/geometry for the request form\n- `requirements.txt` — Python dependencies\n- `samples/` — demo Excel file(s) with fake/random software entries (safe for Git)\n\n## Requirements\n\n- Windows 10/11\n- Python 3.10+ recommended\n\n## Setup\n\nFrom the repo root:\n\n```bash\npython -m pip install --upgrade pip\npython -m pip install -r requirements.txt\n```\n\n## Quick Start\n\n```bash\npython -m pip install -r requirements.txt\npython excel_search_gui.py\n```\n## Run the Windows executable (no Python required)\n\nIf you just want to run the app (recommended), download the latest release asset:\n\n1. Go to **Releases** and download `dist.zip`\n2. Right-click the zip → **Extract All**\n3. Open the extracted folder and run `Software_Search.exe` (or the .exe name in the folder)\n\n**Important:** Keep all extracted files together in the same folder (this is an `onedir` build).\n\n### Sample data\nThe executable includes fictional demo data in:\n- `samples/Example_Software_List.xlsx`\n\nYou can replace that file with your own spreadsheet if you keep the same filename, or use the app’s browse/select option (if enabled).\n\n## Demo Excel file\n\nUse the fictional example Excel sheet in:\n\n- `samples/Example_Software_List.xlsx`\n\nThe demo sheet uses the dropdown values:\n\n- **Platform:** Windows, iOS, Android, macOS, Cloud  \n- **Type:** Cloud, Application, Extensions  \n- **Authorized User:** IT Use Only, IT Cyber Only, Staff, Students, Staff and Students, Medical\n\n## Notes / Safety\n\nDo not commit real Intune exports or any sensitive data to this repo.\n\nKeep production data outside the repo, or ensure it is ignored by `.gitignore`.\n\n## License\n\nMIT — see `LICENSE`.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04"
+    }
+  ]
+}

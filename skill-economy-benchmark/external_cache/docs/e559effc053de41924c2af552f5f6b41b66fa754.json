@@ -1,0 +1,20 @@
+{
+  "doc_id": "e559effc053de41924c2af552f5f6b41b66fa754",
+  "fetched_at": "2026-04-21T18:08:34.374623",
+  "source_type": "github_repo_doc",
+  "repo": "IamRakibAhmed/linkedin-voucher-checker",
+  "path": "requirements.txt",
+  "default_branch": "main",
+  "source_url": "https://github.com/IamRakibAhmed/linkedin-voucher-checker/blob/main/requirements.txt",
+  "text": "selenium\nwebdriver-manager\npandas\nopenpyxl\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05"
+    }
+  ]
+}

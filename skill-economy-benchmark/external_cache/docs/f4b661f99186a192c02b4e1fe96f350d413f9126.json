@@ -1,0 +1,20 @@
+{
+  "doc_id": "f4b661f99186a192c02b4e1fe96f350d413f9126",
+  "fetched_at": "2026-04-21T18:07:27.361491",
+  "source_type": "github_repo_doc",
+  "repo": "shourba1/Tourism-Data-Analysis-Project",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md",
+  "text": "🎯 Tourism Data Analysis Project\n🧹 Python • 📊 Excel • 📈 Power BI • 🗃 SQL\nBy Mahmoud Gaber\n <p align=\"center\"> <img src=\"https://img.shields.io/badge/Python-EDA-blue?style=for-the-badge\"> <img src=\"https://img.shields.io/badge/Excel-Pivot%20Tables-green?style=for-the-badge\"> <img src=\"https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=for-the-badge\"> <img src=\"https://img.shields.io/badge/SQL-Analysis-red?style=for-the-badge\"> </p>\n📌 Project Overview\nThis project represents a complete end-to-end Data Analysis pipeline applied to a real tourism dataset.\n I explored, cleaned, visualized, and analyzed the data using:\nPython (Pandas, NumPy, Matplotlib, Seaborn)\n\n\nExcel Pivot Tables\n\n\nPower BI Dashboard\n\n\nMySQL Analytical Queries\n\n\nThe goal is to understand tourist behavior, spending patterns, demographics, and seasonality.\n\n🧹 1. Python – Data Cleaning & EDA\nThe raw dataset contained inconsistent data types, missing values, and noisy text fields.\n✔ Cleaning Steps:\nConverted Age & Spending to numeric\n\n\nConverted dates to datetime\n\n\nHandled missing values using median and default categories\n\n\nNormalized text fields (Gender / Purpose / Feedback)\n\n\nRemoved corrupt or invalid rows\n\n\nCreated new fields:\n\n\nDuration\n\n\nMonthNumber\n\n\n✔ EDA Highlights:\nAge distribution ≈ 44 years\n\n\nNo correlation between Age and Spending\n\n\nSpending range: 300–4998 USD\n\n\nDataset fully cleaned for further analysis\n\n\n🔗 Notebook: python_analysis.ipynb\n\n📊 2. Excel – Business Analysis (10 Questions)\nUsing Pivot Tables, I analyzed:\nTop countries → Egypt & Germany (1491 visitors each)\n\n\nMost common purpose → Business & Leisure\n\n\nHighest spending country → Saint Martin\n\n\nGender distribution → Male 7311 | Female 7112\n\n\nHighest spending age group → 50+\n\n\nPeak month → May (1320 visitors)\n\n\nAverage duration → 11.54 days\n\n\nMost common feedback → OK\n\n\n🔗 Excel File: clean_tourism_data.xlsx\n\n📈 3. Power BI – Interactive Dashboard\nDashboard Includes:\n🌍 Visitors by Country\n\n\n🎯 Purpose of Visit Breakdown\n\n\n👥 Gender Distribution\n\n\n💰 Average Spending by Age Group\n\n\n📅 Arrivals by Month (Seasonality)\n\n\n🎛 Slicers: Country, Gender, Purpose\n\n\n🔢 KPI Cards: Total Visitors, Avg Spending, Avg Duration\n\n\nDashboard Insights:\nTourism peaks in May\n\n\nSpending increases with age\n\n\nBusiness travel dominates\n\n\nGender distribution is nearly balanced\n\n\n🔗 Dashboard File: tourism_dashboard.pbix\n\n🗃 4. SQL – Analytical Queries\nKey SQL Queries:\nTop countries by visitors\n\n\nAverage spending per country\n\n\nSpending by age\n\n\nMonthly visitor trends\n\n\nPurpose-based insights\n\n\nExample:\nSELECT Country, COUNT(*) AS Visitors\nFROM tourism_clean\nGROUP BY Country\nORDER BY Visitors DESC;\n\n🔗 SQL File: analysis_queries.sql\n\n📂 Project Structure\n📁 Tourism-Data-Analysis\n│── python_analysis.ipynb\n│── clean_tourism_data.xlsx\n│── tourism_dashboard.pbix\n│── analysis_queries.sql\n│── presentation.pptx\n│── README.md\n\n\n🏁 Final Insights\nEgypt & Germany are top markets\n\n\nBusiness & Leisure dominate travel motives\n\n\nTourists aged 50+ spend the most\n\n\nPeak tourism month is May\n\n\nMost travelers stay about 12 days\n\n\nFeedback shows moderate satisfaction\n\n\n\n🙌 About Me\nI’m currently building my career in Data Analysis and expanding my skills through real projects like this one.\nFeel free to check out the repository and share feedback!\n#dataanalysis #python #excel #powerbi #sql #portfolio #analytics\n\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02"
+    }
+  ]
+}

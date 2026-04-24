@@ -1,0 +1,20 @@
+{
+  "doc_id": "7d497903c5e111c65b81bd091426d8ba0d62500c",
+  "fetched_at": "2026-04-21T18:07:34.192333",
+  "source_type": "github_repo_doc",
+  "repo": "VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation",
+  "path": "QUICKSTART.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/VuppalaYashwanth/Python-Automation-Tool-for-CSV-Validation-Cleaning-Report-Generation/blob/main/QUICKSTART.md",
+  "text": "# 🚀 Quick Start Guide\n\nGet up and running with the CSV Validation Tool in 3 minutes!\n\n## Step 1: Install (30 seconds)\n\n```bash\n# Clone the repository\ngit clone https://github.com/yourusername/csv-validation-tool.git\ncd csv-validation-tool\n\n# Install dependencies\npip install -r requirements.txt\n```\n\n## Step 2: Prepare Your Data (30 seconds)\n\nPlace your CSV or Excel files in the `input/` directory:\n\n```bash\n# Example: Copy your data file\ncp /path/to/your/data.csv input/\n```\n\n## Step 3: Run the Tool (30 seconds)\n\n```bash\n# Basic usage - validate and clean\npython src/main.py --input input/data.csv --output output/\n\n# Or process all files in input directory\npython src/main.py --input input/ --output output/\n```\n\n## Step 4: Check Results (1 minute)\n\nYour cleaned data and reports are in the `output/` directory:\n\n```\noutput/\n├── cleaned_data.csv           # Your cleaned data\n├── report_data.txt            # Validation report\n└── stats_data.txt             # Summary statistics\n```\n\n## Common Use Cases\n\n### Validate Required Columns\n```bash\npython src/main.py \\\n  --input input/data.csv \\\n  --output output/ \\\n  --required-columns \"name,email,phone\"\n```\n\n### Validation Only (No Cleaning)\n```bash\npython src/main.py \\\n  --input input/data.csv \\\n  --output output/ \\\n  --validate-only\n```\n\n### Custom Missing Value Handling\n```bash\npython src/main.py \\\n  --input input/data.csv \\\n  --output output/ \\\n  --fill-missing median\n```\n\n### Process Multiple Files\n```bash\npython src/main.py \\\n  --input input/ \\\n  --output output/ \\\n  --verbose\n```\n\n## Understanding the Output\n\n### Cleaned CSV File\n- Duplicates removed\n- Missing values handled\n- Whitespace trimmed\n- Column names standardized\n\n### Validation Report\nShows:\n- Data quality score (0-100)\n- Missing values analysis\n- Duplicate detection\n- Column-by-column analysis\n- Recommendations\n\n### Summary Statistics\nContains:\n- Descriptive statistics for numeric columns\n- Value distributions for categorical columns\n- Data completeness metrics\n\n## Next Steps\n\n1. ✅ Read the full [README.md](README.md) for detailed documentation\n2. ✅ Customize validation rules in your code\n3. ✅ Automate with cron jobs or task schedulers\n4. ✅ Integrate into your data pipelines\n\n## Need Help?\n\n- Check [README.md](README.md) for detailed usage\n- See `logs/tool.log` for execution details\n- Review example files in `examples/` directory\n\n---\n\n**That's it! You're ready to clean your data!** 🎉\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::04"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::03"
+    }
+  ]
+}

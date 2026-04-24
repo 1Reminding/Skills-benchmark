@@ -24,6 +24,7 @@ DEFAULT_DATASET_ROOT = PROJECT_ROOT / "dataset"
 DEFAULT_SKILL_REGISTRY = PROJECT_ROOT / "data" / "skill_registry.json"
 DEFAULT_GENERIC_SKILLS = PROJECT_ROOT / "data" / "generic_skills.json"
 DEFAULT_EXTERNAL_SKILLS = PROJECT_ROOT / "data" / "external_skills.json"
+DEFAULT_EXTERNAL_CORPUS = PROJECT_ROOT / "data" / "external_skill_corpus.json"
 DEFAULT_OUTPUT_ROOT = PROJECT_ROOT / "skill_pool"
 
 TOKEN_RE = re.compile(r"[a-z0-9][a-z0-9\-_/+]*")
@@ -624,6 +625,13 @@ def main() -> None:
     parser.add_argument("--max-external", type=int, default=DEFAULT_MAX_PER_BUCKET["external"])
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     args = parser.parse_args()
+
+    # Backward-compatible auto-discovery for the new external corpus output.
+    if args.external_skills is None:
+        if DEFAULT_EXTERNAL_CORPUS.exists():
+            args.external_skills = DEFAULT_EXTERNAL_CORPUS
+        elif DEFAULT_EXTERNAL_SKILLS.exists():
+            args.external_skills = DEFAULT_EXTERNAL_SKILLS
 
     if args.external_skills and not args.external_skills.exists():
         raise SystemExit(f"External skills file not found: {args.external_skills}")

@@ -1,0 +1,16 @@
+{
+  "doc_id": "d8d9400a37e1dff89bcfcb8c0539f904d0dfb5ff",
+  "fetched_at": "2026-04-21T18:07:59.512646",
+  "source_type": "github_repo_doc",
+  "repo": "Tanguy9862/Medical-OCR-Data-Extraction",
+  "path": "requirements.txt",
+  "default_branch": "master",
+  "source_url": "https://github.com/Tanguy9862/Medical-OCR-Data-Extraction/blob/master/requirements.txt",
+  "text": "pandas\ntqdm\nPillow\ntabula\nnumpy\npdf2image\npytesseract\nlangdetect\nxlsxwriter\npywin32",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05"
+    }
+  ]
+}

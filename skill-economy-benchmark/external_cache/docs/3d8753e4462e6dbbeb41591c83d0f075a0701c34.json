@@ -1,0 +1,16 @@
+{
+  "doc_id": "3d8753e4462e6dbbeb41591c83d0f075a0701c34",
+  "fetched_at": "2026-04-21T18:07:50.557765",
+  "source_type": "github_repo_doc",
+  "repo": "pdfliberation/pdf_table_extraction",
+  "path": "README.md",
+  "default_branch": "master",
+  "source_url": "https://github.com/pdfliberation/pdf_table_extraction/blob/master/README.md",
+  "text": "experiment_table-extraction\n===========================\n\nusing poppler, pdf-table-extract and numpy to extract tabular data\n\n# visuals\n\nThe \"visuals\" folder contains the output of `pdftotext -bbox`  with additional css and js code to visualize the locations of all detected text.\n\n    pdftoppm -r 150 -png -f 1 -l 1 pdf_documents/DHS.TSA.2013.pdf visuals/DHS.TSA.2013.png\n\n    pdftotext -r 150 -bbox -f 1 -l 1 pdf_documents/DHS.TSA.2013.pdf visuals/DHS.TSA.2013.html\n\n# table-extract\n\nThe \"table-extract\" folder looks at the performance of the pdf-table-extract library on various source documents. Also some rough code for generating pandas dataframes from the output.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03"
+    }
+  ]
+}

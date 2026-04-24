@@ -1,0 +1,20 @@
+{
+  "doc_id": "ce0b4cab3bf409513f54324694d8ab6cf2210e12",
+  "fetched_at": "2026-04-21T18:08:22.405681",
+  "source_type": "github_repo_doc",
+  "repo": "a-sehic-dev/seo-automation-tool",
+  "path": "requirements.txt",
+  "default_branch": "main",
+  "source_url": "https://github.com/a-sehic-dev/seo-automation-tool/blob/main/requirements.txt",
+  "text": "pandas\nopenpyxl\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-04-22T11:25:57.539326",
+  "generated_dir": "data/generated_external_skills",
+  "ranked_dir": "data/external_ranked_chunks",
+  "final_json_dir": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/finalized_external_skills",
+  "skill_dir": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/final_external_skills",
+  "model": "gemini-3-flash-preview",
+  "api_base": "https://yibuapi.com/v1",
+  "timeout_sec": 120.0,
+  "connect_timeout_sec": 20.0,
+  "summary": {
+    "n_tasks": 2,
+    "n_total_final_candidates": 9
+  },
+  "tasks": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "final_json_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/finalized_external_skills/sales-pivot-analysis.json",
+      "audit_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/finalized_external_skills_audit/sales-pivot-analysis.json",
+      "skill_dir": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/final_external_skills/sales-pivot-analysis",
+      "n_final_candidates": 5
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "final_json_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/finalized_external_skills/weighted-gdp-calc.json",
+      "audit_file": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/data/finalized_external_skills_audit/weighted-gdp-calc.json",
+      "skill_dir": "/local-data/xingqinghua/Skills-benchmark/skill-economy-benchmark/skill_pool/final_external_skills/weighted-gdp-calc",
+      "n_final_candidates": 4
+    }
+  ]
+}

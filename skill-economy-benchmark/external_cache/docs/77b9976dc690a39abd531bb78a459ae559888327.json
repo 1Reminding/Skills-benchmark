@@ -1,0 +1,16 @@
+{
+  "doc_id": "77b9976dc690a39abd531bb78a459ae559888327",
+  "fetched_at": "2026-04-21T18:07:45.556793",
+  "source_type": "github_repo_doc",
+  "repo": "Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction",
+  "path": "packages.txt",
+  "default_branch": "main",
+  "source_url": "https://github.com/Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction/blob/main/packages.txt",
+  "text": "poppler-utils\ntesseract-ocr\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03"
+    }
+  ]
+}

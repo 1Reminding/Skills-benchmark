@@ -1,0 +1,33 @@
+{
+  "skill_id": "pivot-table-aggregation-analysis",
+  "display_name": "Pivot Table Aggregation Analysis",
+  "family": [
+    "spreadsheet_analytics"
+  ],
+  "artifacts": [
+    "xlsx"
+  ],
+  "tools": [
+    "spreadsheet"
+  ],
+  "operations": [
+    "aggregate"
+  ],
+  "granularity": "atomic",
+  "summary": "Using pivot tables to group and summarize data to identify key business metrics such as top-performing categories, seasonal peaks, and categorical distributions.",
+  "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+  "metadata": {
+    "task_id": "sales-pivot-analysis",
+    "source_chunk_ids": [
+      "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+      "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+    ],
+    "source_urls": [
+      "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+      "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+    ],
+    "confidence": 0.95,
+    "finalized_at": "2026-04-22T11:26:22.877271",
+    "finalizer": "12_finalize_skill_candidates.py"
+  }
+}

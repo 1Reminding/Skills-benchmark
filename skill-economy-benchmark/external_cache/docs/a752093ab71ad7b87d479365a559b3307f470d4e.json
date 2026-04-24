@@ -1,0 +1,16 @@
+{
+  "doc_id": "a752093ab71ad7b87d479365a559b3307f470d4e",
+  "fetched_at": "2026-04-21T18:07:40.847311",
+  "source_type": "github_repo_doc",
+  "repo": "xavctn/img2table",
+  "path": "tests/tables/objects/test_data/table.html",
+  "default_branch": "main",
+  "source_url": "https://github.com/xavctn/img2table/blob/main/tests/tables/objects/test_data/table.html",
+  "text": "<table>\n <tr>\n  <td colspan=\"1\" rowspan=\"1\">\n   Test 1\n  </td>\n  <td colspan=\"1\" rowspan=\"1\">\n   Test 2\n  </td>\n </tr>\n <tr>\n  <td colspan=\"1\" rowspan=\"1\">\n   Test 3\n  </td>\n  <td colspan=\"1\" rowspan=\"1\">\n   Test 4\n  </td>\n </tr>\n</table>",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::03"
+    }
+  ]
+}

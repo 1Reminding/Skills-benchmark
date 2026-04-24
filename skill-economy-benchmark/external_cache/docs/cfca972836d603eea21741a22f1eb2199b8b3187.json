@@ -1,0 +1,20 @@
+{
+  "doc_id": "cfca972836d603eea21741a22f1eb2199b8b3187",
+  "fetched_at": "2026-04-21T18:08:39.420837",
+  "source_type": "github_repo_doc",
+  "repo": "fy-labs/md-spreadsheet-parser",
+  "path": "docs/COOKBOOK.ja.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/fy-labs/md-spreadsheet-parser/blob/main/docs/COOKBOOK.ja.md",
+  "text": "{% include \"../COOKBOOK.ja.md\" %}\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05"
+    }
+  ]
+}

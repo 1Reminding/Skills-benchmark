@@ -1,0 +1,48 @@
+
+{
+  "global_allowed_domains": [
+    "github.com",
+    "readthedocs.io"
+  ],
+  "domains_by_family": {
+    "spreadsheet_analytics": [
+      "openpyxl.readthedocs.io",
+      "pandas.pydata.org",
+      "xlsxwriter.readthedocs.io",
+      "github.com"
+    ],
+    "document_extraction": [
+      "pdfplumber.readthedocs.io",
+      "pymupdf.readthedocs.io",
+      "github.com",
+      "readthedocs.io"
+    ],
+    "debugging_ci_repair": [
+      "docs.pytest.org",
+      "docs.astral.sh",
+      "docs.github.com",
+      "github.com"
+    ],
+    "geospatial_analysis": [
+      "geopandas.org",
+      "shapely.readthedocs.io",
+      "pyproj4.github.io",
+      "github.com"
+    ],
+    "data_analytics": [
+      "pandas.pydata.org",
+      "numpy.org",
+      "github.com"
+    ],
+    "scientific_analysis": [
+      "numpy.org",
+      "scipy.org",
+      "matplotlib.org",
+      "github.com"
+    ],
+    "general_problem_solving": [
+      "github.com",
+      "readthedocs.io"
+    ]
+  }
+}

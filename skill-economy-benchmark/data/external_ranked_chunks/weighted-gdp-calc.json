@@ -1,0 +1,771 @@
+{
+  "task_id": "weighted-gdp-calc",
+  "generated_at": "2026-04-21T20:22:33.600158",
+  "schema": {
+    "task_id": "weighted-gdp-calc",
+    "family": "spreadsheet_analytics",
+    "domain": "financial-analysis",
+    "artifacts": [
+      "xlsx"
+    ],
+    "operations": [
+      "aggregate",
+      "extract",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "python",
+      "spreadsheet"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "excel",
+      "finance",
+      "macrofinance",
+      "statistics"
+    ],
+    "family_candidates": [
+      "spreadsheet_analytics"
+    ],
+    "original_curated_skills": [
+      "xlsx"
+    ]
+  },
+  "summary": {
+    "n_ranked_candidates": 20,
+    "n_scored_before_dedup": 117,
+    "n_after_dedup": 117
+  },
+  "ranked_chunks": [
+    {
+      "chunk_id": "db718da9d96d848b1b0e4e92652db8cb5ec9bf53",
+      "doc_id": "417b2670aa0fb27da9546bc0f74f81b7d9aa2244",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::06",
+        "weighted-gdp-calc::skill_neighbor::04"
+      ],
+      "title": "RazaAli313/Automating-Excel-WorkFlows-Using-Python:README.md",
+      "section_title": "Automating-Excel-WorkFlows-Using-Python",
+      "source_url": "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+      "path": "README.md",
+      "text": "Excel Workflow Automation with OpenPyXL This Python script automates Excel spreadsheet processing using the openpyxl library. It modifies numerical values, adds a bar chart, and saves an updated version of the file. Features Reads an Excel file and processes data in Sheet1. Updates values in the third column (reducing by 10%) and writes them to the fourth column. Adds a bar chart to visualize the updated values. Saves a new Excel file with modifications. Requirements Python 3.x openpyxl library Installation bash Copy Edit pip install openpyxl Usage Ensure your Excel file (e.g., sales.xlsx) exists in the script's directory. Run the script with: python Copy Edit process_spreadsheet(\"sales.xlsx\") The modified file is saved as sales_updated.xlsx.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 15.0,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::family_core::03",
+        "procedural_cues:4",
+        "path_good:2"
+      ]
+    },
+    {
+      "chunk_id": "1f2603e00164f4dff20871e8107e2319b20dc418",
+      "doc_id": "a5e0bdd82396b4980adbcebd1bb3e201ca4ecb2e",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::06",
+        "weighted-gdp-calc::skill_neighbor::04"
+      ],
+      "title": "bassem-elsodany/mcp_excel_server:README.md",
+      "section_title": "About MCP Excel Server",
+      "source_url": "https://github.com/bassem-elsodany/mcp_excel_server/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "bassem-elsodany/mcp_excel_server",
+      "path": "README.md",
+      "text": "![MCP Excel Server](imgs/mcp_excel_server.jpg) **MCP Excel Server** is an implementation of the MCP Server that provides tools for automating Excel file operations using Python and [openpyxl](https://openpyxl.readthedocs.io/). It allows you to: - Create, open, and save Excel workbooks - Add, rename, copy, move, and delete worksheets - Read and write data to cells and ranges - Merge, unmerge, copy, move, and delete cell ranges - List available Excel files ---",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 6,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 14.3,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:4",
+        "workflow_verbs",
+        "path_good:1"
+      ]
+    },
+    {
+      "chunk_id": "3ae140fe7667349120ed070e3dbdf7d635109171",
+      "doc_id": "47afa3405ceae2b82faeba58ab0050a37652fb57",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::06",
+        "weighted-gdp-calc::skill_neighbor::04"
+      ],
+      "title": "RayCarterLab/ExcelAlchemy:examples/README.md",
+      "section_title": "Recommended Reading Order",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+      "domain": "github.com",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/README.md",
+      "text": "import.py` - Read this after the basic import flow. - Shows `ImporterConfig.for_create_or_update(...)` with `is_data_exist`, `creator`, and `updater`. - Best for: admin tools and synchronization flows that mix creates and updates. - Output: prints created row count, updated row count, and the final import result. - Captured output: [`files/example-outputs/create-or-update-import.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/create-or-update-import.txt) 4. `export_workflow.py` - Read this once the import flow is clear. - Shows artifact generation, export uploads, and a custom storage-backed export task. - Best for: download centers and reporting tasks that need workbook artifacts and upload URLs. - Output: prints artifact filename, byte size, upload URL, and uploaded object names. - Captured output: [`files/example-outputs/export-workflow.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/export-workflow.txt) 5. `custom_storage.py` - Read this when you want to implement your own `ExcelStorage`. - Keeps the example minimal and focused on the protocol boundary.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 1,
+        "chunk_idx": 1
+      },
+      "retrieval_score": 13.4,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:3",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "3cd94e144b37d775043058a7b95ca3def2d668f6",
+      "doc_id": "dcfb5a5e9eb2a7230cf421ba236a7b3d9fb7711f",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::07",
+        "weighted-gdp-calc::skill_neighbor::05"
+      ],
+      "title": "rogers-cyber/SmartExcelGuardian:README.md",
+      "section_title": "SmartExcelGuardian v1.1.0 – Professional Excel Data Guardian Tool (Full Source Code)",
+      "source_url": "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "rogers-cyber/SmartExcelGuardian",
+      "path": "README.md",
+      "text": "SmartExcelGuardian v1.1.0 is a powerful Python desktop application for **professional Excel data cleanup, validation, and monitoring**. This repository contains the **full source code**, allowing you to customize heuristic scoring, formula cleanup, conditional formatting, export logic, and UI behavior for enterprise reporting, analytics, or auditing workflows. ------------------------------------------------------------ 🌟 SCREENSHOT ------------------------------------------------------------ <img alt=\"FileScope Main Interface\" src=\"https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/SmartExcelGuardian.jpg\" /> ------------------------------------------------------------ 🌟 FEATURES ------------------------------------------------------------ - 📂 Excel File Input — Load `.xlsx` or `.xls` workbooks - 🧹 Automatic Data Cleanup — Handles missing values, duplicates, and type inconsistencies - 🧠 Heuristic Scoring Engine (0–100) — Flags high-risk columns based on data quality - 📝 Column Name Normalization — snake_case rename suggestions - 🔢 Type Normalization — Numeric and string coercion with validation - 📊 Missing Value Imputation — Mean (numeric) and Mode (string) - 📈 Duplicate",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 13.4,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "weak_ops:2",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::03",
+        "procedural_cues:3",
+        "workflow_verbs",
+        "path_good:1",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "f493b34e318ff85a5d8aab3957557cfaa5c179dc",
+      "doc_id": "707c6a6b10f969c0fcbc773455d1954e1dee9210",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::04",
+        "weighted-gdp-calc::family_core::03"
+      ],
+      "title": "SakshiKhanore/Sales-Dashboard-Excel:README.md",
+      "section_title": "Tools & Technologies",
+      "source_url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "SakshiKhanore/Sales-Dashboard-Excel",
+      "path": "README.md",
+      "text": "- **Python (Pandas)** — data cleaning, filtering, aggregation, revenue metrics computation - **Microsoft Excel** — Pivot Tables, KPI cards, interactive charts (Line, Bar, Donut), dashboard design - **Jupyter Notebook** — exploratory data analysis and programmatic validation",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 3,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 13.1,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "weak_ops:2",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:3",
+        "path_good:1"
+      ]
+    },
+    {
+      "chunk_id": "3e5286ca05ea3934b83d869191592866ac4643f6",
+      "doc_id": "228ef388acb1dbe22704b3b7ed45c5bdb89ee8c4",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::06",
+        "weighted-gdp-calc::skill_neighbor::04"
+      ],
+      "title": "RayCarterLab/ExcelAlchemy:examples/fastapi_reference/README.md",
+      "section_title": "`POST /employee-imports`",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/fastapi_reference/README.md",
+      "domain": "github.com",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/fastapi_reference/README.md",
+      "text": "Accepts an uploaded workbook and runs the import workflow. Request: - multipart form-data - file field name: `file` - optional form field: `tenant_id` Example: Example JSON response: If the workbook has validation errors, the same endpoint still returns a structured result payload. Application code can then read: - workbook-level result status from `result` - created row count from `created_rows` - uploaded result workbook names from `uploaded_artifacts` - cell-level frontend payloads from `cell_errors` - row-level frontend payloads from `row_errors` In the reference app, those values live under `data`, while `ok` tells the client whether the route returned a success or an API-layer error envelope. Example validation-error response shape: Example API-layer error response: In a real project, you would typically extend this response with: - request-scoped trace metadata - actor information - domain-specific identifiers or import job ids - your own error-code to UI-action mapping",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 5,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 13.1,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "weak_ops:2",
+        "query_overlap:1",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:3",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "1fbb83057acee0156cac8ae1d6b09085bed0ddd6",
+      "doc_id": "47afa3405ceae2b82faeba58ab0050a37652fb57",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::06",
+        "weighted-gdp-calc::skill_neighbor::04"
+      ],
+      "title": "RayCarterLab/ExcelAlchemy:examples/README.md",
+      "section_title": "Recommended Reading Order",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+      "domain": "github.com",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/README.md",
+      "text": "1. `annotated_schema.py` - Start here if you want to learn the declaration style first. - Shows the modern `Annotated[..., Field(...), ExcelMeta(...)]` pattern. - Best for: first-time readers who want to understand the schema declaration style. - Output: prints the generated template filename and the declared field labels. - Captured output: [`files/example-outputs/annotated-schema.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/annotated-schema.txt) 2. `employee_import_workflow.py` - Read this next if you want to understand the core import story. - Shows template generation, workbook upload, import execution, and result reporting. - Best for: backend developers implementing the basic import path. - Output: prints success and failure counts, created row count, and uploaded result artifacts. - Captured output: [`files/example-outputs/employee-import-workflow.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/employee-import-workflow.txt) 3. `create_or_update_import.py` - Read this after the basic import flow. - Shows `ImporterConfig.for_create_or_update(...)` with `is_data_exist`, `creator`, and `updater`.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 1,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 12.9,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:2",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "fdc79deea702774c93582c976c56b52afc854547",
+      "doc_id": "47afa3405ceae2b82faeba58ab0050a37652fb57",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::06",
+        "weighted-gdp-calc::skill_neighbor::04"
+      ],
+      "title": "RayCarterLab/ExcelAlchemy:examples/README.md",
+      "section_title": "Recommended Reading Order",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+      "domain": "github.com",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/README.md",
+      "text": "nments, ownership trees, or selection-heavy templates. - Best for: approval forms, personnel assignment forms, and selection-heavy business templates. - Output: prints the generated template filename and the declared selection field labels. - Captured output: [`files/example-outputs/selection-fields.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/selection-fields.txt) 8. `minio_storage.py` - Read this if you need the built-in Minio path in the current 2.x line. - This reflects the current 2.x compatibility-based Minio path rather than a future 3.x-only storage story. - Best for: teams already using the built-in Minio compatibility path in 2.x. - Output: prints the gateway type and confirms the built-in Minio path. 9. `fastapi_upload.py` - Read this last as a web integration example. - It is useful once the import and storage examples already make sense. - Best for: backend teams exposing template download and workbook import over HTTP. - Output: prints the import result, created row count, uploaded result artifacts, and registered FastAPI routes. 10.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 1,
+        "chunk_idx": 3
+      },
+      "retrieval_score": 12.9,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:2",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+      "doc_id": "f4b661f99186a192c02b4e1fe96f350d413f9126",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::02",
+        "weighted-gdp-calc::family_core::02"
+      ],
+      "title": "shourba1/Tourism-Data-Analysis-Project:README.md",
+      "section_title": "README",
+      "source_url": "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "shourba1/Tourism-Data-Analysis-Project",
+      "path": "README.md",
+      "text": "graphics, and seasonality. 🧹 1. Python – Data Cleaning & EDA The raw dataset contained inconsistent data types, missing values, and noisy text fields. ✔ Cleaning Steps: Converted Age & Spending to numeric Converted dates to datetime Handled missing values using median and default categories Normalized text fields (Gender / Purpose / Feedback) Removed corrupt or invalid rows Created new fields: Duration MonthNumber ✔ EDA Highlights: Age distribution ≈ 44 years No correlation between Age and Spending Spending range: 300–4998 USD Dataset fully cleaned for further analysis 🔗 Notebook: python_analysis.ipynb 📊 2. Excel – Business Analysis (10 Questions) Using Pivot Tables, I analyzed: Top countries → Egypt & Germany (1491 visitors each) Most common purpose → Business & Leisure Highest spending country → Saint Martin Gender distribution → Male 7311 | Female 7112 Highest spending age group → 50+ Peak month → May (1320 visitors) Average duration → 11.54 days Most common feedback → OK 🔗 Excel File: clean_tourism_data.xlsx 📈 3.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 1
+      },
+      "retrieval_score": 12.7,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:2",
+        "step_pattern",
+        "path_good:1",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "f269114e3cb05a90aea9d47e8b129857f1e47813",
+      "doc_id": "dcfb5a5e9eb2a7230cf421ba236a7b3d9fb7711f",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::07",
+        "weighted-gdp-calc::skill_neighbor::05"
+      ],
+      "title": "rogers-cyber/SmartExcelGuardian:README.md",
+      "section_title": "SmartExcelGuardian v1.1.0 – Professional Excel Data Guardian Tool (Full Source Code)",
+      "source_url": "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "rogers-cyber/SmartExcelGuardian",
+      "path": "README.md",
+      "text": "entation ------------------------------------------------------------ 📦 OUTPUT FORMATS ------------------------------------------------------------ - Excel (.xlsx) — Cleaned data, highlighted risk columns, formulas - PDF — Color-coded heuristic report with pagination - JSON — Machine-readable cleanup results - TXT — Human-readable text summary ------------------------------------------------------------ 📦 DEPENDENCIES ------------------------------------------------------------ - Python 3.10+ - pandas — Data processing and validation - numpy — Numeric computation support - ttkbootstrap — Modern themed UI - openpyxl — Excel reading, writing, and formatting - reportlab — PDF generation - Tkinter — Standard Python GUI framework - threading — Background cleanup execution - OS / Sys — Platform-aware file handling ------------------------------------------------------------ 📝 NOTES ------------------------------------------------------------ - SmartExcelGuardian processes all files locally - No data is transmitted or uploaded - Heuristic scores help prioritize risky columns - Conditional formatting visually highlights problem areas - Numeric columns receive automatic SUM and AVERAGE form",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 4
+      },
+      "retrieval_score": 12.5,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "weak_ops:2",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::skill_neighbor::05",
+        "procedural_cues:1",
+        "path_good:1",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "47384b0ddf1dfcee95b795897b01b694a67fa5a1",
+      "doc_id": "707c6a6b10f969c0fcbc773455d1954e1dee9210",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::04",
+        "weighted-gdp-calc::family_core::03"
+      ],
+      "title": "SakshiKhanore/Sales-Dashboard-Excel:README.md",
+      "section_title": "What I Learned",
+      "source_url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "SakshiKhanore/Sales-Dashboard-Excel",
+      "path": "README.md",
+      "text": "- Cross-validating insights across two different tools (Python vs Excel) builds confidence in analytical outputs - Pivot tables and programmatic aggregation produce consistent results when data cleaning is done correctly - Dashboard design choices (chart type, KPI placement) significantly impact how insights are communicated to non-technical stakeholders",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 7,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 12.0,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::artifact_operation::09",
+        "procedural_cues:2",
+        "path_good:1"
+      ]
+    },
+    {
+      "chunk_id": "0fc4bfcf1da55f53dcf13391c2ad341c1ecf5d69",
+      "doc_id": "f4b661f99186a192c02b4e1fe96f350d413f9126",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::02",
+        "weighted-gdp-calc::family_core::02"
+      ],
+      "title": "shourba1/Tourism-Data-Analysis-Project:README.md",
+      "section_title": "README",
+      "source_url": "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "shourba1/Tourism-Data-Analysis-Project",
+      "path": "README.md",
+      "text": "🎯 Tourism Data Analysis Project 🧹 Python • 📊 Excel • 📈 Power BI • 🗃 SQL By Mahmoud Gaber <p align=\"center\"> <img src=\"https://img.shields.io/badge/Python-EDA-blue?style=for-the-badge\"> <img src=\"https://img.shields.io/badge/Excel-Pivot%20Tables-green?style=for-the-badge\"> <img src=\"https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=for-the-badge\"> <img src=\"https://img.shields.io/badge/SQL-Analysis-red?style=for-the-badge\"> </p> 📌 Project Overview This project represents a complete end-to-end Data Analysis pipeline applied to a real tourism dataset. I explored, cleaned, visualized, and analyzed the data using: Python (Pandas, NumPy, Matplotlib, Seaborn) Excel Pivot Tables Power BI Dashboard MySQL Analytical Queries The goal is to understand tourist behavior, spending patterns, demographics, and seasonality. 🧹 1. Python – Data Cleaning & EDA The raw dataset contained inconsistent data types, missing values, and noisy text fields.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 11.5,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:1",
+        "path_good:1"
+      ]
+    },
+    {
+      "chunk_id": "14e302497801b7124d937b646f86c17fa2150123",
+      "doc_id": "dcfb5a5e9eb2a7230cf421ba236a7b3d9fb7711f",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::07",
+        "weighted-gdp-calc::skill_neighbor::05"
+      ],
+      "title": "rogers-cyber/SmartExcelGuardian:README.md",
+      "section_title": "SmartExcelGuardian v1.1.0 – Professional Excel Data Guardian Tool (Full Source Code)",
+      "source_url": "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "rogers-cyber/SmartExcelGuardian",
+      "path": "README.md",
+      "text": "e displayed with: - Original type → Cleaned type - Missing values count - Duplicate count - Heuristic score (0–100) - Suggested rename (snake_case) 5. Export Results: - 📄 Excel — Cleaned data, conditional formatting, formulas - 📄 PDF — Professional audit-style report - 📄 JSON — Structured results for automation - 📃 TXT — Plain-text summary 6. About / Guide: - Click ℹ About for features, usage steps, and developer info ------------------------------------------------------------ ⚙️ CONFIGURATION OPTIONS ------------------------------------------------------------ Option Description ------------------------------ -------------------------------------------------- Excel File Load a workbook for cleanup Start Cleanup Begin heuristic analysis and data cleaning Stop Cleanup Safely halt processing Results Table Interactive column-level diagnostics Export Excel Cleaned data + formulas + formatting Export PDF Professional audit-style report Export JSON Structured cleanup metadata Export TXT Plain-text summary About / Guide Built-in usage documentation ------------------------------------------------------------ 📦 OUTPUT FORMATS ------------------------------------------------------------ -",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 3
+      },
+      "retrieval_score": 11.1,
+      "retrieval_path": [
+        "family_cues:2",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:4",
+        "step_pattern",
+        "workflow_verbs",
+        "path_good:1"
+      ]
+    },
+    {
+      "chunk_id": "a2c721fa295c1ac35783b32a507f11686673bb08",
+      "doc_id": "87daff9aa3f656aab7869c48e9e09daef4fa8ceb",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::02",
+        "weighted-gdp-calc::family_core::02"
+      ],
+      "title": "Rohitpandey08/automated-data-cleaning-pipeline:README.md",
+      "section_title": "1️⃣ Install dependencies",
+      "source_url": "https://github.com/Rohitpandey08/automated-data-cleaning-pipeline/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "Rohitpandey08/automated-data-cleaning-pipeline",
+      "path": "README.md",
+      "text": "```bash pip install -r requirements.txt 2️⃣ Run the automation python clean_data.py 🧠 Data Quality Safeguards The pipeline enforces a required schema: order_id customer_name product sales_amount order_date region If any input file is missing required columns, the script fails fast with a clear error message. This prevents silent data issues and ensures reliable downstream analysis. 🔁 Column Mapping Example The script automatically standardizes inconsistent column names: Raw Column Name Standardized Name OrderID order_id Cust_Name customer_name Amount sales_amount Date order_date Area region 🛠️ Tech Stack Python Pandas OpenPyXL CLI (PowerShell / Command Prompt) 💼 Use Cases Cleaning operational Excel reports Preparing CSV exports from systems or APIs Generating analysis-ready data for Power BI / Tableau Demonstrating real-world data automation skills 📌 Key Learning Outcomes Building automation outside Jupyter notebooks Handling inconsistent schemas safely Preventing silent data quality issues Designing reusable, scalable data pipelines 👤 Author Rohit",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 4,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 10.8,
+      "retrieval_path": [
+        "family_cues:2",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:1",
+        "example_pattern",
+        "path_good:1",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "9f3f13f68ac2094452c87fe75f2fc43781c7a9de",
+      "doc_id": "707c6a6b10f969c0fcbc773455d1954e1dee9210",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::04",
+        "weighted-gdp-calc::family_core::03"
+      ],
+      "title": "SakshiKhanore/Sales-Dashboard-Excel:README.md",
+      "section_title": "Project Overview",
+      "source_url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "SakshiKhanore/Sales-Dashboard-Excel",
+      "path": "README.md",
+      "text": "An end-to-end retail sales analysis project combining Python-based data processing with an interactive Excel dashboard to uncover revenue trends, customer behaviour patterns, and product performance insights across 1,000+ transactions. The goal was to validate findings across two workflows — programmatic analysis in Python and spreadsheet-based dashboarding in Excel — ensuring consistency and accuracy of insights before presenting to stakeholders.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 10.8,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "weak_ops:2",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:2",
+        "path_good:1"
+      ]
+    },
+    {
+      "chunk_id": "0eaa53397f3c3a282dcf9927bf49dcc787f07105",
+      "doc_id": "6f3e570568b5b0a6432891554fb425bebfaa0f4d",
+      "task_ids": [
+        "sales-pivot-analysis"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::03"
+      ],
+      "title": "xavctn/img2table:README.md",
+      "section_title": "Excel export <a name=\"xlsx\"></a>",
+      "source_url": "https://github.com/xavctn/img2table/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "xavctn/img2table",
+      "path": "README.md",
+      "text": "ile</dd> > <dt>ocr : OCRInstance, optional, default <code>None</code></dt> > <dd style=\"font-style: italic;\">OCR instance used to parse document text. If None, cells content will not be extracted</dd> > <dt>implicit_rows : bool, optional, default <code>False</code></dt> > <dd style=\"font-style: italic;\">Boolean indicating if implicit rows should be identified - check related <a href=\"/examples/Implicit.ipynb\" target=\"_self\">example</a></dd> > <dt>implicit_rows : bool, optional, default <code>False</code></dt> > <dd style=\"font-style: italic;\">Boolean indicating if implicit columns should be identified - check related <a href=\"/examples/Implicit.ipynb\" target=\"_self\">example</a></dd> > <dt>borderless_tables : bool, optional, default <code>False</code></dt> > <dd style=\"font-style: italic;\">Boolean indicating if <a href=\"/examples/borderless.ipynb\" target=\"_self\">borderless tables</a> are extracted.",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 10,
+        "chunk_idx": 1
+      },
+      "retrieval_score": 10.8,
+      "retrieval_path": [
+        "family_cues:2",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "weak_ops:2",
+        "query_overlap:1",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:1",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:1"
+      ]
+    },
+    {
+      "chunk_id": "1493756e20e657d33ea3ed3490cdb90733925e68",
+      "doc_id": "4e25903c40e16677eb5baa075a945e1dfe7bbfbc",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::06",
+        "weighted-gdp-calc::skill_neighbor::04"
+      ],
+      "title": "bassem-elsodany/mcp_excel_server:mcp_article.md",
+      "section_title": "**1. Comprehensive Excel Operations**",
+      "source_url": "https://github.com/bassem-elsodany/mcp_excel_server/blob/main/mcp_article.md",
+      "domain": "github.com",
+      "repo": "bassem-elsodany/mcp_excel_server",
+      "path": "mcp_article.md",
+      "text": "My server provides **20+ powerful tools** covering every aspect of Excel manipulation: **📊 Workbook Management:** - Create new workbooks with custom sheet names - List and browse existing Excel files - Get detailed workbook information - Read and write data with precision **📋 Worksheet Operations:** - Create, rename, copy, move, and delete worksheets - Merge and unmerge cells - Advanced filtering capabilities - Smart data manipulation **🎯 Range Operations:** - Copy, move, and delete cell ranges - Validate ranges for data integrity - Bulk operations for efficiency",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 7,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 10.7,
+      "retrieval_path": [
+        "family_cues:2",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "weak_ops:2",
+        "query_overlap:1",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:3",
+        "workflow_verbs"
+      ]
+    },
+    {
+      "chunk_id": "ee5b2d2608e06abd382904539817b9c99daaa2dc",
+      "doc_id": "6f3e570568b5b0a6432891554fb425bebfaa0f4d",
+      "task_ids": [
+        "sales-pivot-analysis"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::skill_neighbor::03"
+      ],
+      "title": "xavctn/img2table:README.md",
+      "section_title": "Table of contents",
+      "source_url": "https://github.com/xavctn/img2table/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "xavctn/img2table",
+      "path": "README.md",
+      "text": "* [Installation](#installation) * [Features](#features) * [Supported file formats](#supported-file-formats) * [Usage](#usage) * [Documents](#documents) * [Images](#images-doc) * [PDF](#pdf-doc) * [Supported OCRs](#ocr) * [Table extraction](#table-extract) * [Excel export](#xlsx) * [Examples](#examples) * [Caveats / FYI](#fyi)",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 1,
+        "chunk_idx": 0
+      },
+      "retrieval_score": 10.6,
+      "retrieval_path": [
+        "family_cues:2",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::artifact_operation::10",
+        "procedural_cues:2",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:1",
+        "thin_chunk"
+      ]
+    },
+    {
+      "chunk_id": "5933d111292f1cd213d42ef4a497581df6b83075",
+      "doc_id": "383a8176044a2de311bf3f9a25524f2ddc13106a",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::02",
+        "weighted-gdp-calc::family_core::02"
+      ],
+      "title": "Samiul1947/google-adwords-performance-analysis:README.md",
+      "section_title": "📌 Table of Contents",
+      "source_url": "https://github.com/Samiul1947/google-adwords-performance-analysis/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "Samiul1947/google-adwords-performance-analysis",
+      "path": "README.md",
+      "text": "imized, or paused? This project addresses these challenges by building a **structured analytics framework** for Google AdWords performance evaluation. --- - <h2><a class=\"anchor\" id=\"project-objectives\"></a>🎯 Project Objectives</h2> - Analyze keyword-level traffic, cost, and competition metrics - Identify high-impact and low-efficiency keywords - Track search demand and CPC trends over time - Build a normalized relational database schema - Deliver interactive Power BI dashboards for decision-making --- - <h2><a class=\"anchor\" id=\"tools-&-technologies\"></a>🛠 Tools & Technologies</h2> | Tool | Purpose | |----|----| | **Excel** | Raw data preparation, formulas, lookup tables | | **Python (pandas)** | Data cleaning, keyword ID generation | | **MySQL** | Relational modeling & SQL querying | | **Power BI** | Data modeling, DAX, dashboards | | **Git & GitHub** | Version control & documentation | --- - <h2><a class=\"anchor\" id=\"end-to-end-data-workflow\"></a>🔁 End-to-End Data Workflow</h2> Each stage feeds clean, structured data into the next—mirroring real production analytics pipelines. --- - <h2><a class=\"anchor\" id=\"dataset\"></a>📂 Dataset</h2>",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 1,
+        "chunk_idx": 2
+      },
+      "retrieval_score": 10.5,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:1",
+        "path_good:1",
+        "substantive_chunk"
+      ]
+    },
+    {
+      "chunk_id": "20f7158565675d5f7603c440ee5edde918c3fcf0",
+      "doc_id": "f4b661f99186a192c02b4e1fe96f350d413f9126",
+      "task_ids": [
+        "sales-pivot-analysis",
+        "weighted-gdp-calc"
+      ],
+      "query_ids": [
+        "sales-pivot-analysis::family_core::02",
+        "weighted-gdp-calc::family_core::02"
+      ],
+      "title": "shourba1/Tourism-Data-Analysis-Project:README.md",
+      "section_title": "README",
+      "source_url": "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md",
+      "domain": "github.com",
+      "repo": "shourba1/Tourism-Data-Analysis-Project",
+      "path": "README.md",
+      "text": "eaks in May Spending increases with age Business travel dominates Gender distribution is nearly balanced 🔗 Dashboard File: tourism_dashboard.pbix 🗃 4. SQL – Analytical Queries Key SQL Queries: Top countries by visitors Average spending per country Spending by age Monthly visitor trends Purpose-based insights Example: SELECT Country, COUNT(*) AS Visitors FROM tourism_clean GROUP BY Country ORDER BY Visitors DESC; 🔗 SQL File: analysis_queries.sql 📂 Project Structure 📁 Tourism-Data-Analysis │── python_analysis.ipynb │── clean_tourism_data.xlsx │── tourism_dashboard.pbix │── analysis_queries.sql │── presentation.pptx │── README.md 🏁 Final Insights Egypt & Germany are top markets Business & Leisure dominate travel motives Tourists aged 50+ spend the most Peak tourism month is May Most travelers stay about 12 days Feedback shows moderate satisfaction 🙌 About Me I’m currently building my career in Data Analysis and expanding my skills through real projects like this one. Feel free to check out the repository and share feedback! #dataanalysis #python #excel #powerbi #sql #portfolio #analytics",
+      "metadata": {
+        "source_type": "github_repo_doc",
+        "sec_idx": 0,
+        "chunk_idx": 3
+      },
+      "retrieval_score": 10.2,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "weak_ops:2",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "example_pattern",
+        "path_good:1",
+        "substantive_chunk"
+      ]
+    }
+  ]
+}

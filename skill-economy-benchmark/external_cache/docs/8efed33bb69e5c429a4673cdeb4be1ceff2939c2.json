@@ -1,0 +1,20 @@
+{
+  "doc_id": "8efed33bb69e5c429a4673cdeb4be1ceff2939c2",
+  "fetched_at": "2026-04-21T18:07:20.905819",
+  "source_type": "github_repo_doc",
+  "repo": "Rohitpandey08/automated-data-cleaning-pipeline",
+  "path": "requirements.txt",
+  "default_branch": "main",
+  "source_url": "https://github.com/Rohitpandey08/automated-data-cleaning-pipeline/blob/main/requirements.txt",
+  "text": "pandas\r\nopenpyxl\r\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02"
+    }
+  ]
+}

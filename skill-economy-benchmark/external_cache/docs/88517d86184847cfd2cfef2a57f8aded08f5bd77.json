@@ -1,0 +1,20 @@
+{
+  "doc_id": "88517d86184847cfd2cfef2a57f8aded08f5bd77",
+  "fetched_at": "2026-04-21T18:08:32.076015",
+  "source_type": "github_repo_doc",
+  "repo": "ChennaGopikaPurnima/data_automation_project",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/ChennaGopikaPurnima/data_automation_project/blob/main/README.md",
+  "text": "# data_automation_project\nI created a Python-based data automation system that cleans sales data, calculates business metrics, generates final Excel reports, and prepares dashboards automatically. This automation reduces manual work and ensures accurate daily insights.\n\nPROJECT FOLDER STRUCTURE:\nData-Automation-Project/\n│\n├── data/\n│   ├── sales_regionA.xlsx\n│   ├── sales_regionA.xlsx\n│   └── product_master.xlsx\n├── output/\n│   └── final_report.xlsx\n│\n├── dashboard/\n│   └── Sales_Dashboard.xlsx\n│\n├── scripts/\n│   └── automation.py\n│\n└── README.md\n\nTECHNOLOGIES USED:\n\nTECHNOLOGY  -   PURPOSE\nPython\t    -   Core automation\nPandas\t    -   Data cleaning & transformations\nOpenPyXL\t  -   Excel report creation\nExcel       -   Dashboard creation\nVS Code     -   Code editor\nGitHub\t    -   Version control & hosting\n\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05"
+    }
+  ]
+}

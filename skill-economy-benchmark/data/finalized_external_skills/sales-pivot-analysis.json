@@ -1,0 +1,219 @@
+{
+  "task_id": "sales-pivot-analysis",
+  "generated_at": "2026-04-22T11:26:22.877438",
+  "schema": {
+    "task_id": "sales-pivot-analysis",
+    "family": "spreadsheet_analytics",
+    "domain": "data-analysis",
+    "artifacts": [
+      "pdf",
+      "xlsx"
+    ],
+    "operations": [
+      "aggregate",
+      "extract",
+      "transform",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "pdf",
+      "python",
+      "spreadsheet"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "data-integration",
+      "excel",
+      "pdf",
+      "pivot-tables"
+    ],
+    "family_candidates": [
+      "document_extraction",
+      "spreadsheet_analytics"
+    ],
+    "original_curated_skills": [
+      "pdf",
+      "xlsx"
+    ]
+  },
+  "summary": {
+    "n_input_candidates": 5,
+    "n_prefilter_kept": 5,
+    "n_final_candidates": 5,
+    "model": "gemini-3-flash-preview"
+  },
+  "final_skill_candidates": [
+    {
+      "skill_id": "pdf-table-to-structured-extraction",
+      "display_name": "PDF Table to Structured Extraction",
+      "family": [
+        "document_extraction"
+      ],
+      "artifacts": [
+        "pdf",
+        "xlsx"
+      ],
+      "tools": [
+        "pdf",
+        "python"
+      ],
+      "operations": [
+        "extract",
+        "transform"
+      ],
+      "granularity": "compositional",
+      "summary": "Extracting tabular data from PDF documents using OCR and morphological transformations, then converting the results into structured formats like Pandas DataFrames or Excel workbooks.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "1f873e24ce1ab3d3ae618b67107c31ac2804ec8c",
+          "8a4924f9c5cc93e1937039b17a2849ecdf1d057b"
+        ],
+        "source_urls": [
+          "https://github.com/Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction/blob/main/README.md",
+          "https://github.com/xavctn/img2table/blob/main/README.md"
+        ],
+        "confidence": 0.95,
+        "finalized_at": "2026-04-22T11:26:22.877229",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    },
+    {
+      "skill_id": "pivot-table-aggregation-analysis",
+      "display_name": "Pivot Table Aggregation Analysis",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "spreadsheet"
+      ],
+      "operations": [
+        "aggregate"
+      ],
+      "granularity": "atomic",
+      "summary": "Using pivot tables to group and summarize data to identify key business metrics such as top-performing categories, seasonal peaks, and categorical distributions.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.95,
+        "finalized_at": "2026-04-22T11:26:22.877271",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    },
+    {
+      "skill_id": "data-integrity-audit-and-validation",
+      "display_name": "Data Integrity Audit and Validation",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "pdf",
+        "xlsx"
+      ],
+      "tools": [
+        "python"
+      ],
+      "operations": [
+        "validate",
+        "verify"
+      ],
+      "granularity": "compositional",
+      "summary": "Conducting heuristic analysis to identify data risks, such as missing values and duplicates, and generating color-coded validation reports in PDF and Excel formats.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "14e302497801b7124d937b646f86c17fa2150123",
+          "f269114e3cb05a90aea9d47e8b129857f1e47813"
+        ],
+        "source_urls": [
+          "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "finalized_at": "2026-04-22T11:26:22.877298",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    },
+    {
+      "skill_id": "tabular-data-cleaning-and-normalization",
+      "display_name": "Tabular Data Cleaning and Normalization",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python"
+      ],
+      "operations": [
+        "transform",
+        "validate"
+      ],
+      "granularity": "compositional",
+      "summary": "Processing raw datasets to resolve inconsistent data types, handle missing values, and normalize text fields to prepare data for downstream analysis.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "finalized_at": "2026-04-22T11:26:22.877320",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    },
+    {
+      "skill_id": "programmatic-spreadsheet-update-and-charting",
+      "display_name": "Programmatic Spreadsheet Update and Charting",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python"
+      ],
+      "operations": [
+        "transform"
+      ],
+      "granularity": "compositional",
+      "summary": "Automating the modification of Excel cells, column values, and the insertion of visual charts using Python libraries like openpyxl.",
+      "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+      "metadata": {
+        "task_id": "sales-pivot-analysis",
+        "source_chunk_ids": [
+          "db718da9d96d848b1b0e4e92652db8cb5ec9bf53"
+        ],
+        "source_urls": [
+          "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md"
+        ],
+        "confidence": 0.85,
+        "finalized_at": "2026-04-22T11:26:22.877341",
+        "finalizer": "12_finalize_skill_candidates.py"
+      }
+    }
+  ]
+}

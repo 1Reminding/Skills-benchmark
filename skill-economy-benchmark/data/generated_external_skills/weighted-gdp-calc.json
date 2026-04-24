@@ -1,0 +1,371 @@
+{
+  "task_id": "weighted-gdp-calc",
+  "generated_at": "2026-04-21T21:04:29.138825",
+  "schema": {
+    "task_id": "weighted-gdp-calc",
+    "family": "spreadsheet_analytics",
+    "domain": "financial-analysis",
+    "artifacts": [
+      "xlsx"
+    ],
+    "operations": [
+      "aggregate",
+      "extract",
+      "validate",
+      "verify"
+    ],
+    "tools": [
+      "python",
+      "spreadsheet"
+    ],
+    "output_type": "structured_output_or_file_update",
+    "constraints": [
+      "deterministic_verifier"
+    ],
+    "tags": [
+      "excel",
+      "finance",
+      "macrofinance",
+      "statistics"
+    ],
+    "family_candidates": [
+      "spreadsheet_analytics"
+    ],
+    "original_curated_skills": [
+      "xlsx"
+    ]
+  },
+  "summary": {
+    "n_evidence_chunks": 10,
+    "n_generated_candidates": 4,
+    "model": "gemini-3-flash-preview"
+  },
+  "evidence_preview": [
+    {
+      "chunk_id": "db718da9d96d848b1b0e4e92652db8cb5ec9bf53",
+      "doc_id": "417b2670aa0fb27da9546bc0f74f81b7d9aa2244",
+      "title": "RazaAli313/Automating-Excel-WorkFlows-Using-Python:README.md",
+      "section_title": "Automating-Excel-WorkFlows-Using-Python",
+      "repo": "RazaAli313/Automating-Excel-WorkFlows-Using-Python",
+      "path": "README.md",
+      "source_url": "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md",
+      "retrieval_score": 15.0,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::family_core::03",
+        "procedural_cues:4",
+        "path_good:2"
+      ],
+      "text": "Excel Workflow Automation with OpenPyXL This Python script automates Excel spreadsheet processing using the openpyxl library. It modifies numerical values, adds a bar chart, and saves an updated version of the file. Features Reads an Excel file and processes data in Sheet1. Updates values in the third column (reducing by 10%) and writes them to the fourth column. Adds a bar chart to visualize the updated values. Saves a new Excel file with modifications. Requirements Python 3.x openpyxl library Installation bash Copy Edit pip install openpyxl Usage Ensure your Excel file (e.g., sales.xlsx) exists in the script's directory. Run the script with: python Copy Edit process_spreadsheet(\"sales.xlsx\") The modified file is saved as sales_updated.xlsx."
+    },
+    {
+      "chunk_id": "1f2603e00164f4dff20871e8107e2319b20dc418",
+      "doc_id": "a5e0bdd82396b4980adbcebd1bb3e201ca4ecb2e",
+      "title": "bassem-elsodany/mcp_excel_server:README.md",
+      "section_title": "About MCP Excel Server",
+      "repo": "bassem-elsodany/mcp_excel_server",
+      "path": "README.md",
+      "source_url": "https://github.com/bassem-elsodany/mcp_excel_server/blob/main/README.md",
+      "retrieval_score": 14.3,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:4",
+        "workflow_verbs",
+        "path_good:1"
+      ],
+      "text": "![MCP Excel Server](imgs/mcp_excel_server.jpg) **MCP Excel Server** is an implementation of the MCP Server that provides tools for automating Excel file operations using Python and [openpyxl](https://openpyxl.readthedocs.io/). It allows you to: - Create, open, and save Excel workbooks - Add, rename, copy, move, and delete worksheets - Read and write data to cells and ranges - Merge, unmerge, copy, move, and delete cell ranges - List available Excel files ---"
+    },
+    {
+      "chunk_id": "3ae140fe7667349120ed070e3dbdf7d635109171",
+      "doc_id": "47afa3405ceae2b82faeba58ab0050a37652fb57",
+      "title": "RayCarterLab/ExcelAlchemy:examples/README.md",
+      "section_title": "Recommended Reading Order",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/README.md",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+      "retrieval_score": 13.4,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:3",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ],
+      "text": "import.py` - Read this after the basic import flow. - Shows `ImporterConfig.for_create_or_update(...)` with `is_data_exist`, `creator`, and `updater`. - Best for: admin tools and synchronization flows that mix creates and updates. - Output: prints created row count, updated row count, and the final import result. - Captured output: [`files/example-outputs/create-or-update-import.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/create-or-update-import.txt) 4. `export_workflow.py` - Read this once the import flow is clear. - Shows artifact generation, export uploads, and a custom storage-backed export task. - Best for: download centers and reporting tasks that need workbook artifacts and upload URLs. - Output: prints artifact filename, byte size, upload URL, and uploaded object names. - Captured output: [`files/example-outputs/export-workflow.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/export-workflow.txt) 5. `custom_storage.py` - Read this when you want to implement your own `ExcelStorage`. - Keeps the example minimal and focused on the protocol boundary."
+    },
+    {
+      "chunk_id": "3cd94e144b37d775043058a7b95ca3def2d668f6",
+      "doc_id": "dcfb5a5e9eb2a7230cf421ba236a7b3d9fb7711f",
+      "title": "rogers-cyber/SmartExcelGuardian:README.md",
+      "section_title": "SmartExcelGuardian v1.1.0 – Professional Excel Data Guardian Tool (Full Source Code)",
+      "repo": "rogers-cyber/SmartExcelGuardian",
+      "path": "README.md",
+      "source_url": "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+      "retrieval_score": 13.4,
+      "retrieval_path": [
+        "family_cues:3",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "weak_ops:2",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::03",
+        "procedural_cues:3",
+        "workflow_verbs",
+        "path_good:1",
+        "substantive_chunk"
+      ],
+      "text": "SmartExcelGuardian v1.1.0 is a powerful Python desktop application for **professional Excel data cleanup, validation, and monitoring**. This repository contains the **full source code**, allowing you to customize heuristic scoring, formula cleanup, conditional formatting, export logic, and UI behavior for enterprise reporting, analytics, or auditing workflows. ------------------------------------------------------------ 🌟 SCREENSHOT ------------------------------------------------------------ <img alt=\"FileScope Main Interface\" src=\"https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/SmartExcelGuardian.jpg\" /> ------------------------------------------------------------ 🌟 FEATURES ------------------------------------------------------------ - 📂 Excel File Input — Load `.xlsx` or `.xls` workbooks - 🧹 Automatic Data Cleanup — Handles missing values, duplicates, and type inconsistencies - 🧠 Heuristic Scoring Engine (0–100) — Flags high-risk columns based on data quality - 📝 Column Name Normalization — snake_case rename suggestions - 🔢 Type Normalization — Numeric and string coercion with validation - 📊 Missing Value Imputation — Mean (numeric) and Mode (string) - 📈 Duplicate"
+    },
+    {
+      "chunk_id": "f493b34e318ff85a5d8aab3957557cfaa5c179dc",
+      "doc_id": "707c6a6b10f969c0fcbc773455d1954e1dee9210",
+      "title": "SakshiKhanore/Sales-Dashboard-Excel:README.md",
+      "section_title": "Tools & Technologies",
+      "repo": "SakshiKhanore/Sales-Dashboard-Excel",
+      "path": "README.md",
+      "source_url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+      "retrieval_score": 13.1,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:2",
+        "strong_ops:1",
+        "weak_ops:2",
+        "query_overlap:3",
+        "best_query:weighted-gdp-calc::family_core::02",
+        "procedural_cues:3",
+        "path_good:1"
+      ],
+      "text": "- **Python (Pandas)** — data cleaning, filtering, aggregation, revenue metrics computation - **Microsoft Excel** — Pivot Tables, KPI cards, interactive charts (Line, Bar, Donut), dashboard design - **Jupyter Notebook** — exploratory data analysis and programmatic validation"
+    },
+    {
+      "chunk_id": "3e5286ca05ea3934b83d869191592866ac4643f6",
+      "doc_id": "228ef388acb1dbe22704b3b7ed45c5bdb89ee8c4",
+      "title": "RayCarterLab/ExcelAlchemy:examples/fastapi_reference/README.md",
+      "section_title": "`POST /employee-imports`",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/fastapi_reference/README.md",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/fastapi_reference/README.md",
+      "retrieval_score": 13.1,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "weak_ops:2",
+        "query_overlap:1",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:3",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ],
+      "text": "Accepts an uploaded workbook and runs the import workflow. Request: - multipart form-data - file field name: `file` - optional form field: `tenant_id` Example: Example JSON response: If the workbook has validation errors, the same endpoint still returns a structured result payload. Application code can then read: - workbook-level result status from `result` - created row count from `created_rows` - uploaded result workbook names from `uploaded_artifacts` - cell-level frontend payloads from `cell_errors` - row-level frontend payloads from `row_errors` In the reference app, those values live under `data`, while `ok` tells the client whether the route returned a success or an API-layer error envelope. Example validation-error response shape: Example API-layer error response: In a real project, you would typically extend this response with: - request-scoped trace metadata - actor information - domain-specific identifiers or import job ids - your own error-code to UI-action mapping"
+    },
+    {
+      "chunk_id": "1fbb83057acee0156cac8ae1d6b09085bed0ddd6",
+      "doc_id": "47afa3405ceae2b82faeba58ab0050a37652fb57",
+      "title": "RayCarterLab/ExcelAlchemy:examples/README.md",
+      "section_title": "Recommended Reading Order",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/README.md",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+      "retrieval_score": 12.9,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:2",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ],
+      "text": "1. `annotated_schema.py` - Start here if you want to learn the declaration style first. - Shows the modern `Annotated[..., Field(...), ExcelMeta(...)]` pattern. - Best for: first-time readers who want to understand the schema declaration style. - Output: prints the generated template filename and the declared field labels. - Captured output: [`files/example-outputs/annotated-schema.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/annotated-schema.txt) 2. `employee_import_workflow.py` - Read this next if you want to understand the core import story. - Shows template generation, workbook upload, import execution, and result reporting. - Best for: backend developers implementing the basic import path. - Output: prints success and failure counts, created row count, and uploaded result artifacts. - Captured output: [`files/example-outputs/employee-import-workflow.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/employee-import-workflow.txt) 3. `create_or_update_import.py` - Read this after the basic import flow. - Shows `ImporterConfig.for_create_or_update(...)` with `is_data_exist`, `creator`, and `updater`."
+    },
+    {
+      "chunk_id": "fdc79deea702774c93582c976c56b52afc854547",
+      "doc_id": "47afa3405ceae2b82faeba58ab0050a37652fb57",
+      "title": "RayCarterLab/ExcelAlchemy:examples/README.md",
+      "section_title": "Recommended Reading Order",
+      "repo": "RayCarterLab/ExcelAlchemy",
+      "path": "examples/README.md",
+      "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+      "retrieval_score": 12.9,
+      "retrieval_path": [
+        "family_cues:1",
+        "artifact_overlap:1",
+        "tool_overlap:1",
+        "strong_ops:1",
+        "query_overlap:2",
+        "best_query:weighted-gdp-calc::family_core::01",
+        "procedural_cues:2",
+        "example_pattern",
+        "workflow_verbs",
+        "path_good:3",
+        "substantive_chunk"
+      ],
+      "text": "nments, ownership trees, or selection-heavy templates. - Best for: approval forms, personnel assignment forms, and selection-heavy business templates. - Output: prints the generated template filename and the declared selection field labels. - Captured output: [`files/example-outputs/selection-fields.txt`](https://github.com/RayCarterLab/ExcelAlchemy/blob/main/files/example-outputs/selection-fields.txt) 8. `minio_storage.py` - Read this if you need the built-in Minio path in the current 2.x line. - This reflects the current 2.x compatibility-based Minio path rather than a future 3.x-only storage story. - Best for: teams already using the built-in Minio compatibility path in 2.x. - Output: prints the gateway type and confirms the built-in Minio path. 9. `fastapi_upload.py` - Read this last as a web integration example. - It is useful once the import and storage examples already make sense. - Best for: backend teams exposing template download and workbook import over HTTP. - Output: prints the import result, created row count, uploaded result artifacts, and registered FastAPI routes. 10."
+    }
+  ],
+  "skill_candidates": [
+    {
+      "skill_id": "excel-data-validation-and-normalization",
+      "display_name": "Excel Data Validation and Normalization",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python",
+        "spreadsheet"
+      ],
+      "operations": [
+        "extract",
+        "validate"
+      ],
+      "granularity": "atomic",
+      "summary": "Clean and validate spreadsheet data by handling missing values, normalizing data types (e.g., numeric coercion), and identifying data quality risks using heuristic scoring.",
+      "why_distinct": "Focuses on the pre-calculation phase of ensuring data integrity and type consistency, which is critical for accurate financial modeling.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "3cd94e144b37d775043058a7b95ca3def2d668f6",
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc"
+        ],
+        "source_urls": [
+          "https://github.com/rogers-cyber/SmartExcelGuardian/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "generated_at": "2026-04-21T21:04:29.138638",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    },
+    {
+      "skill_id": "python-spreadsheet-aggregation-workflow",
+      "display_name": "Python Spreadsheet Aggregation Workflow",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python",
+        "spreadsheet"
+      ],
+      "operations": [
+        "aggregate",
+        "extract"
+      ],
+      "granularity": "compositional",
+      "summary": "Programmatically compute numerical metrics and aggregations (such as weighted sums or revenue metrics) from spreadsheet data using Python libraries like Pandas or OpenPyXL, and update the workbook with results.",
+      "why_distinct": "Emphasizes the use of external programming logic to perform complex calculations that may be cumbersome in native spreadsheet formulas.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "db718da9d96d848b1b0e4e92652db8cb5ec9bf53",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/RazaAli313/Automating-Excel-WorkFlows-Using-Python/blob/main/README.md",
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md"
+        ],
+        "confidence": 0.9,
+        "generated_at": "2026-04-21T21:04:29.138679",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    },
+    {
+      "skill_id": "excel-pivot-table-aggregation",
+      "display_name": "Excel Pivot Table Aggregation",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "spreadsheet"
+      ],
+      "operations": [
+        "aggregate",
+        "extract"
+      ],
+      "granularity": "atomic",
+      "summary": "Utilize Excel Pivot Tables to aggregate and summarize large datasets, enabling multi-dimensional analysis such as top-performing categories or average values across groups.",
+      "why_distinct": "Focuses on native spreadsheet features for aggregation, providing a non-programmatic alternative for data summarization.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "bc6fc570f377bd762fbd4686cea23938bbe493fc",
+          "f493b34e318ff85a5d8aab3957557cfaa5c179dc"
+        ],
+        "source_urls": [
+          "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+          "https://github.com/shourba1/Tourism-Data-Analysis-Project/blob/main/README.md"
+        ],
+        "confidence": 0.85,
+        "generated_at": "2026-04-21T21:04:29.138710",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    },
+    {
+      "skill_id": "excel-workflow-data-verification",
+      "display_name": "Excel Workflow Data Verification",
+      "family": [
+        "spreadsheet_analytics"
+      ],
+      "artifacts": [
+        "xlsx"
+      ],
+      "tools": [
+        "python",
+        "spreadsheet"
+      ],
+      "operations": [
+        "extract",
+        "verify"
+      ],
+      "granularity": "compositional",
+      "summary": "Verify data existence and integrity during spreadsheet import/update workflows, ensuring that row-level operations are correctly tracked and reported in a structured format.",
+      "why_distinct": "Focuses on the verification of the workflow execution itself, ensuring that data updates or imports were successful and identifying specific row-level errors.",
+      "metadata": {
+        "task_id": "weighted-gdp-calc",
+        "source_chunk_ids": [
+          "3ae140fe7667349120ed070e3dbdf7d635109171",
+          "3e5286ca05ea3934b83d869191592866ac4643f6"
+        ],
+        "source_urls": [
+          "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/README.md",
+          "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/examples/fastapi_reference/README.md"
+        ],
+        "confidence": 0.8,
+        "generated_at": "2026-04-21T21:04:29.138736",
+        "generator": "11_generate_skill_candidates.vendor_compatible.py"
+      }
+    }
+  ]
+}

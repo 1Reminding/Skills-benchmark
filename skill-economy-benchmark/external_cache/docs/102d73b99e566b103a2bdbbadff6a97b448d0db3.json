@@ -1,0 +1,20 @@
+{
+  "doc_id": "102d73b99e566b103a2bdbbadff6a97b448d0db3",
+  "fetched_at": "2026-04-21T18:07:25.353427",
+  "source_type": "github_repo_doc",
+  "repo": "hcibikci/Python-Automation-Fatigue-Data-Analysis",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/hcibikci/Python-Automation-Fatigue-Data-Analysis/blob/main/README.md",
+  "text": "# Automated Fatigue Analysis Tool (Python)\n**Focus:** Design Automation | **Libraries:** Pandas, NumPy | **Method:** Palmgren-Miner Rule\n\n---\n\n## 1. The Engineering Problem\nIn structural durability projects (both Automotive & Aerospace), engineers often deal with \"Rainflow Counting\" data containing millions of load cycles. Processing these datasets in **Excel** creates significant risks:\n* **Human Error:** Manual cell referencing mistakes.\n* **Performance:** Files crashing when exceeding 500MB.\n* **Lack of Traceability:** Hard to version control Excel formulas.\n\n## 2. The Solution\nI developed this Python script to automate the cumulative damage calculation. This approach treats engineering data as a software object, allowing for:\n* **Speed:** Reduces processing time from hours to seconds.\n* **Accuracy:** Vectorized calculations prevent manual errors.\n* **Scalability:** Can handle millions of rows without crashing.\n\n## 3. Technical Methodology\nThe script implements **Basquin's Equation** for the S-N Curve and the **Palmgren-Miner Rule** for damage accumulation.\n\n### Governing Equation\nThe fatigue life ($N_f$) is calculated using the log-log S-N relationship:\n\n$$\\sigma_a = \\sigma_f' (2N_f)^b$$\n\nWhere:\n* $\\sigma_a$: Stress Amplitude\n* $\\sigma_f'$: Fatigue Strength Coefficient\n* $b$: Fatigue Strength Exponent\n\nCumulative Damage ($D$) is then derived:\n\n$$D = \\sum_{i=1}^{k} \\frac{n_i}{N_i}$$\n\nIf $D \\ge 1.0$, failure is predicted.\n\n---\n\n## 4. How to Run\nThis is a standalone script. Ensure you have `pandas` installed.\n\n```bash\npip install pandas numpy\npython fatigue_solver.py\n\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02"
+    }
+  ]
+}

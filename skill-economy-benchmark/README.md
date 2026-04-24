@@ -477,38 +477,49 @@ python scripts/07_build_skill_pool_retrieval_v2.py \
 - `skill_pool/task_pools/<task_id>.json`：合并后的 task-level candidate pool
 - `skill_pool/metadata.json`：本次运行清单
 
-### 外部清单准备（URL/license 可追溯）
+### 外部检索与收集（GitHub API）
 
 ```bash
-# 从 docs/skills-research/official_skills.json 生成标准化 external skills 清单
-python scripts/08_prepare_external_skills_catalog.py \
-  --source-file docs/skills-research/official_skills.json \
-  --output-file data/external_skills.json
+# Step 08: 先基于 task schema 生成 query plans
+python scripts/08_generate_external_queries.py \
+  --task-ids sales-pivot-analysis,weighted-gdp-calc,fix-build-agentops,earthquake-plate-calculation \
+  --max-queries-per-task 10
 
-# 实时外部拉取（GitHub API，推荐）
+# Step 09: 实时外部抓取 + query-driven 打分（推荐）
 # 可选：export GITHUB_TOKEN=...
-python scripts/08_prepare_external_skills_catalog.py \
+python scripts/09_collect_external_skills.query_driven.py \
   --live-fetch \
   --task-ids sales-pivot-analysis,weighted-gdp-calc,fix-build-agentops,earthquake-plate-calculation \
   --max-skills 40 \
-  --output-file data/external_skills.json
+  --output-file data/external_skill_corpus.json
+
+# 可选：加入你手工维护的仓库地址清单（JSON）
+python scripts/09_collect_external_skills.query_driven.py \
+  --live-fetch \
+  --extra-repos-file data/external_repo_sources.json \
+  --task-ids sales-pivot-analysis,weighted-gdp-calc \
+  --max-skills 40 \
+  --output-file data/external_skill_corpus.json
 
 # 小规模开启 external 候选
 python scripts/07_build_skill_pool_retrieval_v2.py \
   --task-ids sales-pivot-analysis,weighted-gdp-calc \
-  --external-skills data/external_skills.json \
+  --external-skills data/external_skill_corpus.json \
   --max-generic 1 \
   --max-cross 1 \
   --max-external 2
 ```
 
-`data/external_skills.json` 每条候选建议包含：
+`data/external_skill_corpus.json` 每条候选建议包含：
 - `metadata.source_url`：原始来源链接
 - `metadata.license_note`：许可证说明（或待确认）
 - `family / artifacts / operations / tools / granularity / domain_specificity`：用于可解释检索
 
 说明：
 - `--live-fetch` 会优先从 GitHub 实时拉取 skills（默认仓库：`anthropics/skills`、`openai/skills`），若拉取失败会回退到本地 `--source-file`。
+- `--extra-repos-file` 支持手工扩展仓库来源（例如 SkillBench 相关仓库），格式支持：
+  - `{"repos":[{"repo_url":"https://github.com/<owner>/<repo>","paths":["skills","docs/skills"],"ref":"main","enabled":true}]}`
+  - 或显式 `owner/repo` 字段：`{"owner":"<owner>","repo":"<repo>","paths":["skills"]}`
 - 可用 `--save-live-snapshot` 将本次实时拉取内容写回本地快照，便于复现。
 
 ---

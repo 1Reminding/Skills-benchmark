@@ -1,0 +1,20 @@
+{
+  "doc_id": "fe39a5579f962d2894705be7b7fd46f36d8e03c8",
+  "fetched_at": "2026-04-21T18:08:39.985104",
+  "source_type": "github_repo_doc",
+  "repo": "fy-labs/md-spreadsheet-parser",
+  "path": "docs/changes/archive/0.3.3/cookbook-docs.docs.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/fy-labs/md-spreadsheet-parser/blob/main/docs/changes/archive/0.3.3/cookbook-docs.docs.md",
+  "text": "### Added Cookbook to Documentation\n\nIntegrated the new `COOKBOOK.md` into the MkDocs site navigation for better accessibility.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05"
+    }
+  ]
+}

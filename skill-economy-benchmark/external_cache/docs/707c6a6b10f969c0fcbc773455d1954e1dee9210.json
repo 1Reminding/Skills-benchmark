@@ -1,0 +1,20 @@
+{
+  "doc_id": "707c6a6b10f969c0fcbc773455d1954e1dee9210",
+  "fetched_at": "2026-04-21T18:07:29.176486",
+  "source_type": "github_repo_doc",
+  "repo": "SakshiKhanore/Sales-Dashboard-Excel",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/SakshiKhanore/Sales-Dashboard-Excel/blob/main/README.md",
+  "text": "# Retail Sales Analysis Dashboard\n\n**Tools:** Python (Pandas) · Microsoft Excel · Jupyter Notebook\n\n## Project Overview\n\nAn end-to-end retail sales analysis project combining Python-based data processing \nwith an interactive Excel dashboard to uncover revenue trends, customer behaviour \npatterns, and product performance insights across 1,000+ transactions.\n\nThe goal was to validate findings across two workflows — programmatic analysis in \nPython and spreadsheet-based dashboarding in Excel — ensuring consistency and \naccuracy of insights before presenting to stakeholders.\n\n## Business Objective\n\n- Identify monthly revenue trends and seasonal patterns\n- Analyse sales performance by product category and gender\n- Surface top-performing customers and high-value segments\n- Validate insights across both Python and Excel workflows\n\n## Dataset\n\n- 1,000+ retail transactions\n- Features: Transaction ID, Date, Customer ID, Gender, Age, \n  Product Category, Quantity, Price per Unit, Total Amount\n\n## Tools & Technologies\n\n- **Python (Pandas)** — data cleaning, filtering, aggregation, \n  revenue metrics computation\n- **Microsoft Excel** — Pivot Tables, KPI cards, interactive \n  charts (Line, Bar, Donut), dashboard design\n- **Jupyter Notebook** — exploratory data analysis and \n  programmatic validation\n\n## Key Insights\n\n- **Top category by revenue:** Beauty products contributed the \n  highest share of total revenue (~40%)\n- **Peak sales month:** Revenue spiked consistently in Q1 and Q3, \n  suggesting seasonal buying patterns\n- **Gender split:** Female customers accounted for a higher \n  transaction volume across most product categories\n- **High-value customers:** Top 5 customers by spend identified \n  and visualised for targeted retention focus\n\n## Dashboard Features (Excel)\n\n- KPI cards: Total Revenue, Total Quantity, Average Order Value, \n  Total Transactions\n- Monthly revenue trend (Line chart)\n- Sales by product category (Bar chart)\n- Gender distribution (Donut chart)\n- Top 5 customers by revenue\n\n## Files\n\n| File | Description |\n|------|-------------|\n| `Retail Sales Analysis.ipynb` | Python EDA and analysis notebook |\n| `Retail Sales Analysis Using Python.html` | Rendered notebook for easy viewing |\n| `retail_sales_dataset_workbook.xlsx` | Excel dashboard with pivot tables and charts |\n| `retail_sales_dataset_original.zip` | Raw dataset |\n\n## What I Learned\n\n- Cross-validating insights across two different tools \n  (Python vs Excel) builds confidence in analytical outputs\n- Pivot tables and programmatic aggregation produce consistent \n  results when data cleaning is done correctly\n- Dashboard design choices (chart type, KPI placement) \n  significantly impact how insights are communicated to \n  non-technical stakeholders\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::04"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::03"
+    }
+  ]
+}

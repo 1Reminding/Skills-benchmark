@@ -1,0 +1,20 @@
+{
+  "doc_id": "98dfab8f56ab88c35b16cf8831cc5ea710c06ba7",
+  "fetched_at": "2026-04-21T18:08:11.829401",
+  "source_type": "github_repo_doc",
+  "repo": "RayCarterLab/ExcelAlchemy",
+  "path": "docs/locale.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/RayCarterLab/ExcelAlchemy/blob/main/docs/locale.md",
+  "text": "# Locale Policy\n\n## Scope\n\nExcelAlchemy currently distinguishes between three kinds of language output:\n\n- developer diagnostics, intended for logs and runtime troubleshooting\n- runtime messages, intended for Python developers and integrators\n- workbook display text, intended for spreadsheet users\n\nThese layers do not currently share the same locale policy.\n\n## Developer Diagnostics Policy\n\n- Developer diagnostics are emitted through named loggers such as:\n  - `excelalchemy.codecs`\n  - `excelalchemy.runtime`\n  - `excelalchemy.metadata`\n- Stability policy: diagnostics are intentionally standardized in English for the\n  2.x line\n- Intended audience: backend developers, operators, and maintainers\n\nDeveloper diagnostics are not the same surface as API payloads or workbook-facing\nmessages. They are designed for logs, traces, and troubleshooting rather than\nend-user rendering.\n\n## Runtime Message Policy\n\n- Supported runtime locale set: `('en',)`\n- Default runtime locale: `en`\n- Stability policy: runtime exceptions are intentionally standardized in English for the 2.x line\n\nThis means error messages raised in Python code are expected to stay English unless the\nproject explicitly announces broader runtime i18n support in a future release.\n\n## Workbook Display Locale Policy\n\n- Supported workbook display locales: `('zh-CN', 'en')`\n- Default workbook display locale: `zh-CN`\n- Stability policy: the default workbook locale is considered stable for the 2.x line\n\nWorkbook display locale affects user-facing spreadsheet text such as:\n\n- import instructions in the first row\n- header comments\n- result and reason column labels\n- row validation status text\n- composite child labels such as start/end date and min/max value\n- workbook-facing boolean values such as `Yes/No` or `是/否`\n\n## Fallback Rules\n\n- Developer diagnostics fall back to English\n- Runtime messages fall back to the runtime default locale: `en`\n- Workbook display messages fall back to the workbook display default locale: `zh-CN`\n\nIf you pass an unsupported locale today, ExcelAlchemy will continue working and fall back\nto the default locale for that message layer.\n\n## Recommended Usage\n\nUse `locale='zh-CN'` when the workbook is meant for Chinese-speaking spreadsheet users.\n\nUse `locale='en'` when the workbook is meant for English-speaking spreadsheet users.\n\nExamples:\n\n```python\nfrom excelalchemy import ExcelAlchemy, ImporterConfig\n\nalchemy_zh = ExcelAlchemy(ImporterConfig(ImporterModel, creator=create_func, locale='zh-CN'))\nalchemy_en = ExcelAlchemy(ImporterConfig(ImporterModel, creator=create_func, locale='en'))\n```\n\n## Compatibility Notes\n\n- Constants in `excelalchemy.const` such as `HEADER_HINT`, `RESULT_COLUMN_LABEL`, and `REASON_COLUMN_LABEL`\n  remain available as compatibility helpers and represent the stable `zh-CN` defaults.\n- Locale-aware behavior should be driven through `ImporterConfig(..., locale=...)` and\n  `ExporterConfig(..., locale=...)`, not by reading those constants directly.\n\n## Future Direction\n\nThe i18n roadmap remains intentionally incremental:\n\n1. keep developer diagnostics consistently English\n2. keep runtime messages consistently English\n3. keep workbook display locale explicit and stable\n4. add new workbook locales additively\n5. only expand runtime locale support when there is a clear maintenance plan\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::06"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::04"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "doc_id": "6b0a285ede5afdd59bf8e289a8ab36d223280369",
+  "fetched_at": "2026-04-21T18:08:36.820847",
+  "source_type": "github_repo_doc",
+  "repo": "fy-labs/md-spreadsheet-parser",
+  "path": "docs/changes/archive/1.2.2/readme-updates.docs.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/fy-labs/md-spreadsheet-parser/blob/main/docs/changes/archive/1.2.2/readme-updates.docs.md",
+  "text": "docs: Add PengSheets announcement and update NPM READMEs\n\n- **Core**: Added PengSheets announcement to `README.md` and `README.ja.md`.\n- **Core**: Fixed invalid `update_table_metadata` example in `README.md`.\n- **NPM**: Added `packages/npm/README.ja.md` (Japanese translation).\n- **NPM**: Updated logic parity claims and Excel limitations text.\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::07"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::skill_neighbor::05"
+    }
+  ]
+}

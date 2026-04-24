@@ -1,0 +1,16 @@
+{
+  "doc_id": "06a68db58e7ab44da97be108087837321c4e7f27",
+  "fetched_at": "2026-04-21T18:07:55.238844",
+  "source_type": "github_repo_doc",
+  "repo": "JuniverseCoder/MinerU2PPT",
+  "path": "docs/testing/ocr-bbox-refine-testing.md",
+  "default_branch": "master",
+  "source_url": "https://github.com/JuniverseCoder/MinerU2PPT/blob/master/docs/testing/ocr-bbox-refine-testing.md",
+  "text": "# Testing Guide: OCR BBox Refinement (XY in Unified Flow)\n\n## Scope\n- Feature/workflow under test: OCR text bbox refinement where X refinement is added inside existing Y refinement flow.\n- Test layers covered: unit / integration / e2e-smoke\n\n## Shared Testing Rules\n- Mandatory coverage expectations:\n  - Y-direction refinement behavior remains valid (non-regression).\n  - X-direction refinement is covered for both trim and extend behavior.\n  - `line.bbox` and `span.bbox` are synchronized in both X and Y.\n  - Debug fields (`ocr_bbox_original`, `ocr_bbox_pad`, `ocr_bbox_refined`) remain present.\n- Test data/fixtures conventions:\n  - Use deterministic synthetic images with clear text-like foreground/background contrast.\n  - Include over-wide/over-tall and too-small bbox scenarios.\n- Mock/adapter expectations:\n  - Unit tests should target refine logic directly without requiring OCR model initialization.\n\n## How to Run\n- Unit:\n  - `python -m pytest \"tests/unit/test_ocr_bbox_refine.py\"`\n- Integration:\n  - `python -m pytest \"tests/integration/test_generator_ocr_merge.py\"`\n- E2E/Smoke:\n  - `python main.py --json \"demo/case1/MinerU_PixPin_2026-03-05_21-52-43__20260305135318.json\" --input \"demo/case1/PixPin_2026-03-05_21-52-43.png\" --output \"demo/case1/ocr-xy-refine-smoke-output.pptx\"`\n\n## Workflow Validation Requirements\n- When workflow changes, required test updates:\n  - Any change to row/column hit thresholds or trim/extend rules must update/refit unit assertions.\n  - Any change to bbox writeback logic must assert element/line/span synchronization.\n- Required evidence for sign-off:\n  - Unit and integration test pass output.\n  - Smoke output artifact generated successfully.\n\n## Failure Handling\n- Common failure patterns:\n  - Synthetic fixture mismatch causes color extraction to invert expectations.\n  - Too-tight bbox with no hit pixels leads to no refinement (expected in some cases).\n  - Over-aggressive thresholds can over-expand/over-trim boundaries.\n- Debug/triage checklist:\n  1. Inspect `ocr_bbox_original`, `ocr_bbox_pad`, `ocr_bbox_refined`.\n  2. Verify row/column hit signal presence for fixture ROI.\n  3. Confirm fallback path triggers only on invalid refined bbox.\n\n## References\n- PRD/Plan refs:\n  - `docs/interview/spec-ocr-bbox-xy-refine.md`\n  - `docs/plan/ocr-bbox-xy-refine-plan.md`\n- Related test files:\n  - `tests/unit/test_ocr_bbox_refine.py`\n  - `tests/integration/test_generator_ocr_merge.py`\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::skill_neighbor::05"
+    }
+  ]
+}

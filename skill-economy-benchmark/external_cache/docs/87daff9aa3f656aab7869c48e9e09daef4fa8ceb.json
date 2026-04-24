@@ -1,0 +1,20 @@
+{
+  "doc_id": "87daff9aa3f656aab7869c48e9e09daef4fa8ceb",
+  "fetched_at": "2026-04-21T18:07:20.371131",
+  "source_type": "github_repo_doc",
+  "repo": "Rohitpandey08/automated-data-cleaning-pipeline",
+  "path": "README.md",
+  "default_branch": "main",
+  "source_url": "https://github.com/Rohitpandey08/automated-data-cleaning-pipeline/blob/main/README.md",
+  "text": "# Automated Data Cleaning Pipeline (Python)\n\nA production-style Python automation pipeline that cleans raw Excel and CSV files and generates analysis-ready datasets with schema validation.\n\nThis project focuses on **automation, data quality, and real-world workflows**, moving beyond notebooks into reusable CLI-based data processing.\n\n---\n\n## 🚀 Features\n\n- Supports **Excel (.xlsx)** and **CSV (.csv)** files  \n- Folder-based automation (no file renaming required)  \n- Column name normalization (case, spaces, formatting)  \n- Column alias mapping to handle inconsistent schemas  \n- Required column validation (fail-fast mechanism)  \n- Removes duplicate records and empty rows  \n- Standardizes text, numeric, and date fields  \n- Generates clean output files without modifying raw data  \n\n---\n\n## 📂 Project Structure\n\nautomated-data-cleaning-pipeline/\n│\n├── input_data/ # Raw input files (Excel / CSV)\n├── output_data/ # Cleaned output files\n├── notebook/ # Jupyter notebook used for exploration\n├── clean_data.py # Main automation script\n├── requirements.txt\n└── README.md\n\n\n---\n\n## ⚙️ How It Works\n\n1. Place any Excel or CSV file into the `input_data/` folder  \n2. Run the Python script from the command line  \n3. Cleaned files are generated in the `output_data/` folder  \n\nRaw input files are **never modified**.\n\n---\n\n## ▶️ How to Run\n\n### 1️⃣ Install dependencies\n```bash\npip install -r requirements.txt\n\n2️⃣ Run the automation\npython clean_data.py\n\n🧠 Data Quality Safeguards\n\nThe pipeline enforces a required schema:\n\norder_id\ncustomer_name\nproduct\nsales_amount\norder_date\nregion\n\n\nIf any input file is missing required columns, the script fails fast with a clear error message.\nThis prevents silent data issues and ensures reliable downstream analysis.\n\n🔁 Column Mapping Example\n\nThe script automatically standardizes inconsistent column names:\n\nRaw Column Name\tStandardized Name\nOrderID\torder_id\nCust_Name\tcustomer_name\nAmount\tsales_amount\nDate\torder_date\nArea\tregion\n\n🛠️ Tech Stack\n\nPython\n\nPandas\n\nOpenPyXL\n\nCLI (PowerShell / Command Prompt)\n\n💼 Use Cases\n\nCleaning operational Excel reports\n\nPreparing CSV exports from systems or APIs\n\nGenerating analysis-ready data for Power BI / Tableau\n\nDemonstrating real-world data automation skills\n\n📌 Key Learning Outcomes\n\nBuilding automation outside Jupyter notebooks\n\nHandling inconsistent schemas safely\n\nPreventing silent data quality issues\n\nDesigning reusable, scalable data pipelines\n\n\n👤 Author\n\nRohit\n",
+  "task_refs": [
+    {
+      "task_id": "sales-pivot-analysis",
+      "query_id": "sales-pivot-analysis::family_core::02"
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "query_id": "weighted-gdp-calc::family_core::02"
+    }
+  ]
+}

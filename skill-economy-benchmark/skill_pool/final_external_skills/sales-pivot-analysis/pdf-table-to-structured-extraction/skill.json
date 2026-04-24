@@ -1,0 +1,36 @@
+{
+  "skill_id": "pdf-table-to-structured-extraction",
+  "display_name": "PDF Table to Structured Extraction",
+  "family": [
+    "document_extraction"
+  ],
+  "artifacts": [
+    "pdf",
+    "xlsx"
+  ],
+  "tools": [
+    "pdf",
+    "python"
+  ],
+  "operations": [
+    "extract",
+    "transform"
+  ],
+  "granularity": "compositional",
+  "summary": "Extracting tabular data from PDF documents using OCR and morphological transformations, then converting the results into structured formats like Pandas DataFrames or Excel workbooks.",
+  "why_kept": "Recovered from prefilter because final reviewer kept too few candidates.",
+  "metadata": {
+    "task_id": "sales-pivot-analysis",
+    "source_chunk_ids": [
+      "1f873e24ce1ab3d3ae618b67107c31ac2804ec8c",
+      "8a4924f9c5cc93e1937039b17a2849ecdf1d057b"
+    ],
+    "source_urls": [
+      "https://github.com/Baskar-forever/TableExtractor-Advanced-PDF-Table-Extraction/blob/main/README.md",
+      "https://github.com/xavctn/img2table/blob/main/README.md"
+    ],
+    "confidence": 0.95,
+    "finalized_at": "2026-04-22T11:26:22.877229",
+    "finalizer": "12_finalize_skill_candidates.py"
+  }
+}
